@@ -43,9 +43,8 @@ class Data extends React.Component{
 
           render = () =>  {
               const {data} = this.state;
-              console.log(data)
               return (
-                <div> </div>
+              <BlockChart data={data}/>
               );
           };
 

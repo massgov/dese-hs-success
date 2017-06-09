@@ -1,0 +1,148 @@
+/* ============================================================
+ Block Chart by Substance
+============================================================ */
+
+.table th {
+    text-align: center;
+}
+
+.table td {
+    width: 50%;
+    text-align: center;
+    color: white;
+}
+
+.people-blocks {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.group {
+    display: inline-block;
+}
+
+.block-chart {
+    height: 300px;
+    // overflow: hidden;
+    margin: 20px;
+    position: relative;
+    width: 300px;
+    display: inline-block;
+}
+
+.block {
+    -webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
+    mask: url(/images/person.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    float: left;
+    height: 9%;
+    width: 9%;
+    margin: 0.5%;
+    position: relative;
+    opacity: 1;
+}
+
+.block:after {
+    content: attr(data-index);
+}
+
+.td_Yes {
+    background: #43956f;
+}
+
+.td_No {
+    background: #B0BEC5;
+}
+
+.left {
+    text-align: left;
+}
+
+.red {
+    color: #43956f;
+}
+
+
+/* ============================================================
+ Bar
+============================================================ */
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+#bar {
+    position: relative;
+}
+
+#tooltip {
+    position: absolute;
+    top: 20;
+    left: 0;
+    background-color: white .5;
+    width: 180px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+#tooltip.hidden {
+    display: none;
+}
+
+
+/* ============================================================
+ Buttons
+============================================================ */
+
+.disableClick {
+    pointer-events: none;
+    color: #78909C;
+    border-color: #78909C;
+}
+
+.btn-primary {
+    color: #0071bc;
+    background-color: #fff;
+    border-color: #0071bc;
+    margin-top: 5px;
+    padding: 10px 20px;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: #0071bc;
+    border-color: #0071bc;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0071bc;
+    border-color: #0071bc;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #fff;
+    background-color: #0071bc;
+    border-color: #0071bc;
+}
