@@ -46,6 +46,7 @@
 
 .block:after {
     content: attr(data-index);
+    visibility: hidden;
 }
 
 .td_Yes {
