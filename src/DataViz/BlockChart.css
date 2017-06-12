@@ -1,6 +1,13 @@
 /* ============================================================
  Block Chart by Substance
 ============================================================ */
+.center{
+  text-align: center;
+}
+
+.left {
+    text-align: left;
+}
 
 .table th {
     text-align: center;
@@ -8,33 +15,26 @@
 
 .table td {
     width: 50%;
-    text-align: center;
     color: white;
 }
 
 .table_blockchart {
     width: 100%;
     margin: auto;
-    text-align: center;
     display: inline-block;
 }
 
-.group {
-
-}
-
 .block-chart {
-    height: 500px;
-    position: relative;
     width: 300px;
+    height: 300px;
     display: inline-block;
 }
 
 .block {
-    /*-webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
+    -webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
     mask: url(/images/person.svg) no-repeat 50% 50%;
     -webkit-mask-size: contain;
-    mask-size: contain;*/
+    mask-size: contain;
     float: left;
     height: 9%;
     width: 9%;
@@ -43,62 +43,12 @@
     opacity: 1;
 }
 
-.block:after {
-    content: attr(data-index);
-    visibility: hidden;
-}
-
 .color_Yes {
     background: #43956f;
 }
 
 .color_No {
     background: #B0BEC5;
-}
-
-.left {
-    text-align: left;
-}
-
-.red {
-    color: #43956f;
-}
-
-
-/* ============================================================
- Bar
-============================================================ */
-
-.axis path,
-.axis line {
-    fill: none;
-    stroke: black;
-    shape-rendering: crispEdges;
-}
-
-.axis text {
-    font-family: sans-serif;
-    font-size: 11px;
-}
-
-#bar {
-    position: relative;
-}
-
-#tooltip {
-    position: absolute;
-    top: 20;
-    left: 0;
-    background-color: white .5;
-    width: 180px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    pointer-events: none;
-}
-
-#tooltip.hidden {
-    display: none;
 }
 
 
@@ -116,8 +66,9 @@
     color: #0071bc;
     background-color: #fff;
     border-color: #0071bc;
-    margin-top: 5px;
+    margin: 6px 3px;
     padding: 10px 20px;
+    border-radius: 0;
 }
 
 .btn-primary:focus,
