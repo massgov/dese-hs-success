@@ -12,30 +12,29 @@
     color: white;
 }
 
-.people-blocks {
+.table_blockchart {
     width: 100%;
     margin: auto;
     text-align: center;
-}
-
-.group {
     display: inline-block;
 }
 
+.group {
+
+}
+
 .block-chart {
-    height: 300px;
-    // overflow: hidden;
-    margin: 20px;
+    height: 500px;
     position: relative;
     width: 300px;
     display: inline-block;
 }
 
 .block {
-    -webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
+    /*-webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
     mask: url(/images/person.svg) no-repeat 50% 50%;
     -webkit-mask-size: contain;
-    mask-size: contain;
+    mask-size: contain;*/
     float: left;
     height: 9%;
     width: 9%;
@@ -49,11 +48,11 @@
     visibility: hidden;
 }
 
-.td_Yes {
+.color_Yes {
     background: #43956f;
 }
 
-.td_No {
+.color_No {
     background: #B0BEC5;
 }
 
