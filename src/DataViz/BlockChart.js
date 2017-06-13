@@ -44,8 +44,8 @@ class BlockChart extends React.Component{
                                   <th>Did not graduated on time</th>
                                 </tr>
                                 <tr>
-                                  <td className="color_Yes">{Yes}</td>
-                                  <td className="color_No">{No}</td>
+                                  <td className="color_Yes">{Yes}%</td>
+                                  <td className="color_No">{No}%</td>
                                 </tr>
                             </tbody>
                           </table>
