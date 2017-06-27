@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from 'axios'
-import BlockChart from './DataViz/BlockChart'
+import BlockChartDuo from './DataViz/BlockChartDuo'
+import NVD3Chart from 'react-nvd3'
+import {ResponsiveContainer,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Text} from 'recharts'
 
 class Data extends React.Component{
 
@@ -8,7 +10,8 @@ class Data extends React.Component{
         super(props, context);
 
         this.state = {
-          data: null,
+          data: [],
+          datum: []
         };
       };
 
@@ -16,21 +19,16 @@ class Data extends React.Component{
               this.fetchData()
           };
 
-          componentDidUpdate = (prevProps) =>  {
-              let oldId = prevProps.match.params
-              let newId = this.props.match.params
-              if (newId !== oldId)
-              this.fetchData()
-          };
-
           fetchData = () =>  {
               var _this = this;
+              console.log(this.props.match.url)
               axios.all([
-                      axios.get('/data/' + this.props.match.params.year +'/data.json'),
+                      axios.get('/data' + this.props.match.url +'/data.json'),
                   ])
                   .then(axios.spread(function(result) {
                       _this.setState({
-                          data: result.data,
+                          data: result.data[0],
+                          datum: result.data[1],
                       });
                   }))
                   .catch((error) => {console.log(error)})
@@ -42,9 +40,13 @@ class Data extends React.Component{
           };
 
           render = () =>  {
-              const {data} = this.state;
+
+              const {data, datum} = this.state;
               return (
-              <BlockChart data={data}/>
+                <div>
+                  <BlockChartDuo data={data}/>
+                </div>
+
               );
           };
 

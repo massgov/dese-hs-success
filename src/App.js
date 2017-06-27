@@ -5,6 +5,7 @@ import {
   Link
 } from 'react-router-dom';
 import Data from './Data'
+import Data1 from './Data1'
 import Story from './Story'
 
 const App = () => (
@@ -21,7 +22,8 @@ const App = () => (
         <hr/>
 
         <Route exact path="/" component={Story}/>
-        <Route path={`/:year`} component={Data}/>
+        <Route path={`/9`} component={Data1}/>
+        <Route path={`/(10|11|12)`} component={Data}/>
       </div>
     </Router>
 
