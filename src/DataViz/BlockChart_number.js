@@ -28,7 +28,9 @@ class BlockChart extends React.Component{
           const {Yes, No, count_student, description} = this.state;
           var blockPeople = this.makeChart();
           return (
-                  <div>
+                  <div className="col-md-6 center">
+                    <h3>9th Grade Indicator</h3>
+                    <h4>On time graducation rate based on classes failed by counts</h4>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>0</Button>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed at least 1 class" value={1}>1+</Button>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('2')}`} data-description="failed at least 2 classes" value={2}>2+</Button>
