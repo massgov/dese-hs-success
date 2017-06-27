@@ -10,12 +10,18 @@ class Data extends React.Component{
         super(props, context);
 
         this.state = {
-          data: [],
-          datum: []
+          data: []
         };
       };
 
       componentWillMount = () =>  {
+              this.fetchData()
+          };
+
+          componentDidUpdate = (prevProps) =>  {
+              let oldId = prevProps.match.url
+              let newId = this.props.match.url
+              if (newId !== oldId)
               this.fetchData()
           };
 
@@ -27,8 +33,7 @@ class Data extends React.Component{
                   ])
                   .then(axios.spread(function(result) {
                       _this.setState({
-                          data: result.data[0],
-                          datum: result.data[1],
+                          data: eval(result.data),
                       });
                   }))
                   .catch((error) => {console.log(error)})
@@ -41,7 +46,8 @@ class Data extends React.Component{
 
           render = () =>  {
 
-              const {data, datum} = this.state;
+              const {data} = this.state;
+              console.log(data[0])
               return (
                 <div>
                   <BlockChartDuo data={data}/>

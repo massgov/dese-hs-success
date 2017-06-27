@@ -1,32 +1,38 @@
 [
-  {
-    "count_class": 0,
-    "count_student": 54038,
-    "count_grad": 51666,
-    "rate_grad": 96
-  },
-  {
-    "count_class": 1,
-    "count_student": 12817,
-    "count_grad": 8157,
-    "rate_grad": 64
-  },
-  {
-    "count_class": 2,
-    "count_student": 7608,
-    "count_grad": 3887,
-    "rate_grad": 51
-  },
-  {
-    "count_class": 3,
-    "count_student": 5145,
-    "count_grad": 2158,
-    "rate_grad": 42
-  },
-  {
-    "count_class": 4,
-    "count_student": 3645,
-    "count_grad": 1342,
-    "rate_grad": 37
-  }
+  [
+    {
+      "indicator": "AP",
+      "metric": "Took and Passed",
+      "count": 51666,
+      "rate_grad": 96,
+      "rate_enroll": 50,
+      "rate_persist": 40
+    },
+    {
+      "indicator": "AP",
+      "metric": "Did Not Take or Failed",
+      "count": 8157,
+      "rate_grad": 64,
+      "rate_enroll": 50,
+      "rate_persist": 40
+    },
+  ],
+  [
+    {
+      "indicator": "Algebra",
+      "metric": "Took and Passed",
+      "count": 8157,
+      "rate_grad": 64,
+      "rate_enroll": 50,
+      "rate_persist": 40
+    },
+    {
+      "indicator": "Algebra",
+      "metric": "Did Not Take or Failed",
+      "count": 8157,
+      "rate_grad": 64,
+      "rate_enroll": 50,
+      "rate_persist": 40
+    }
+  ]
 ]

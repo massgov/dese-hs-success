@@ -60,9 +60,9 @@ class BlockChart extends React.Component{
 
       handleClick = (event) =>  {
         var target = event.target;
-        var count_failed = target.value;
+        var value = event.target.value;
         var data = this.props.data;
-        this.getData(target, data, count_failed)
+        this.getData(target, data, value)
       };
 
       getData = (target, dataset,i) => {

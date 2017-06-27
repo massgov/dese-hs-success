@@ -10,9 +10,10 @@ class BlockChart extends React.Component{
           Yes: 96,
           No: 4,
           count: 54038,
-          description: "passed all classes",
           array: [],
-          selected: '0'
+          selected: '0',
+          indicator: '',
+          metric: ''
         };
       };
 
@@ -25,18 +26,18 @@ class BlockChart extends React.Component{
         return 'btn '+((value===this.state.selected) ?'active':'default');
       };
       render = () =>  {
-          const {Yes, No, count, description, selected} = this.state
+          const {count, selected, indicator, metric} = this.state
 
-          const indicator = ["Math", "Science"]
-          const metric = ["Completed", "Did Not Complete"]
+          // const indicator = ["Math", "Science"]
+          // const metric = ["Completed", "Did Not Complete"]
           var blockPeople = this.makeChart()
           return (
             <div>
               <div className="col-md-4">
                 <hr />
                 <p>Select an indicator:</p>
-                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>Math</Button>
-                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed at least 1 class" value={1}>Science</Button>
+                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>Math</Button>
+                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>Science</Button>
                 <hr />
                 <p>Select an outcome:</p>
                   <div className="radio">
@@ -49,21 +50,21 @@ class BlockChart extends React.Component{
                     <label><input type="radio" name="optradio"/>College Persistence</label>
                   </div>
                 <div id="legend">
-                  <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% out of {count} students who {description}<p /></span>
+                  <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% out of {count} students who {}<p /></span>
                 </div>
               </div>
                     <div className="col-md-8">
                       <div className="col-md-6 left">
-                        <h3>{metric[0]+ ' '+indicator[selected]}</h3>
-                        <h4>Total number of students:</h4>
+                        <h3>{metric+ ' '+indicator}</h3>
+                        <h4>Total number of students: {count} </h4>
                         <hr />
                         <div className="block-chart">
                           {blockPeople}
                         </div>
                       </div>
                       <div className="col-md-6 right">
-                        <h3>{metric[1]+ ' '+indicator[selected]}</h3>
-                        <h4>Total number of students:</h4>
+                        <h3>{metric+ ' '+indicator}</h3>
+                        <h4>Total number of students: {count} </h4>
                         <hr />
                           <div className="block-chart">
                             {blockPeople}
@@ -79,7 +80,7 @@ class BlockChart extends React.Component{
       handleClick = (event) =>  {
         var target = event.target;
         var value = event.target.value;
-        var data = this.props.data;
+        var data = this.props.data[value];
         this.getData(target, data, value)
       };
 
@@ -87,14 +88,17 @@ class BlockChart extends React.Component{
         var Yes = dataset[i].rate_grad;
         var No = 100-Yes;
         var count = dataset[i].count;
-        var description = target.dataset.description;
+        var indicator = dataset[i].indicator;
+        var metric = dataset[i].metric;
         this.createArray(Yes, No)
         this.setState({
             Yes: Yes,
             No: No,
             count: count,
-            description: description,
-            selected: i
+            selected: i,
+            indicator: indicator,
+            metric: metric
+
         });
       };
 

@@ -19,8 +19,6 @@ const App = () => (
           <li><Link to={`/12`}>12th Grade</Link></li>
         </ul>
 
-        <hr/>
-
         <Route exact path="/" component={Story}/>
         <Route path={`/9`} component={Data1}/>
         <Route path={`/(10|11|12)`} component={Data}/>

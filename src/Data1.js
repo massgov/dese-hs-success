@@ -27,6 +27,7 @@ class Data extends React.Component{
                       axios.get('/data' + this.props.match.path +'/data.json'),
                   ])
                   .then(axios.spread(function(result) {
+                    console.log(result.data)
                       _this.setState({
                           data: result.data[0],
                           datum: result.data[1],
@@ -64,8 +65,8 @@ class Data extends React.Component{
                     <Button onClick={this.handleClick} className={`btn btn-primary`} value="noncore">Non-Core</Button>
                      <ResponsiveContainer minHeight={400}>
                        <BarChart data={datum} margin={{top: 20, right: 20, left: 10, bottom: 5}}>
-                            <XAxis dataKey="label" fontSize = ".8em"/>
-                            <YAxis fontSize = "1em"/>
+                            <XAxis dataKey="label" fontSize = "1em"/>
+                            <YAxis domain={[0,5]} fontSize = "1em"/>
                             <CartesianGrid strokeDasharray="3 3"/>
                             <Tooltip/>
                             <Legend />
