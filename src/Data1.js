@@ -52,7 +52,7 @@ class Data extends React.Component{
             const {barData, barGroup} = this.state;
             console.log(barGroup)
             return (barData.map(function(course_count, i){
-                return <li key={"course-count_" + i}><b>One Only:</b> Of the {barData[i].count} students who failed only one course, {barData[i].barGroup} graduated on time.</li>
+                return <li key={"course-count_" + i}><b>{i+1} Only:</b> Of the {barData[i][`count_`+barGroup]} students who failed only one course, {barData[i][barGroup]} graduated on time.</li>
             }))
           }
 
@@ -63,7 +63,7 @@ class Data extends React.Component{
               return (
                 <div>
                   <div className="col-md-6 center">
-                    <h3>On time graducation rate based on classes failed by counts</h3>
+                    <h3>On-Time Graduation Rate by Number of Courses Failed</h3>
                     <BlockChart data={blockData}/>
                   </div>
                   <div className="col-md-6">

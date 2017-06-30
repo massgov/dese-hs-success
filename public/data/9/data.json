@@ -16,25 +16,29 @@
   [
     {
       "label" : "One Only" ,
-      "count" : 5209,
+      "count_all" : 5209,
+      "count_core" : 4555,
       "all" : 0.82,
       "core": 0.77,
     } ,
     {
       "label" : "Two Only" ,
-      "count" : 2463,
+      "count_all" : 2463,
+      "count_core" : 2177,
       "all" : 0.70,
       "core": 0.61,
     } ,
     {
       "label" : "Three Only" ,
-      "count" : 1500,
+      "count_all" : 1500,
+      "count_core" : 1370,
       "all" : 0.54,
       "core": 0.43,
     } ,
     {
       "label" : "Four or More" ,
-      "count" : 3645,
+      "count_all" : 3645,
+      "count_core" : 1980,
       "all" : 0.37,
       "core": 0.23,
     }
