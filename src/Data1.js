@@ -28,7 +28,6 @@ class Data extends React.Component{
                   ])
                   .then(axios.spread(function(result) {
                     var data = eval(result.data)
-                    console.log(data[1].count)
                       _this.setState({
                           blockData: data[0],
                           barData: data[1],
@@ -49,9 +48,18 @@ class Data extends React.Component{
             })
           };
 
+          createBarDescriptions = () => {
+            const {barData, barGroup} = this.state;
+            console.log(barGroup)
+            return (barData.map(function(course_count, i){
+                return <li key={"course-count_" + i}><b>One Only:</b> Of the {barData[i].count} students who failed only one course, {barData[i].barGroup} graduated on time.</li>
+            }))
+          }
+
           render = () =>  {
               const {blockData, barData, barGroup} = this.state;
               console.log(barData)
+              var list  = this.createBarDescriptions();
               return (
                 <div>
                   <div className="col-md-6 center">
@@ -76,10 +84,7 @@ class Data extends React.Component{
                          </ResponsiveContainer>
                      </div>
                      <ul>
-                       <li><b>One Only:</b> Of the {barData.count} students who failed only one course, {barData.barGroup} graduated on time.</li>
-                       <li><b>Two Only:</b> Of the {barData.count} students who failed only one course, {barData.barGroup} graduated on time.</li>
-                       <li><b>Three Only:</b> Of the {barData.count} students who failed only one course, {barData.barGroup} graduated on time.</li>
-                       <li><b>Four or More:</b> Of the {barData.count} students who failed only one course, {barData.barGroup} graduated on time.</li>
+                       {list}
                      </ul>
                    </div>
                 </div>
