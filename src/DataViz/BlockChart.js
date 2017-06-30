@@ -29,11 +29,8 @@ class BlockChart extends React.Component{
           var blockPeople = this.makeChart();
           return (
                   <div>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>0</Button>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed at least 1 class" value={1}>1+</Button>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('2')}`} data-description="failed at least 2 classes" value={2}>2+</Button>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('3')}`} data-description="failed at least 3 classes" value={3}>3+</Button>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('4')}`} data-description="failed at least 4 classes" value={4}>4+</Button>
+                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>Passed All</Button>
+                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed at least 1 class" value={1}>Failed Any</Button>
                       <div className="table_blockchart">
                           <table className="table">
                             <tbody>
@@ -48,7 +45,7 @@ class BlockChart extends React.Component{
                             </tbody>
                           </table>
                           <div id="legend">
-                            <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% out of {count_student} students who {description}<p /></span>
+                            <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% out of <b>{count_student}</b> students who <b>{description}</b></span>
                           </div>
                           <div className="block-chart">
                             {blockPeople}

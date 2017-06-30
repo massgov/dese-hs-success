@@ -11,44 +11,32 @@
       "count_student": 12817,
       "count_grad": 8157,
       "rate_grad": 64
-    },
-    {
-      "count_class": 2,
-      "count_student": 7608,
-      "count_grad": 3887,
-      "rate_grad": 51
-    },
-    {
-      "count_class": 3,
-      "count_student": 5145,
-      "count_grad": 2158,
-      "rate_grad": 42
-    },
-    {
-      "count_class": 4,
-      "count_student": 3645,
-      "count_grad": 1342,
-      "rate_grad": 37
     }
   ],
   [
     {
-      "label" : "2" ,
-      "all" : 3,
-      "core": 2,
-      "noncore": 1
+      "label" : "One Only" ,
+      "count" : 5209,
+      "all" : 0.82,
+      "core": 0.77,
     } ,
     {
-      "label" : "3" ,
-      "all" : 3,
-      "core": 3,
-      "noncore": 0
+      "label" : "Two Only" ,
+      "count" : 2463,
+      "all" : 0.70,
+      "core": 0.61,
     } ,
     {
-      "label" : "4+" ,
-      "all" : 1,
-      "core": 1,
-      "noncore": 0
+      "label" : "Three Only" ,
+      "count" : 1500,
+      "all" : 0.54,
+      "core": 0.43,
+    } ,
+    {
+      "label" : "Four or More" ,
+      "count" : 3645,
+      "all" : 0.37,
+      "core": 0.23,
     }
   ]
 ]
