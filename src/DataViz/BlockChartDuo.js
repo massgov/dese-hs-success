@@ -12,9 +12,9 @@ class BlockChart extends React.Component{
           count: 54038,
           array: [],
           clickedButton: '0',
-          selectedOption: 'grad',
+          selectedOption: 'rate_grad',
           indicators: ['Math', 'Science'],
-          metric: ''
+          metric: ["Completed", "Did Not Complete"]
         };
       };
 
@@ -28,48 +28,41 @@ class BlockChart extends React.Component{
       };
       render = () =>  {
           const {count, clickedButton, selectedOption, indicators, metric} = this.state
-          console.log(indicators)
-
-          // const indicators = ["Math", "Science"]
-          // const metric = ["Completed", "Did Not Complete"]
           var blockPeople = this.makeChart()
           return (
             <div>
               <div className="col-md-4">
+                <form>
                 <hr />
                 <p>Select an indicators:</p>
                       <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{indicators[0]}</Button>
                       <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{indicators[1]}</Button>
                 <hr />
-                <form>
                   <p>Select an outcome:</p>
                     <div className="radio">
-                      <label><input type="radio" name="outcome" value="grad" checked={selectedOption==='grad'} onChange={this.handleOptionChange}/>On-time Graduation</label>
+                      <label><input type="radio" name="outcome" value="rate_enroll" checked={selectedOption==='rate_enroll'} onChange={this.handleOptionChange}/>College Enrollment</label>
                     </div>
                     <div className="radio">
-                      <label><input type="radio" name="outcome" value="enroll" checked={selectedOption==='enroll'} onChange={this.handleOptionChange}/>College Enrollment</label>
-                    </div>
-                    <div className="radio">
-                      <label><input type="radio" name="outcome" value="persist" checked={selectedOption==='persist'} onChange={this.handleOptionChange}/>College Persistence</label>
+                      <label><input type="radio" name="outcome" value="rate_persist" checked={selectedOption==='rate_persist'} onChange={this.handleOptionChange}/>College Persistence</label>
                     </div>
                   <div id="legend">
-                    <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% out of {count} students who {}<p /></span>
+                    <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% of the students<p /></span>
                   </div>
                 </form>
 
               </div>
                     <div className="col-md-8">
                       <div className="col-md-6 left">
-                        <h3>{metric+ ' '+indicators[clickedButton]}</h3>
-                        <h4>Total number of students: {count} </h4>
+                        <h3>{metric[0]+ ' '+indicators[clickedButton]}</h3>
+                        <h4>Total number of students: {count[0]} </h4>
                         <hr />
                         <div className="block-chart">
                           {blockPeople}
                         </div>
                       </div>
                       <div className="col-md-6 right">
-                        <h3>{metric+ ' '+indicators[clickedButton]}</h3>
-                        <h4>Total number of students: {count} </h4>
+                        <h3>{metric[1]+ ' '+indicators[clickedButton]}</h3>
+                        <h4>Total number of students: {count[1]} </h4>
                         <hr />
                           <div className="block-chart">
                             {blockPeople}
@@ -94,15 +87,15 @@ class BlockChart extends React.Component{
         clickedButton = (typeof clickedButton!== 'undefined') ? clickedButton: this.state.clickedButton
         selectedOption = (typeof selectedOption!== 'undefined') ? selectedOption: this.state.selectedOption
         var i = clickedButton
-        var outcome = selectedOption
         var dataset = this.props.data[i];
-        var Yes = dataset[i][`rate_`+selectedOption];
-                console.log(selectedOption)
-        console.log(this.state.indicators[clickedButton])
-
+        var Yes = dataset[i][selectedOption];
         var No = 100-Yes;
-        var count = dataset[i].count;
-        var metric = dataset[i].metric;
+        var count = [],metric = [];
+        count[0] = dataset[0].count;
+        count[1] = dataset[1].count;
+        metric[0] = dataset[0].metric;
+        metric[1] = dataset[1].metric;
+                console.log(metric, count)
         this.createArray(Yes, No)
         this.setState({
             Yes: Yes,

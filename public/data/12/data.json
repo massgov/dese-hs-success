@@ -1,36 +1,32 @@
 [
   [
-      {
-      "indicator": "Math",
+    {
+      "indicator": "Full Year Math",
       "metric": "Completed",
-      "count": 51666,
-      "rate_grad": 96,
+      "count": 51679,
       "rate_enroll": 50,
       "rate_persist": 40
     },
     {
-      "indicator": "Math",
+      "indicator": "Full Year Math",
       "metric": "Did Not Complete",
       "count": 8157,
-      "rate_grad": 64,
       "rate_enroll": 50,
       "rate_persist": 40
     },
   ],
   [
     {
-      "indicator": "Science",
-      "metric": "Did Not Complete",
+      "indicator": "Full Year Science",
+      "metric": "Completed",
       "count": 8157,
-      "rate_grad": 64,
       "rate_enroll": 50,
       "rate_persist": 40
     },
     {
-      "indicator": "Science",
+      "indicator": "Full Year Science",
       "metric": "Did Not Complete",
       "count": 8157,
-      "rate_grad": 64,
       "rate_enroll": 50,
       "rate_persist": 40
     }
