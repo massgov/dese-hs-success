@@ -11,8 +11,9 @@ class BlockChart extends React.Component{
           No: 4,
           count: 54038,
           array: [],
-          selected: '0',
-          indicator: '',
+          clickedButton: '0',
+          selectedOption: 'grad',
+          indicators: ['Math', 'Science'],
           metric: ''
         };
       };
@@ -23,39 +24,43 @@ class BlockChart extends React.Component{
       };
 
       isActive = (value) => {
-        return 'btn '+((value===this.state.selected) ?'active':'default');
+        return 'btn '+((value===this.state.clickedButton) ?'active':'default');
       };
       render = () =>  {
-          const {count, selected, indicator, metric} = this.state
+          const {count, clickedButton, selectedOption, indicators, metric} = this.state
+          console.log(indicators)
 
-          // const indicator = ["Math", "Science"]
+          // const indicators = ["Math", "Science"]
           // const metric = ["Completed", "Did Not Complete"]
           var blockPeople = this.makeChart()
           return (
             <div>
               <div className="col-md-4">
                 <hr />
-                <p>Select an indicator:</p>
-                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>Math</Button>
-                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>Science</Button>
+                <p>Select an indicators:</p>
+                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{indicators[0]}</Button>
+                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{indicators[1]}</Button>
                 <hr />
-                <p>Select an outcome:</p>
-                  <div className="radio">
-                    <label><input type="radio" name="optradio"/>On-time Graduation</label>
+                <form>
+                  <p>Select an outcome:</p>
+                    <div className="radio">
+                      <label><input type="radio" name="outcome" value="grad" checked={selectedOption==='grad'} onChange={this.handleOptionChange}/>On-time Graduation</label>
+                    </div>
+                    <div className="radio">
+                      <label><input type="radio" name="outcome" value="enroll" checked={selectedOption==='enroll'} onChange={this.handleOptionChange}/>College Enrollment</label>
+                    </div>
+                    <div className="radio">
+                      <label><input type="radio" name="outcome" value="persist" checked={selectedOption==='persist'} onChange={this.handleOptionChange}/>College Persistence</label>
+                    </div>
+                  <div id="legend">
+                    <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% out of {count} students who {}<p /></span>
                   </div>
-                  <div className="radio">
-                    <label><input type="radio" name="optradio"/>College Enrollment</label>
-                  </div>
-                  <div className="radio">
-                    <label><input type="radio" name="optradio"/>College Persistence</label>
-                  </div>
-                <div id="legend">
-                  <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% out of {count} students who {}<p /></span>
-                </div>
+                </form>
+
               </div>
                     <div className="col-md-8">
                       <div className="col-md-6 left">
-                        <h3>{metric+ ' '+indicator}</h3>
+                        <h3>{metric+ ' '+indicators[clickedButton]}</h3>
                         <h4>Total number of students: {count} </h4>
                         <hr />
                         <div className="block-chart">
@@ -63,7 +68,7 @@ class BlockChart extends React.Component{
                         </div>
                       </div>
                       <div className="col-md-6 right">
-                        <h3>{metric+ ' '+indicator}</h3>
+                        <h3>{metric+ ' '+indicators[clickedButton]}</h3>
                         <h4>Total number of students: {count} </h4>
                         <hr />
                           <div className="block-chart">
@@ -77,27 +82,35 @@ class BlockChart extends React.Component{
           );
       };
 
-      handleClick = (event) =>  {
-        var target = event.target;
-        var value = event.target.value;
-        var data = this.props.data[value];
-        this.getData(target, data, value)
+      handleClick = (clickEvent) =>  {
+        this.getData(clickEvent.target.value,undefined)
       };
 
-      getData = (target, dataset,i) => {
-        var Yes = dataset[i].rate_grad;
+      handleOptionChange = (changeEvent) => {
+        this.getData(undefined,changeEvent.target.value)
+      };
+
+      getData = (clickedButton,selectedOption) => {
+        clickedButton = (typeof clickedButton!== 'undefined') ? clickedButton: this.state.clickedButton
+        selectedOption = (typeof selectedOption!== 'undefined') ? selectedOption: this.state.selectedOption
+        var i = clickedButton
+        var outcome = selectedOption
+        var dataset = this.props.data[i];
+        var Yes = dataset[i][`rate_`+selectedOption];
+                console.log(selectedOption)
+        console.log(this.state.indicators[clickedButton])
+
         var No = 100-Yes;
         var count = dataset[i].count;
-        var indicator = dataset[i].indicator;
         var metric = dataset[i].metric;
         this.createArray(Yes, No)
         this.setState({
             Yes: Yes,
             No: No,
             count: count,
-            selected: i,
-            indicator: indicator,
-            metric: metric
+            metric: metric,
+            clickedButton: clickedButton,
+            selectedOption: selectedOption
 
         });
       };
