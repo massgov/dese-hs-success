@@ -7,28 +7,30 @@ class BlockChart extends React.Component{
         super(props, context);
 
         this.state = {
-          Yes: 96,
-          No: 4,
-          count: 54038,
+          Yes: [72,58],
+          No: [28,42],
+          count: [51679,51679],
           array: [],
           clickedButton: '0',
-          selectedOption: 'rate_grad',
+          selectedOption: 'rate_enroll',
           indicators: ['Math', 'Science'],
           metric: ["Completed", "Did Not Complete"]
         };
       };
 
-      componentDidMount = () => {
+      componentWillMount = () => {
         const {Yes, No} = this.state;
-        this.createArray(Yes, No)
+        this.pushArray(Yes,No)
       };
 
       isActive = (value) => {
         return 'btn '+((value===this.state.clickedButton) ?'active':'default');
       };
       render = () =>  {
-          const {count, clickedButton, selectedOption, indicators, metric} = this.state
-          var blockPeople = this.makeChart()
+          const {count, clickedButton, selectedOption, indicators, metric, array} = this.state
+          console.log(array)
+         var blockPeople1 = this.makeChart(array[0])
+         var blockPeople2 = this.makeChart(array[1])
           return (
             <div>
               <div className="col-md-4">
@@ -57,7 +59,7 @@ class BlockChart extends React.Component{
                         <h4>Total number of students: {count[0]} </h4>
                         <hr />
                         <div className="block-chart">
-                          {blockPeople}
+                            {blockPeople1}
                         </div>
                       </div>
                       <div className="col-md-6 right">
@@ -65,7 +67,7 @@ class BlockChart extends React.Component{
                         <h4>Total number of students: {count[1]} </h4>
                         <hr />
                           <div className="block-chart">
-                            {blockPeople}
+                            {blockPeople2}
                           </div>
                       </div>
                 </div>
@@ -88,41 +90,48 @@ class BlockChart extends React.Component{
         selectedOption = (typeof selectedOption!== 'undefined') ? selectedOption: this.state.selectedOption
         var i = clickedButton
         var dataset = this.props.data[i];
-        var Yes = dataset[i][selectedOption];
-        var No = 100-Yes;
+        var Yes = [], No = [];
+        Yes[0] = dataset[0][selectedOption];
+        Yes[1] = dataset[1][selectedOption];
+        No[0] = 100-Yes[0];
+        No[1] = 100-Yes[1];
         var count = [],metric = [];
         count[0] = dataset[0].count;
         count[1] = dataset[1].count;
         metric[0] = dataset[0].metric;
         metric[1] = dataset[1].metric;
-                console.log(metric, count)
-        this.createArray(Yes, No)
+        this.pushArray(Yes, No)
         this.setState({
             Yes: Yes,
             No: No,
             count: count,
             metric: metric,
             clickedButton: clickedButton,
-            selectedOption: selectedOption
-
+            selectedOption: selectedOption,
         });
       };
 
       createArray = (Yes, No) => {
-        var arr=[];
+        var arr = []
         for(var y=0; y<Yes; y++){
           arr.push('Yes');
         };
         for(var n=0; n<No; n++){
           arr.push('No');
         };
+        return arr;
+      };
+
+      pushArray = (Yes, No) => {
+        var array = []
+        array[0] = this.createArray(Yes[0], No[0])
+        array[1] = this.createArray(Yes[1], No[1])
         this.setState({
-            array: arr
+            array: array
         });
       };
 
-      makeChart = () => {
-        const {array} = this.state;
+      makeChart = (array) => {
         return (array.map(function(person, i){
             return <div className={"block color_" + array[i]} data-index={i} key={"person_" + i}></div>
         }))
