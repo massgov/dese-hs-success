@@ -11,8 +11,7 @@ class Data extends React.Component{
 
         this.state = {
           blockData: [],
-          barData: [],
-          barGroup: "all"
+          barData: []
         };
       };
 
@@ -40,18 +39,11 @@ class Data extends React.Component{
               this.ignoreLastFetch = true
           };
 
-          handleClick = (event) =>{
-            var value = event.target.value;
-            this.setState({
-              barGroup: value
-            })
-          };
 
           createBarDescriptions = () => {
-            const {barData, barGroup} = this.state;
-            console.log(barGroup)
+            const {barData} = this.state;
             return (barData.map(function(course_count, i){
-                return <li key={"course-count_" + i}><b>{i+1} Only:</b> Of the {barData[i][`count_`+barGroup]} students who failed only one course, {barData[i][barGroup]} graduated on time.</li>
+                return <li key={"course-count_" + i}><b>{i+1} Only:</b> Of the {barData[i][`count_all`]} students who failed only one course, {barData[i][`all`]} graduated on time. Of the {barData[i][`count_core`]} students who failed only one core course, {barData[i][`core`]} graduated on time.</li>
             }))
           }
 
@@ -69,16 +61,15 @@ class Data extends React.Component{
                     <div className='center'>
                         <h3>On-Time Graduation Rate by Number of Core Courses Failed</h3>
                         <h4>The gap in on-time graduation widens based on the number and type of courses failed in the 9th grade</h4>
-                        <Button onClick={this.handleClick} className={`btn btn-primary`} value="all">All</Button>
-                        <Button onClick={this.handleClick} className={`btn btn-primary`} value="core">Core</Button>
                          <ResponsiveContainer minHeight={400}>
                            <BarChart data={barData} margin={{top: 20, right: 20, left: 10, bottom: 5}}>
                                 <XAxis dataKey="label" fontSize = "1em"/>
-                                <YAxis domain={[0,1]} fontSize = "1em"/>
+                                <YAxis fontSize = "1em"/>
                                 <CartesianGrid strokeDasharray="3 3"/>
                                 <Tooltip/>
                                 <Legend />
-                                <Bar dataKey={barGroup} fill="#43956f"/>
+                                <Bar dataKey="all" fill="#14558f"/>
+                                <Bar dataKey="core" fill="#43956f"/>
                            </BarChart>
                          </ResponsiveContainer>
                      </div>
