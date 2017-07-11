@@ -4,29 +4,29 @@
       "indicator": "Full Year Math",
       "metric": "Completed",
       "count": 51679,
-      "rate_enroll": 50,
-      "rate_persist": 40
+      "rate_enroll": 72,
+      "rate_persist": 68
     },
     {
       "indicator": "Full Year Math",
       "metric": "Did Not Complete",
-      "count": 8157,
-      "rate_enroll": 50,
-      "rate_persist": 40
+      "count": 51679,
+      "rate_enroll": 59,
+      "rate_persist": 53
     },
   ],
   [
     {
       "indicator": "Full Year Science",
       "metric": "Completed",
-      "count": 8157,
-      "rate_enroll": 50,
-      "rate_persist": 40
+      "count": 42298,
+      "rate_enroll": 61,
+      "rate_persist": 55
     },
     {
       "indicator": "Full Year Science",
       "metric": "Did Not Complete",
-      "count": 8157,
+      "count": 22661,
       "rate_enroll": 50,
       "rate_persist": 40
     }
