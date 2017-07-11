@@ -2,37 +2,33 @@
   [
     {
       "indicator": "AP",
-      "metric": "Took and Passed",
-      "count": 51666,
-      "rate_grad": 96,
-      "rate_enroll": 50,
-      "rate_persist": 40
+      "metric": "Completed",
+      "count": 17902,
+      "rate_enroll": 87,
+      "rate_persist": 86
     },
     {
       "indicator": "AP",
-      "metric": "Did Not Take or Failed",
-      "count": 8157,
-      "rate_grad": 64,
-      "rate_enroll": 50,
-      "rate_persist": 40
+      "metric": "Did Not Complete",
+      "count": 47100,
+      "rate_enroll": 61,
+      "rate_persist": 56
     },
   ],
   [
     {
       "indicator": "Algebra",
-      "metric": "Took and Passed",
-      "count": 8157,
-      "rate_grad": 64,
-      "rate_enroll": 50,
-      "rate_persist": 40
+      "metric": "Completed",
+      "count": 45592,
+      "rate_enroll": 77,
+      "rate_persist": 74
     },
     {
       "indicator": "Algebra",
-      "metric": "Did Not Take or Failed",
-      "count": 8157,
-      "rate_grad": 64,
-      "rate_enroll": 50,
-      "rate_persist": 40
+      "metric": "Did Not Complete",
+      "count": 19409,
+      "rate_enroll": 49,
+      "rate_persist": 43
     }
   ]
 ]
