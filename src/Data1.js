@@ -2,7 +2,6 @@ import React from 'react'
 import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'
 import { Button } from 'react-bootstrap'
-import NVD3Chart from 'react-nvd3'
 import {ResponsiveContainer,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Text} from 'recharts'
 
 class Data extends React.Component{
