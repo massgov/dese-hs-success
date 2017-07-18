@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  NavLink
 } from 'react-router-dom';
 import Dashboard from './Dashboard'
 import Dashboard_9 from './Dashboard_9'
@@ -12,11 +12,11 @@ const App = () => (
     <Router>
       <div>
         <Story />
-        <ul>
-          <li><Link to={`/9`}>9th Grade</Link></li>
-          <li><Link to={`/10`}>10th Grade</Link></li>
-          <li><Link to={`/11`}>11th Grade</Link></li>
-          <li><Link to={`/12`}>12th Grade</Link></li>
+        <ul className="nav nav-tabs nav-justified">
+          <li className="nav-item"><NavLink className="nav-link active"  to={`/9`}>9th Grade</NavLink></li>
+          <li className="nav-item"><NavLink className="nav-link"         to={`/10`}>10th Grade</NavLink></li>
+          <li className="nav-item"><NavLink className="nav-link"         to={`/11`}>11th Grade</NavLink></li>
+          <li className="nav-item"><NavLink className="nav-link"         to={`/12`}>12th Grade</NavLink></li>
         </ul>
 
         <Route exact path="/" component={Dashboard_9}/>
