@@ -11,6 +11,7 @@ class Data extends React.Component{
         this.state = {
           data: []
         };
+
       };
 
       componentWillMount = () =>  {
@@ -26,7 +27,6 @@ class Data extends React.Component{
 
           fetchData = () =>  {
               var _this = this;
-              console.log(this.props.match.url)
               axios.all([
                       axios.get('/data' + this.props.match.url +'/data.json'),
                   ])
@@ -44,9 +44,12 @@ class Data extends React.Component{
           };
 
           render = () =>  {
+            const {data} = this.state;
 
-              const {data} = this.state;
-              console.log(data[0])
+              if(data.length==0) {
+                return <div>Loading...</div>
+              }
+
               return (
                 <div>
                   <BlockChartDuo data={data}/>
