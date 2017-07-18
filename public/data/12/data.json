@@ -1,14 +1,14 @@
 [
   [
     {
-      "indicator": "Full Year Math",
+      "indicator": "Math",
       "metric": "Completed",
       "count": 51679,
       "rate_enroll": 72,
       "rate_persist": 68
     },
     {
-      "indicator": "Full Year Math",
+      "indicator": "Math",
       "metric": "Did Not Complete",
       "count": 51679,
       "rate_enroll": 59,
@@ -17,14 +17,14 @@
   ],
   [
     {
-      "indicator": "Full Year Science",
+      "indicator": "Science",
       "metric": "Completed",
       "count": 42298,
       "rate_enroll": 61,
       "rate_persist": 55
     },
     {
-      "indicator": "Full Year Science",
+      "indicator": "Science",
       "metric": "Did Not Complete",
       "count": 22661,
       "rate_enroll": 50,
