@@ -5,16 +5,16 @@ import './BlockChart.css'
 class BlockChart extends React.Component{
       constructor(props, context) {
         super(props, context);
-
+        var init = this.prepData('0', 'rate_enroll')
         this.state = {
-          Yes: [72,58],
-          No: [28,42],
-          count: [51679,51679],
+          Yes: init.Yes,
+          No: init.No,
+          count: init.count,
+          indicators: init.indicator,
+          metric: init.metric,
           array: [],
           clickedButton: '0',
           selectedOption: 'rate_enroll',
-          indicators: ['Math', 'Science'],
-          metric: ["Completed", "Did Not Complete"]
         };
       };
 
@@ -47,11 +47,11 @@ class BlockChart extends React.Component{
                     <div className="radio">
                       <label><input type="radio" name="outcome" value="rate_persist" checked={selectedOption==='rate_persist'} onChange={this.handleOptionChange}/>College Persistence</label>
                     </div>
-                  <div id="legend">
-                    <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% of the students<p /></span>
-                  </div>
                 </form>
-
+                <hr />
+                <div id="legend">
+                  <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% of the total number of students<p /></span>
+                </div>
               </div>
                     <div className="col-md-8">
                       <div className="col-md-6 left">
@@ -88,28 +88,33 @@ class BlockChart extends React.Component{
       getData = (clickedButton,selectedOption) => {
         clickedButton = (typeof clickedButton!== 'undefined') ? clickedButton: this.state.clickedButton
         selectedOption = (typeof selectedOption!== 'undefined') ? selectedOption: this.state.selectedOption
-        var i = clickedButton
-        var dataset = this.props.data[i];
-        var Yes = [], No = [];
-        Yes[0] = dataset[0][selectedOption];
-        Yes[1] = dataset[1][selectedOption];
+        var prepData = this.prepData(clickedButton,selectedOption)
+        this.pushArray(prepData.Yes, prepData.No)
+        this.setState({
+            Yes: prepData.Yes,
+            No: prepData.No,
+            count: prepData.count,
+            metric: prepData.metric,
+            clickedButton, selectedOption
+        });
+      };
+
+      prepData = (i,j) => {
+        var data = this.props.data
+        var dataset = data[i];
+        var Yes = [], No = [], count = [],metric = [], indicator=[]
+        Yes[0] = dataset[0][j];
+        Yes[1] = dataset[1][j];
         No[0] = 100-Yes[0];
         No[1] = 100-Yes[1];
-        var count = [],metric = [];
         count[0] = dataset[0].count;
         count[1] = dataset[1].count;
         metric[0] = dataset[0].metric;
         metric[1] = dataset[1].metric;
-        this.pushArray(Yes, No)
-        this.setState({
-            Yes: Yes,
-            No: No,
-            count: count,
-            metric: metric,
-            clickedButton: clickedButton,
-            selectedOption: selectedOption,
-        });
-      };
+        indicator[0] = data[0][0].indicator;
+        indicator[1] = data[1][0].indicator;
+        return { Yes, No, count, metric, indicator }
+      }
 
       createArray = (Yes, No) => {
         var arr = []
