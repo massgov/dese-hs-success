@@ -4,8 +4,8 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Data from './Data'
-import Data1 from './Data1'
+import Dashboard from './Dashboard'
+import Dashboard_9 from './Dashboard_9'
 import Story from './Story'
 
 const App = () => (
@@ -19,9 +19,9 @@ const App = () => (
           <li><Link to={`/12`}>12th Grade</Link></li>
         </ul>
 
-        <Route exact path="/" component={Story}/>
-        <Route path={`/9`} component={Data1}/>
-        <Route path={`/(10|11|12)`} component={Data}/>
+        <Route exact path="/" component={Dashboard_9}/>
+          <Route path={`/9`} component={Dashboard_9}/>
+          <Route path={`/(10|11|12)`} component={Dashboard}/>
       </div>
     </Router>
 
