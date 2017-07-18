@@ -10,12 +10,13 @@ class BlockChart extends React.Component{
           Yes: init.Yes,
           No: init.No,
           count: init.count,
-          indicators: init.indicator,
+          indicator: init.indicator,
           metric: init.metric,
           array: [],
           clickedButton: '0',
           selectedOption: 'rate_enroll',
         };
+
       };
 
       componentWillMount = () => {
@@ -23,12 +24,19 @@ class BlockChart extends React.Component{
         this.pushArray(Yes,No)
       };
 
+      componentDidUpdate = (prevProps) =>  {
+          let oldData = prevProps.data
+          let newData = this.props.data
+          if (newData !== oldData)
+          this.getData('0', 'rate_enroll')
+      };
+
       isActive = (value) => {
         return 'btn '+((value===this.state.clickedButton) ?'active':'default');
       };
       render = () =>  {
-          const {count, clickedButton, selectedOption, indicators, metric, array} = this.state
-          console.log(array)
+
+        const {count, clickedButton, selectedOption, indicator, metric, array} = this.state
          var blockPeople1 = this.makeChart(array[0])
          var blockPeople2 = this.makeChart(array[1])
           return (
@@ -37,8 +45,8 @@ class BlockChart extends React.Component{
                 <form>
                 <hr />
                 <p>Select an indicators:</p>
-                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{indicators[0]}</Button>
-                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{indicators[1]}</Button>
+                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{indicator[0]}</Button>
+                      <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{indicator[1]}</Button>
                 <hr />
                   <p>Select an outcome:</p>
                     <div className="radio">
@@ -55,7 +63,7 @@ class BlockChart extends React.Component{
               </div>
                     <div className="col-md-8">
                       <div className="col-md-6 left">
-                        <h3>{metric[0]+ ' '+indicators[clickedButton]}</h3>
+                        <h3>{metric[0]+ ' '+indicator[clickedButton]}</h3>
                         <h4>Total number of students: {count[0]} </h4>
                         <hr />
                         <div className="block-chart">
@@ -63,7 +71,7 @@ class BlockChart extends React.Component{
                         </div>
                       </div>
                       <div className="col-md-6 right">
-                        <h3>{metric[1]+ ' '+indicators[clickedButton]}</h3>
+                        <h3>{metric[1]+ ' '+indicator[clickedButton]}</h3>
                         <h4>Total number of students: {count[1]} </h4>
                         <hr />
                           <div className="block-chart">
@@ -95,6 +103,7 @@ class BlockChart extends React.Component{
             No: prepData.No,
             count: prepData.count,
             metric: prepData.metric,
+            indicator: prepData.indicator,
             clickedButton, selectedOption
         });
       };
