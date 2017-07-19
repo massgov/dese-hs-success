@@ -15,14 +15,14 @@
   ],
   [
     {
-      "indicator": "Suspended",
-      "metric": "Never",
+      "indicator": "Suspension",
+      "metric": "Never Had",
       "count": 60726,
       "rate_enroll": 94
     },
     {
-      "indicator": "Suspended",
-      "metric": "Ever",
+      "indicator": "Suspension",
+      "metric": "Had",
       "count": 5264,
       "rate_enroll": 64
     }
