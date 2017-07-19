@@ -1,7 +1,6 @@
 import React from 'react'
 import axios from 'axios'
 import BlockChartDuo from './DataViz/BlockChartDuo'
-import {ResponsiveContainer,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Text} from 'recharts'
 
 class Data extends React.Component{
 
