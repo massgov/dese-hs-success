@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import './BlockChart.css'
+import PersonLegend from './PersonLegend'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
@@ -44,9 +45,7 @@ class BlockChart extends React.Component{
                                 </tr>
                             </tbody>
                           </table>
-                          <div id="legend">
-                            <img src="/images/person.svg" width="25px" height="25px" alt="a person icon"/><span>= 1% out of <b>{count_student}</b> students who <b>{description}</b></span>
-                          </div>
+                          <PersonLegend>1% out of <b>{count_student}</b> students who <b>{description}</b></PersonLegend>
                           <div className="block-chart">
                             {blockPeople}
                           </div>
