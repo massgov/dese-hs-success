@@ -44,6 +44,7 @@ class Data extends React.Component{
 
           render = () =>  {
             const {data} = this.state;
+            const url = this.props.match.url
 
               if(data.length==0) {
                 return <div>Loading...</div>
@@ -51,7 +52,7 @@ class Data extends React.Component{
 
               return (
                 <div>
-                  <BlockChartDuo data={data}/>
+                  <BlockChartDuo data={data} url={url}/>
                 </div>
 
               );
