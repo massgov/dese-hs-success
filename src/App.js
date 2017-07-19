@@ -8,6 +8,7 @@ import {
 import Dashboard from './Dashboard'
 import Dashboard_9 from './Dashboard_9'
 import Story from './Story'
+import Footer from './Footer'
 
 const App = () => (
     <Router>
@@ -23,6 +24,7 @@ const App = () => (
         <Redirect from="/" to="/9"/>
           <Route path={`/9`} component={Dashboard_9}/>
           <Route path={`/(10|11|12)`} component={Dashboard}/>
+        <Footer />
       </div>
     </Router>
 
