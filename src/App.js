@@ -8,6 +8,7 @@ import {
 import Dashboard from './Dashboard'
 import Dashboard_9 from './Dashboard_9'
 import Story from './Story'
+import Header from './Header'
 import Footer from './Footer'
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
           <li className="nav-item"><NavLink className="nav-link"         to={`/11`}>11th Grade</NavLink></li>
           <li className="nav-item"><NavLink className="nav-link"         to={`/12`}>12th Grade</NavLink></li>
         </ul>
+        <Header />
 
         <Redirect from="/" to="/9"/>
           <Route path={`/9`} component={Dashboard_9}/>
