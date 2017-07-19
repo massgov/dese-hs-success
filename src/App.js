@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Redirect,
   BrowserRouter as Router,
   Route,
   NavLink
@@ -19,7 +20,7 @@ const App = () => (
           <li className="nav-item"><NavLink className="nav-link"         to={`/12`}>12th Grade</NavLink></li>
         </ul>
 
-        <Route exact path="/" component={Dashboard_9}/>
+        <Redirect from="/" to="/9"/>
           <Route path={`/9`} component={Dashboard_9}/>
           <Route path={`/(10|11|12)`} component={Dashboard}/>
       </div>
