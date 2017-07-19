@@ -36,8 +36,14 @@ class BlockChart extends React.Component{
       isActive = (value) => {
         return 'btn '+((value===this.state.clickedButton) ?'active':'default');
       };
-      render = () =>  {
 
+      render = () =>  {
+        const outcomeOptions = (this.props.url==="/10")?
+        (<div>Outcome: On-time graduation</div>):
+        (<div>
+          <p>Select an outcome:</p>
+          <Options selectedOption={this.state.selectedOption} handleOptionChange={this.handleOptionChange} />
+          </div>)
         const {count, clickedButton, selectedOption, indicator, metric, array} = this.state
          var blockPeople1 = this.makeChart(array[0])
          var blockPeople2 = this.makeChart(array[1])
@@ -50,13 +56,7 @@ class BlockChart extends React.Component{
                       <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{indicator[0]}</Button>
                       <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{indicator[1]}</Button>
                 <hr />
-                  <p>Select an outcome:</p>
-                    <div className="radio">
-                      <label><input type="radio" name="outcome" value="rate_enroll" checked={selectedOption==='rate_enroll'} onChange={this.handleOptionChange}/>College Enrollment</label>
-                    </div>
-                    <div className="radio">
-                      <label><input type="radio" name="outcome" value="rate_persist" checked={selectedOption==='rate_persist'} onChange={this.handleOptionChange}/>College Persistence</label>
-                    </div>
+                  {outcomeOptions}
                 </form>
                 <hr />
                 <PersonLegend>1% of the total number of students</PersonLegend>
