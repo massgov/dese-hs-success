@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import './BlockChart.css'
+import Options from './Options'
 import PersonLegend from './PersonLegend'
 
 class BlockChart extends React.Component{
