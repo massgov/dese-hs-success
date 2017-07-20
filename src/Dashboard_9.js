@@ -3,6 +3,7 @@ import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'
 import GroupedBarChart from './DataViz/GroupedBarChart'
 import BarChartText from './DataViz/BarChartText'
+import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 
 class Data extends React.Component{
 
@@ -44,13 +45,13 @@ class Data extends React.Component{
               return (
                 <div>
                   <div className="col-md-6 center">
-                    <h3>On-Time Graduation Rate by Number of Courses Failed</h3>
+                    <ChartTitle>On-Time Graduation Rate by Number of Courses Failed</ChartTitle>
                     <BlockChart data={blockData}/>
                   </div>
                   <div className="col-md-6">
                     <div className='center'>
-                        <h3>On-Time Graduation Rate by Number of Core Courses Failed</h3>
-                        <h4>The gap in on-time graduation widens based on the number and type of courses failed in the 9th grade</h4>
+                        <ChartTitle>On-Time Graduation Rate by Number of Core Courses Failed</ChartTitle>
+                        <ChartSubTitle>The gap in on-time graduation widens based on the number and type of courses failed in the 9th grade</ChartSubTitle>
                         <GroupedBarChart barData={barData} />
                      </div>
                     <BarChartText barData={barData} />

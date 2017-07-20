@@ -1,10 +1,11 @@
 import React from 'react'
+import {ChartTitle, ChartSubTitle} from './ChartTitle'
 
 const BlockTitle= ({count, indicator, metric, clickedButton, i}) => {
   return (
     <div>
-    <h3>{metric[i]+ ' '+indicator[clickedButton]}</h3>
-    <h4>Total number of students: {count[i]} </h4>
+    <ChartTitle>{metric[i]+ ' '+indicator[clickedButton]}</ChartTitle>
+    <ChartSubTitle>Total number of students: {count[i]} </ChartSubTitle>
     </div>
   )
 }
