@@ -4,6 +4,7 @@ import './BlockChart.css'
 import Options from './Options'
 import PersonLegend from './PersonLegend'
 import Block from './Block'
+import BlockDuoTitle from './BlockDuoTitle'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
@@ -62,15 +63,11 @@ class BlockChart extends React.Component{
               </div>
                     <div className="col-md-8">
                       <div className="col-md-6 left">
-                        <h3>{metric[0]+ ' '+indicator[clickedButton]}</h3>
-                        <h4>Total number of students: {count[0]} </h4>
-                        <hr />
+                        <BlockDuoTitle count={count} indicator={indicator} metric={metric} clickedButton={clickedButton} i={0} />
                         <Block array = {array[0]} />
                       </div>
                       <div className="col-md-6 right">
-                        <h3>{metric[1]+ ' '+indicator[clickedButton]}</h3>
-                        <h4>Total number of students: {count[1]} </h4>
-                        <hr />
+                        <BlockDuoTitle count={count} indicator={indicator} metric={metric} clickedButton={clickedButton} i={1} />
                         <Block array = {array[1]} />
                       </div>
                 </div>
