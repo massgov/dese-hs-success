@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap'
 import './BlockChart.css'
 import PersonLegend from './PersonLegend'
 import BlockTable from './BlockTable'
+import Block from './Block'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
@@ -27,8 +28,8 @@ class BlockChart extends React.Component{
         return 'btn '+((value===this.state.selected) ?'active':'default');
       };
       render = () =>  {
-          const {Yes, No, count_student, description} = this.state;
-          var blockPeople = this.makeChart();
+          const {Yes, No, count_student, description, array} = this.state;
+
           return (
                   <div>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>Passed All</Button>
@@ -36,9 +37,7 @@ class BlockChart extends React.Component{
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
                           <PersonLegend>1% out of <b>{count_student}</b> students who <b>{description}</b></PersonLegend>
-                          <div className="block-chart">
-                            {blockPeople}
-                          </div>
+                          <Block array = {array} />
                       </div>
                   </div>
           );
@@ -79,12 +78,7 @@ class BlockChart extends React.Component{
         });
       };
 
-      makeChart = () => {
-        const {array} = this.state;
-        return (array.map(function(person, i){
-            return <div className={"block color_" + array[i]} data-index={i} key={"person_" + i}></div>
-        }))
-      };
+
 
 
 
