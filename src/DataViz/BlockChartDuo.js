@@ -107,16 +107,11 @@ class BlockChart extends React.Component{
         var data = this.props.data
         var dataset = data[i];
         var Yes = [], No = [], count = [],metric = [], indicator=[]
-        Yes[0] = dataset[0][j];
-        Yes[1] = dataset[1][j];
-        No[0] = 100-Yes[0];
-        No[1] = 100-Yes[1];
-        count[0] = dataset[0].count;
-        count[1] = dataset[1].count;
-        metric[0] = dataset[0].metric;
-        metric[1] = dataset[1].metric;
-        indicator[0] = data[0][0].indicator;
-        indicator[1] = data[1][0].indicator;
+        Yes = [dataset[0][j], dataset[1][j]] ;
+        No = [100-Yes[0], 100-Yes[1]];
+        count = [dataset[0].count, dataset[1].count];
+        metric = [dataset[0].metric, dataset[1].metric];
+        indicator = [data[0][0].indicator, data[1][0].indicator];
         return { Yes, No, count, metric, indicator }
       }
 
