@@ -2,6 +2,7 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 import './BlockChart.css'
 import PersonLegend from './PersonLegend'
+import BlockTable from './BlockTable'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
@@ -33,18 +34,7 @@ class BlockChart extends React.Component{
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>Passed All</Button>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed at least 1 class" value={1}>Failed Any</Button>
                       <div className="table_blockchart">
-                          <table className="table">
-                            <tbody>
-                                <tr>
-                                  <th>Graduated on time</th>
-                                  <th>Did not graduated on time</th>
-                                </tr>
-                                <tr>
-                                  <td className="color_Yes">{Yes}%</td>
-                                  <td className="color_No">{No}%</td>
-                                </tr>
-                            </tbody>
-                          </table>
+                          <BlockTable Yes={Yes} No={No} />
                           <PersonLegend>1% out of <b>{count_student}</b> students who <b>{description}</b></PersonLegend>
                           <div className="block-chart">
                             {blockPeople}
