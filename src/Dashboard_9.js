@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'
-import { Button } from 'react-bootstrap'
-import {ResponsiveContainer,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Text} from 'recharts'
+import GroupedBarChart from './DataViz/GroupedBarChart'
+import BarChartText from './DataViz/BarChartText'
 
 class Data extends React.Component{
 
@@ -39,18 +39,8 @@ class Data extends React.Component{
               this.ignoreLastFetch = true
           };
 
-
-          createBarDescriptions = () => {
-            const {barData} = this.state;
-            return (barData.map(function(course_count, i){
-                return <li key={"course-count_" + i}><b>{i+1} Only:</b> Of the {barData[i][`count_all`]} students who failed only one course, {barData[i][`all`]} graduated on time. Of the {barData[i][`count_core`]} students who failed only one core course, {barData[i][`core`]} graduated on time.</li>
-            }))
-          }
-
           render = () =>  {
-              const {blockData, barData, barGroup} = this.state;
-              console.log(barData)
-              var list  = this.createBarDescriptions();
+              const {blockData, barData} = this.state;
               return (
                 <div>
                   <div className="col-md-6 center">
@@ -61,21 +51,9 @@ class Data extends React.Component{
                     <div className='center'>
                         <h3>On-Time Graduation Rate by Number of Core Courses Failed</h3>
                         <h4>The gap in on-time graduation widens based on the number and type of courses failed in the 9th grade</h4>
-                         <ResponsiveContainer minHeight={400}>
-                           <BarChart data={barData} margin={{top: 20, right: 20, left: 10, bottom: 5}}>
-                                <XAxis dataKey="label" fontSize = "1em"/>
-                                <YAxis fontSize = "1em"/>
-                                <CartesianGrid strokeDasharray="3 3"/>
-                                <Tooltip/>
-                                <Legend />
-                                <Bar dataKey="all" fill="#14558f"/>
-                                <Bar dataKey="core" fill="#43956f"/>
-                           </BarChart>
-                         </ResponsiveContainer>
+                        <GroupedBarChart barData={barData} />
                      </div>
-                     <ul>
-                       {list}
-                     </ul>
+                    <BarChartText barData={barData} />
                    </div>
                 </div>
 
