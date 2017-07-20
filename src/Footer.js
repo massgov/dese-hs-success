@@ -9,14 +9,14 @@ class Content extends React.Component{
         <div className="container">
             <div className="col-xs-12 col-md-6">
                     <div className="logo">
-                      <img src="" className="img-responsive" alt="DESE logo" />
+                      <img src="/images/DESE-logo.png" height='50px' className="img-responsive" alt="DESE logo" />
                     </div>
                     <address>
                       <strong>Massachusetts Department of Elementary & Secondary Education</strong>
                       <br />
-                      <i className="glyphicon glyphicon-map-marker" aria-hidden="true" /> 250 Washington St, Boston, MA 02108
+                      <i className="glyphicon glyphicon-map-marker" aria-hidden="true" /> 75 Pleasant St, Malden, MA 02148
                       <br />
-                      <a href="tel:xxx-xxx-xxxx" aria-label="Massachusetts Department of Elementary & Secondary Education phone number"><i className="glyphicon glyphicon-earphone" aria-hidden="true" /> (617) 624-6000</a>
+                      <i className="glyphicon glyphicon-earphone" aria-hidden="true" /><a href="tel:(781) 338-3000" aria-label="Massachusetts Department of Elementary & Secondary Education phone number"> (781) 338-3000</a>
                       <br />
                     </address>
             </div>
