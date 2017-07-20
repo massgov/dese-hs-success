@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap'
 import './BlockChart.css'
 import Options from './Options'
 import PersonLegend from './PersonLegend'
+import Block from './Block'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
@@ -45,8 +46,6 @@ class BlockChart extends React.Component{
           <Options selectedOption={this.state.selectedOption} handleOptionChange={this.handleOptionChange} />
           </div>)
         const {count, clickedButton, selectedOption, indicator, metric, array} = this.state
-         var blockPeople1 = this.makeChart(array[0])
-         var blockPeople2 = this.makeChart(array[1])
           return (
             <div>
               <div className="col-md-4">
@@ -66,17 +65,13 @@ class BlockChart extends React.Component{
                         <h3>{metric[0]+ ' '+indicator[clickedButton]}</h3>
                         <h4>Total number of students: {count[0]} </h4>
                         <hr />
-                        <div className="block-chart">
-                            {blockPeople1}
-                        </div>
+                        <Block array = {array[0]} />
                       </div>
                       <div className="col-md-6 right">
                         <h3>{metric[1]+ ' '+indicator[clickedButton]}</h3>
                         <h4>Total number of students: {count[1]} </h4>
                         <hr />
-                          <div className="block-chart">
-                            {blockPeople2}
-                          </div>
+                        <Block array = {array[1]} />
                       </div>
                 </div>
             </div>
@@ -144,14 +139,6 @@ class BlockChart extends React.Component{
             array: array
         });
       };
-
-      makeChart = (array) => {
-        return (array.map(function(person, i){
-            return <div className={"block color_" + array[i]} data-index={i} key={"person_" + i}></div>
-        }))
-      };
-
-
 
 }
 
