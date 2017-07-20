@@ -9,6 +9,7 @@ class Options extends React.Component{
     const {selectedOption, handleOptionChange} = this.props
     return (
       <div>
+        <p>Select an outcome:</p>
           <Option value="rate_enroll" selectedOption={selectedOption} handleOptionChange={handleOptionChange}>College Enrollment</Option>
           <Option value="rate_persist" selectedOption={selectedOption} handleOptionChange={handleOptionChange}>College Persistence</Option>
       </div>

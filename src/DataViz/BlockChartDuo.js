@@ -40,13 +40,10 @@ class BlockChart extends React.Component{
       };
 
       render = () =>  {
+        const {count, clickedButton, selectedOption, indicator, metric, array} = this.state
         const outcomeOptions = (this.props.url==="/10")?
         (<div>Outcome: On-time graduation</div>):
-        (<div>
-          <p>Select an outcome:</p>
-          <Options selectedOption={this.state.selectedOption} handleOptionChange={this.handleOptionChange} />
-          </div>)
-        const {count, clickedButton, selectedOption, indicator, metric, array} = this.state
+        (<Options selectedOption={this.state.selectedOption} handleOptionChange={this.handleOptionChange} />)
           return (
             <div>
               <div className="col-md-4">
