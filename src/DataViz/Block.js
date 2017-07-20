@@ -8,8 +8,11 @@ const Block = ({array}) => {
   };
   var blockPeople = makeChart(array);
   return (
-    <div className="block-chart">
-      {blockPeople}
+    <div>
+      <hr />
+      <div className="block-chart">
+        {blockPeople}
+      </div>
     </div>
   )
 }
