@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import Logo from './Logo'
 
 class Content extends React.Component{
 
@@ -8,9 +9,7 @@ class Content extends React.Component{
       <footer>
         <div className="container">
             <div className="col-xs-12 col-md-6">
-                    <div className="logo">
-                      <img src="/images/DESE-logo.png" height='50px' className="img-responsive" alt="DESE logo" />
-                    </div>
+                    <Logo />
                     <address>
                       <strong>Massachusetts Department of Elementary & Secondary Education</strong>
                       <br />

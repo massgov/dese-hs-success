@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import Dashboard from './Dashboard'
 import Dashboard_9 from './Dashboard_9'
-import Story from './Story'
+import Narrative from './Narrative'
 import Header from './Header'
 import Footer from './Footer'
 import './App.css'
@@ -17,7 +17,7 @@ const App = () => (
       <div className="wrapper">
         <Header />
         <div className="container">
-          <Story />
+          <Narrative />
           <ul className="nav nav-tabs nav-justified">
             <li className="nav-item"><NavLink className="nav-link active"  to={`/9`}>9th Grade</NavLink></li>
             <li className="nav-item"><NavLink className="nav-link"         to={`/10`}>10th Grade</NavLink></li>
