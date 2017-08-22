@@ -1,6 +1,7 @@
 import React from 'react'
 import {ResponsiveContainer,BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Text} from 'recharts'
 import toPercent from './toPercent'
+import CustomTooltip from './customTooltip'
 
 const GroupedBarChart = ({barData}) => {
           return (
@@ -9,7 +10,7 @@ const GroupedBarChart = ({barData}) => {
                             <XAxis dataKey="label" fontSize = "1em"/>
                             <YAxis fontSize = "1em" tickFormatter={toPercent}/>
                             <CartesianGrid strokeDasharray="3 3"/>
-                            <Tooltip/>
+                            <Tooltip content={<CustomTooltip/>}/>
                             <Legend />
                             <Bar dataKey="all" fill="#14558f" formatter={toPercent}/>
                             <Bar dataKey="core" fill="#43956f" formatter={toPercent}/>
