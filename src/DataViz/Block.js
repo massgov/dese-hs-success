@@ -9,7 +9,6 @@ const Block = ({array}) => {
   var blockPeople = makeChart(array);
   return (
     <div>
-      <hr />
       <div className="block-chart">
         {blockPeople}
       </div>

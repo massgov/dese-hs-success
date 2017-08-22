@@ -4,6 +4,7 @@ import './BlockChart.css'
 import PersonLegend from './PersonLegend'
 import BlockTable from './BlockTable'
 import Block from './Block'
+import { ChartSubTitle } from './ChartTitle'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
@@ -34,10 +35,11 @@ class BlockChart extends React.Component{
                   <div>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>Passed All</Button>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed at least 1 class" value={1}>Failed Any</Button>
+                          <ChartSubTitle>4-Year Graduation Rate</ChartSubTitle>
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
-                          <PersonLegend>1% out of <b>{count_student}</b> students who <b>{description}</b></PersonLegend>
                           <Block array = {array} />
+                          <PersonLegend>1% out of <b>{count_student}</b> students who <b>{description}</b></PersonLegend>
                       </div>
                   </div>
           );

@@ -46,7 +46,6 @@ class Data extends React.Component{
                 <div>
                   <div className="col-md-6 center">
                     <ChartTitle>9th Grade Course Performance</ChartTitle>
-                    <ChartSubTitle>4-year Graduation Rate</ChartSubTitle>
                     <BlockChart data={blockData}/>
                   </div>
                   <div className="col-md-6">
