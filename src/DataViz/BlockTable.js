@@ -5,11 +5,11 @@ const BlockTable = ({Yes, No}) => {
     <table className="table">
       <tbody>
           <tr>
-            <th>Graduated on time</th>
-            <th>Did not graduated on time</th>
+            <th>Graduated in 4 years</th>
+            <td className="color_Yes">{Yes}%</td>
           </tr>
           <tr>
-            <td className="color_Yes">{Yes}%</td>
+            <th>Did not graduate in 4 years</th>
             <td className="color_No">{No}%</td>
           </tr>
       </tbody>
