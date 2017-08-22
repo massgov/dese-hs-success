@@ -45,16 +45,16 @@ class Data extends React.Component{
               return (
                 <div>
                   <div className="col-md-6 center">
-                    <ChartTitle>On-Time Graduation Rate by Number of Courses Failed</ChartTitle>
+                    <ChartTitle>9th Grade Course Performance</ChartTitle>
+                    <ChartSubTitle>4-year Graduation Rate</ChartSubTitle>
                     <BlockChart data={blockData}/>
                   </div>
                   <div className="col-md-6">
                     <div className='center'>
-                        <ChartTitle>On-Time Graduation Rate by Number of Core Courses Failed</ChartTitle>
-                        <ChartSubTitle>The gap in on-time graduation widens based on the number and type of courses failed in the 9th grade</ChartSubTitle>
+                        <ChartTitle>9th Grade Course Failure</ChartTitle>
+                        <ChartSubTitle>4-year Graduation Rate</ChartSubTitle>
                         <GroupedBarChart barData={barData} />
                      </div>
-                    <BarChartText barData={barData} />
                    </div>
                 </div>
 
