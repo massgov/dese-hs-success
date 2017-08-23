@@ -34,7 +34,7 @@ class BlockChart extends React.Component{
           return (
                   <div>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>Passed All</Button>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed at least 1 class" value={1}>Failed Any</Button>
+                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed any classes" value={1}>Failed Any</Button>
                           <ChartSubTitle>4-Year Graduation Rate</ChartSubTitle>
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
