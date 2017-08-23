@@ -54,6 +54,9 @@ class Data extends React.Component{
                         <ChartSubTitle>4-year Graduation Rate</ChartSubTitle>
                         <GroupedBarChart barData={barData} />
                      </div>
+                     <hr/>
+                     <p>Passing all courses is important in all grades, and particularly important in 9th grade because … </p>
+                     <p>Core subjects are English/Language Arts, Math, Science and Social Studies</p>
                    </div>
                 </div>
 
