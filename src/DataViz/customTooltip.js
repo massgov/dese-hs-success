@@ -10,8 +10,8 @@ export default class CustomTooltip extends React.Component{
       const number = payload[0].payload.label.toLowerCase(),
             total_all = payload[0].payload.count_all,
             total_core = payload[1].payload.count_core,
-            all = payload[0].payload.all*100,
-            core = payload[1].payload.core*100,
+            all = payload[0].payload['All subjects']*100,
+            core = payload[1].payload['Core subjects']*100,
             color_all = payload[0].color,
             color_core = payload[1].color
 
