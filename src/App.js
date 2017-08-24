@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import Dashboard from './Dashboard'
 import Dashboard_9 from './Dashboard_9'
+import Dashboard10 from './Dashboard10'
 import Narrative from './Narrative'
 import Header from './Header'
 import Footer from './Footer'
@@ -28,7 +29,8 @@ const App = () => (
 
           <Switch>
             <Route path={`/9`} component={Dashboard_9}/>
-            <Route path={`/(10|11|12)`} component={Dashboard}/>
+            <Route path={`/(11|12)`} component={Dashboard}/>
+            <Route path={`/10`} component={Dashboard10}/>
             <Redirect exact from="/" to="/9"/>
           </Switch>
 
