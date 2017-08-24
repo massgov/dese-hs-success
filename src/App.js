@@ -3,7 +3,8 @@ import {
   Redirect,
   BrowserRouter as Router,
   Route,
-  NavLink
+  NavLink,
+  Switch
 } from 'react-router-dom';
 import Dashboard from './Dashboard'
 import Dashboard_9 from './Dashboard_9'
@@ -25,9 +26,12 @@ const App = () => (
             <li className="nav-item"><NavLink className="nav-link"         to={`/12`}>12th Grade</NavLink></li>
           </ul>
 
-          <Redirect from="/" to="/9"/>
+          <Switch>
             <Route path={`/9`} component={Dashboard_9}/>
             <Route path={`/(10|11|12)`} component={Dashboard}/>
+            <Redirect exact from="/" to="/9"/>
+          </Switch>
+
         </div>
         <Footer />
       </div>
