@@ -9,63 +9,60 @@ import { ChartSubTitle } from './ChartTitle'
 class BlockChart extends React.Component{
       constructor(props, context) {
         super(props, context);
-
+        const metric = [this.props.data[0].metric, this.props.data[1].metric];
+        const {Yes, No, count, description, array} = this.getData('0');
         this.state = {
-          Yes: 96,
-          No: 4,
-          count_student: 54038,
-          description: "passed all classes",
-          array: [],
-          selected: '0'
+          selected: '0',
+          Yes, No, count, description, array, metric
         };
-      };
-
-      componentDidMount = () => {
-        const {Yes, No} = this.state;
-        this.createArray(Yes, No)
       };
 
       isActive = (value) => {
         return 'btn '+((value===this.state.selected) ?'active':'default');
       };
       render = () =>  {
-          const {Yes, No, count_student, description, array} = this.state;
-
+          const {Yes, No, count, description, array, metric} = this.state;
+          console.log(metric)
           return (
                   <div>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} data-description="passed all classes" value={0}>Passed All</Button>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} data-description="failed any classes" value={1}>Failed Any</Button>
+                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{metric[0]}</Button>
+                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{metric[1]}</Button>
                           <ChartSubTitle>4-Year Graduation Rate</ChartSubTitle>
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
                           <Block array = {array} />
-                          <PersonLegend>1% out of <b>{count_student}</b> students who <b>{description}</b></PersonLegend>
+                          <PersonLegend>1% out of <b>{count}</b> students who <b>{description}</b></PersonLegend>
                       </div>
                   </div>
           );
       };
 
       handleClick = (event) =>  {
-        var target = event.target;
-        var value = event.target.value;
-        var data = this.props.data;
-        this.getData(target, data, value)
+        var selected = event.target.value;
+        this.setData(selected)
       };
 
-      getData = (target, dataset,i) => {
-        var Yes = dataset[i].rate_grad;
-        var No = 100-Yes;
-        var count_student = dataset[i].count_student;
-        var description = target.dataset.description;
-        this.createArray(Yes, No)
+      setData = (selected) => {
+        const getData = this.getData(selected);
         this.setState({
-            Yes: Yes,
-            No: No,
-            count_student: count_student,
-            description: description,
-            selected: i
+            Yes: getData.Yes,
+            No: getData.No,
+            count: getData.count,
+            description: getData.description,
+            selected: selected,
+            array: getData.array
         });
       };
+
+      getData = (selected) => {
+        const data = this.props.data;
+        const Yes = data[selected].rate;
+        const No = 100-Yes;
+        const count = data[selected].count;
+        const description = data[selected].description;
+        var array = this.createArray(Yes, No)
+        return { Yes, No, count, description, array}
+      }
 
       createArray = (Yes, No) => {
         var arr=[];
@@ -75,14 +72,8 @@ class BlockChart extends React.Component{
         for(var n=0; n<No; n++){
           arr.push('No');
         };
-        this.setState({
-            array: arr
-        });
+        return arr
       };
-
-
-
-
 
 }
 

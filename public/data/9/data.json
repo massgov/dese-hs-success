@@ -1,16 +1,16 @@
 [
   [
     {
-      "count_class": 0,
-      "count_student": 54038,
-      "count_grad": 51666,
-      "rate_grad": 96
+      "metric": "Passed All",
+      "description": "passed all courses in 9th grade",
+      "count": 54038,
+      "rate": 96
     },
     {
-      "count_class": 1,
-      "count_student": 12817,
-      "count_grad": 8157,
-      "rate_grad": 64
+      "metric": "Failed Any",
+      "description": "failed any courses in 9th grade",
+      "count": 12817,
+      "rate": 64
     }
   ],
   [

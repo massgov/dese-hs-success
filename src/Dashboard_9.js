@@ -42,6 +42,11 @@ class Data extends React.Component{
 
           render = () =>  {
               const {blockData, barData} = this.state;
+
+              if(blockData.length==0) {
+                return <div>Loading...</div>
+              }
+              
               return (
                 <div>
                   <div className="col-md-6 center">
