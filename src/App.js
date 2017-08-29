@@ -12,7 +12,9 @@ import Narrative from './Narrative'
 import Header from './Header'
 import Footer from './Footer'
 import Navigation from './Navigation'
+import DistrictDash from './DistrictDash'
 import './App.css'
+
 
 const App = () => (
     <Router>
@@ -29,6 +31,7 @@ const App = () => (
           </Switch>
 
         </div>
+        <DistrictDash />
         <Footer />
       </div>
 
