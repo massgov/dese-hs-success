@@ -21,14 +21,14 @@ class DistrictDash extends React.Component{
                     />
                   <div className="dashboard">
                       <div className="row">
-                          <DashCard />
-                          <DashCard />
-                          <DashCard />
+                          <DashCard Title='4-yr & 5-yr cohort graduation rate'/>
+                          <DashCard Title='Chronically absent rate'/>
+                          <DashCard Title='Out-of-school suspension rate'/>
                        </div>
                        <div className="row">
-                           <DashCard />
-                           <DashCard />
-                           <DashCard />
+                           <DashCard Title='MassCore Completion Rate'/>
+                           <DashCard Title='Jr. or Sr. taking AP/IB courses rate'/>
+                           <DashCard Title='College Enrollment & Persistent Rate'/>
                        </div>
                    </div>
                 </div>
