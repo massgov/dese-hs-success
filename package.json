@@ -8,6 +8,7 @@
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
+    "react-select": "^1.0.0-rc.5",
     "recharts": "^1.0.0-alpha.1"
   },
   "devDependencies": {
