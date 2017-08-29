@@ -56,18 +56,24 @@ class Data extends React.Component{
               }
 
               return (
-                <div>
-                  <div className="col-md-6 center">
-                    <ChartTitle>10th Grade Attendance Behavior</ChartTitle>
-                    <BlockChart data={blockData1}/>
-                      <Description>
-                        <p>Attendance and Behavior matters in all grades!</p>
-                      </Description>
+                <div className="container">
+                  <div className="row">
+                    <div className="col-md-6 center">
+                      <ChartTitle>10th Grade Attendance Behavior</ChartTitle>
+                      <BlockChart data={blockData1}/>
+                    </div>
+                    <div className="col-md-6 center">
+                      <ChartTitle>10th Grade Suspension Behavior</ChartTitle>
+                      <BlockChart data={blockData2}/>
+                    </div>
                   </div>
-                  <div className="col-md-6 center">
-                    <ChartTitle>10th Grade Suspension Behavior</ChartTitle>
-                    <BlockChart data={blockData2}/>
+                  <div className="row">
+                    <Description>
+                      <p>Attendance and Behavior matters in all grades!</p>
+                    </Description>
                   </div>
+
+
                 </div>
 
               );

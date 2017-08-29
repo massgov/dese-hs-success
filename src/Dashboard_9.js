@@ -49,7 +49,8 @@ class Data extends React.Component{
               }
 
               return (
-                <div>
+                <div className="container">
+                  <div className="row">
                   <div className="col-md-6 center">
                     <ChartTitle>9th Grade Course Performance</ChartTitle>
                     <BlockChart data={blockData}/>
@@ -62,10 +63,15 @@ class Data extends React.Component{
                      </div>
                      <hr/>
                      <p>Core subjects are English/Language Arts, Math, Science and Social Studies</p>
-                     <Description>
-                       <p>A student who passes all grade 9 courses is 14 times more likely to graduate high school in 4 years. </p>
-                       <p>If you have failed a course: find out if there is credit recovery or other options at your school to get back on track.</p>
-                     </Description>
+                     </div>
+                   </div>
+                        <Description>
+                          <p>A student who passes all grade 9 courses is 14 times more likely to graduate high school in 4 years.</p>
+                          <p>If you have failed a course: find out if there is credit recovery or other options at your school to get back on track.</p>
+                        </Description>
+                   <div className="row">
+
+
                    </div>
                 </div>
 
