@@ -6,13 +6,16 @@ class Content extends React.Component{
     return (
       <div>
         <p>
-          The first step to economic success is receiving a good education – and receiving a good education starts well before high school graduation and enrolling in college. Many factors contribute to an individual’s success in high school – specialized learning needs, aptitude, language, financial needs, family and community and it is often hard to find the “silver bullet” solution that works for everyone’s situation. However, there are a number of factors throughout a student’s secondary education journey that are important indicators for success in high school and beyond. We call these the “A-B-C’s of success:
-          A = attendance – make sure you show up,
-          B = Behavior – make sure you are present,
-          C = Curriculum – make sure you get prepared.
+          Education is a key component in building a young person’s economic future. According to the US Census, on average a high school dropout earns $20,241 annually, compared to $30,645 a year for the typical high school grad and $56,665 for someone with a Bachelor’s Degree.[1]   College not only helps students make more money, it can provide them more opportunity. There are increasingly fewer job opportunities for workers without any postsecondary degree and even less for high school dropouts.[2]
         </p>
-        <p>These indicators are key measures that students, families and schools can focus for high school success. Here we measure, success is defined as graduating high school on-time and making a successful transition from high school to postsecondary*.</p>
-        <p>To determine the most impactful indicators we followed a cohort of students through their 4-year journey in high school. Explore the indicators and outcomes throughout each high school year in the section below.</p>
+        <p>Getting through high school and preparing for college and careers can be challenging. There are some things students, families and schools can focus on to support a student’s success in  high school and beyond. Research shows that the ABC’s - Attendance, Behavior & Course Performance – are powerful predictors of success in high school and later. Help ensure that your students show up, are engaged in their school work and preparing for their future.</p>
+        <p>We followed a cohort of students through their 4-year journey in high school and  looked at the how students who met certain indicators compare to those who did not. It highlights that the ABCs do matter:
+          <ul>
+            <li>A student who passes all grade 9 courses is more likely to graduate high school in 4 years than a student who fails one or more courses in ninth grade.</li>
+            <li>Students who are chronically absent (miss more than 10% of days) are less likely graduate than those with high attendance.</li>
+            <li>Students who take higher level coursework (higher level math courses or Advanced Placement courses) are more likely to go to and stay in college.</li>
+          </ul>
+        </p>
       </div>
     );
   };
