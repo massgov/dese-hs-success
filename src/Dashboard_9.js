@@ -4,6 +4,7 @@ import BlockChart from './DataViz/BlockChart'
 import GroupedBarChart from './DataViz/GroupedBarChart'
 import BarChartText from './DataViz/BarChartText'
 import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
+import Description from './Description'
 
 class Data extends React.Component{
 
@@ -46,7 +47,7 @@ class Data extends React.Component{
               if(blockData.length==0) {
                 return <div>Loading...</div>
               }
-              
+
               return (
                 <div>
                   <div className="col-md-6 center">
@@ -60,8 +61,11 @@ class Data extends React.Component{
                         <GroupedBarChart barData={barData} />
                      </div>
                      <hr/>
-                     <p>Passing all courses is important in all grades, and particularly important in 9th grade because … </p>
                      <p>Core subjects are English/Language Arts, Math, Science and Social Studies</p>
+                     <Description>
+                       <p>A student who passes all grade 9 courses is 14 times more likely to graduate high school in 4 years. </p>
+                       <p>If you have failed a course: find out if there is credit recovery or other options at your school to get back on track.</p>
+                     </Description>
                    </div>
                 </div>
 

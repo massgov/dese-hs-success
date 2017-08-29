@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'
 import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
+import Description from './Description'
 
 class Data extends React.Component{
 
@@ -59,6 +60,9 @@ class Data extends React.Component{
                   <div className="col-md-6 center">
                     <ChartTitle>10th Grade Attendance Behavior</ChartTitle>
                     <BlockChart data={blockData1}/>
+                      <Description>
+                        <p>Attendance and Behavior matters in all grades!</p>
+                      </Description>
                   </div>
                   <div className="col-md-6 center">
                     <ChartTitle>10th Grade Suspension Behavior</ChartTitle>
