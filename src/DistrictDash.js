@@ -44,25 +44,22 @@ class DistrictDash extends React.Component{
             }
 
             const districts = _.keysIn(data)
-              console.log(districts)
             var options = [];
             for (var i=0; i<districts.length; i++){
               var option = { value: districts[i], label: districts[i] }
               options.push(option)
             }
 
-            console.log(options)
-
-
-
             function handleChange(val) {
-              console.log("Selected: " + JSON.stringify(val));
+              const selected = val.value
+              console.log(data)
+
             }
                           return (
                 <div className="container data-dash">
                   <DashSelect
                       options={options}
-                      onChange={handleChange}
+                      handleChange={handleChange}
                     />
                   <div className="dashboard">
                       <div className="row">
