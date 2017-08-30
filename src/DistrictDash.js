@@ -2,13 +2,58 @@ import React from 'react'
 import './DistrictDash.css'
 import DashCard from './DashViz/DashCard'
 import DashSelect from './DashViz/DashSelect'
+import axios from 'axios'
+// import Baby from 'babyparse'
+import _ from 'lodash'
 
 class DistrictDash extends React.Component{
+  constructor(props, context) {
+    super(props, context);
+
+    this.state = {
+      data: {}
+    }
+
+  }
+  componentWillMount = () =>  {
+          this.fetchData()
+      };
+
+  fetchData = () =>  {
+          var _this = this;
+          axios.all([
+                  axios.get('/data/district.json'),
+              ])
+              .then(axios.spread(function(result) {
+
+                // const parsed = Baby.parse(result.data, {
+                //   header: true,
+                // });
+                // const value = eval(parsed)
+                const data = _.mapKeys(result.data, "district")
+                  _this.setState({data})
+              }))
+              .catch((error) => {console.log(error)})
+
+      };
+
           render = () =>  {
-            var options = [
-              { value: 'one', label: 'One' },
-              { value: 'two', label: 'Two' }
-            ];
+            const {data} = this.state
+            if(data.length==0) {
+              return <div>Loading...</div>
+            }
+
+            const districts = _.keysIn(data)
+              console.log(districts)
+            var options = [];
+            for (var i=0; i<districts.length; i++){
+              var option = { value: districts[i], label: districts[i] }
+              options.push(option)
+            }
+
+            console.log(options)
+
+
 
             function handleChange(val) {
               console.log("Selected: " + JSON.stringify(val));
