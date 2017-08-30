@@ -1,0 +1,142 @@
+[
+  {
+    "yr": "2015",
+    "district": "MA",
+    "grad_rate": "7",
+    "absent": "5",
+    "suspension": "7",
+    "masscore": "2",
+    "ap": "3",
+    "enroll": "6"
+  },
+  {
+    "yr": "2016",
+    "district": "MA",
+    "grad_rate": "9",
+    "absent": "4",
+    "suspension": "1",
+    "masscore": "3",
+    "ap": "5",
+    "enroll": "1"
+  },
+  {
+    "yr": "2015",
+    "district": "Allston",
+    "grad_rate": "7",
+    "absent": "7",
+    "suspension": "8",
+    "masscore": "1",
+    "ap": "10",
+    "enroll": "5"
+  },
+  {
+    "yr": "2016",
+    "district": "Allston",
+    "grad_rate": "6",
+    "absent": "8",
+    "suspension": "0",
+    "masscore": "1",
+    "ap": "2",
+    "enroll": "3"
+  },
+  {
+    "yr": "2015",
+    "district": "Arlington",
+    "grad_rate": "4",
+    "absent": "8",
+    "suspension": "4",
+    "masscore": "1",
+    "ap": "5",
+    "enroll": "10"
+  },
+  {
+    "yr": "2016",
+    "district": "Arlington",
+    "grad_rate": "1",
+    "absent": "2",
+    "suspension": "1",
+    "masscore": "4",
+    "ap": "1",
+    "enroll": "10"
+  },
+  {
+    "yr": "2015",
+    "district": "Beverly",
+    "grad_rate": "4",
+    "absent": "5",
+    "suspension": "5",
+    "masscore": "5",
+    "ap": "1",
+    "enroll": "3"
+  },
+  {
+    "yr": "2016",
+    "district": "Beverly",
+    "grad_rate": "6",
+    "absent": "7",
+    "suspension": "4",
+    "masscore": "9",
+    "ap": "6",
+    "enroll": "0"
+  },
+  {
+    "yr": "2015",
+    "district": "Boston",
+    "grad_rate": "9",
+    "absent": "6",
+    "suspension": "8",
+    "masscore": "2",
+    "ap": "0",
+    "enroll": "4"
+  },
+  {
+    "yr": "2016",
+    "district": "Boston",
+    "grad_rate": "2",
+    "absent": "0",
+    "suspension": "6",
+    "masscore": "4",
+    "ap": "10",
+    "enroll": "10"
+  },
+  {
+    "yr": "2015",
+    "district": "Chelsea",
+    "grad_rate": "10",
+    "absent": "6",
+    "suspension": "8",
+    "masscore": "2",
+    "ap": "5",
+    "enroll": "3"
+  },
+  {
+    "yr": "2016",
+    "district": "Chelsea",
+    "grad_rate": "4",
+    "absent": "1",
+    "suspension": "2",
+    "masscore": "9",
+    "ap": "8",
+    "enroll": "2"
+  },
+  {
+    "yr": "2015",
+    "district": "Falmouth",
+    "grad_rate": "3",
+    "absent": "6",
+    "suspension": "5",
+    "masscore": "3",
+    "ap": "10",
+    "enroll": "5"
+  },
+  {
+    "yr": "2016",
+    "district": "Falmouth",
+    "grad_rate": "7",
+    "absent": "4",
+    "suspension": "1",
+    "masscore": "10",
+    "ap": "4",
+    "enroll": "4"
+  }
+]
