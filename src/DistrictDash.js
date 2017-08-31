@@ -42,7 +42,7 @@ class DistrictDash extends React.Component{
             const {data, selected} = this.state
 
             const distData = data[`${selected}`]
-            console.log(distData)
+            console.log(data)
             if(data.length==0) {
               return <div>Loading...</div>
             }
@@ -63,8 +63,8 @@ class DistrictDash extends React.Component{
                     />
                   <div className="dashboard">
                       <div className="row">
-                          <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="Gradper"/>
-                          <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="Gradper"/>
+                          <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="Gradper_4yr"/>
+                          <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="Gradper_5yr"/>
                           <DashCard Title='MassCore Completion Rate' data={distData} dataKey="MCorePer"/>
 
                        </div>

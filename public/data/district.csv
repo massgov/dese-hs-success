@@ -1,4 +1,4 @@
-org8code_year,Yr,org4code,org8code,DistName,Cohort_Totl,Gradper,Cohort_Totl,Gradper,MCoreNum,MCorePer,ChronicAbsNum,ChronicAbsRate,PSEnr,PSPersAny2nd,PSEnrperc,PSPersAny2ndperc,Out_Susp_Num,Out_Susp_Pct,PassTotl,Pass_Per,APIBcourse,APIBcourse_per
+org8code_year,Yr,org4code,org8code,DistName,Cohort_Totl,Gradper_4yr,Cohort_Totl,Gradper_5yr,MCoreNum,MCorePer,ChronicAbsNum,ChronicAbsRate,PSEnr,PSPersAny2nd,PSEnrperc,PSPersAny2ndperc,Out_Susp_Num,Out_Susp_Pct,PassTotl,Pass_Per,APIBcourse,APIBcourse_per
 00000000_2011,2011,0,0,State,74307,83.4,74307,86.3,Null,Null,Null,Null,43580,37855,67.43207279,58.57368323,Null,Null,Null,Null,Null,Null
 00000000_2012,2012,0,0,State,73483,84.7,73483,87.5,44571,68.4,58841,19.4,44034,38756,67.74565763,59.6255327,Null,Null,56791,77,39030,28
 00000000_2013,2013,0,0,State,74537,85,74537,87.7,46601,70.2,56452,18.6,45938,40368,69.28285951,60.8822864,0,0,58687,78.1,42120,30
