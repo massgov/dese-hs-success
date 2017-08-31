@@ -3,8 +3,8 @@ import {ResponsiveContainer,LineChart, Line, XAxis, YAxis, CartesianGrid, Toolti
 
 const SimpleLineChart = React.createClass({
 	render () {
-    const {data} = this.props
-    console.log(data)
+    const {data, dataKey} = this.props
+    console.log(dataKey)
   	return (
       <ResponsiveContainer maxHeight={230}>
       	<LineChart data={data}
@@ -14,7 +14,7 @@ const SimpleLineChart = React.createClass({
          <CartesianGrid strokeDasharray="3 3"/>
          <Tooltip/>
          <Legend />
-         <Line type="monotone" dataKey="Cohort_Totl" stroke="#8884d8" activeDot={{r: 8}}/>
+         <Line type="monotone" dataKey={dataKey} stroke="#8884d8" activeDot={{r: 5}}/>
         </LineChart>
       </ResponsiveContainer>
     );

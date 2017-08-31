@@ -63,14 +63,21 @@ class DistrictDash extends React.Component{
                     />
                   <div className="dashboard">
                       <div className="row">
-                          <DashCard Title='4-yr & 5-yr cohort graduation rate' data={distData}/>
-                          <DashCard Title='Chronically absent rate' data={distData}/>
-                          <DashCard Title='Out-of-school suspension rate' data={distData}/>
+                          <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="Gradper"/>
+                          <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="Gradper"/>
+                          <DashCard Title='MassCore Completion Rate' data={distData} dataKey="MCorePer"/>
+
                        </div>
                        <div className="row">
-                           <DashCard Title='MassCore Completion Rate' data={distData}/>
-                           <DashCard Title='Jr. or Sr. taking AP/IB courses rate' data={distData}/>
-                           <DashCard Title='College Enrollment & Persistent Rate' data={distData}/>
+                         <DashCard Title='Chronically Absent Rate' data={distData} dataKey="ChronicAbsRate"/>
+                         <DashCard Title='Out-of-school Suspension Rate' data={distData} dataKey="Out_Susp_Pct"/>
+                          <DashCard Title='Passed All 9th-Grade Courses Rate' data={distData} dataKey="Pass_Per"/>
+
+                       </div>
+                       <div className="row">
+                           <DashCard Title='Jr. or Sr. Taking AP/IB Courses Rate' data={distData} dataKey="APIBcourse_per"/>
+                           <DashCard Title='College Enrollment Rate' data={distData} dataKey="PSEnrperc"/>
+                           <DashCard Title='College Persistent Rate' data={distData} dataKey="PSPersAny2ndperc"/>
                        </div>
                    </div>
                 </div>
