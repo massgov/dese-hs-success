@@ -4,13 +4,13 @@ import LineChart from './LineChart'
 import './DashCard.css'
 
 
-const DataCard =({Title}) => {
+const DataCard =({Title, data}) => {
     return(
       <div className="col-md-4">
           <div className="dash-card">
             <h4>{Title}</h4>
             <hr />
-            <LineChart />
+            <LineChart data={data}/>
           </div>
       </div>
     )

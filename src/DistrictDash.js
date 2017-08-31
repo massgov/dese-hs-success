@@ -11,7 +11,8 @@ class DistrictDash extends React.Component{
     super(props, context);
 
     this.state = {
-      data: {}
+      data: {},
+      selected: 'State'
     }
 
   }
@@ -26,19 +27,22 @@ class DistrictDash extends React.Component{
               ])
               .then(axios.spread(function(result) {
 
-                // const parsed = Baby.parse(result.data, {
-                //   header: true,
-                // });
-                // const value = eval(parsed)
-                const data = _.mapKeys(result.data, "district")
-                  _this.setState({data})
+              const data = _.groupBy(result.data, 'DistName')
+                _this.setState({data})
               }))
               .catch((error) => {console.log(error)})
 
       };
 
+      handleChange = (val) => {
+        const selected = val.value
+        this.setState({selected})
+      };
           render = () =>  {
-            const {data} = this.state
+            const {data, selected} = this.state
+
+            const distData = data[`${selected}`]
+            console.log(distData)
             if(data.length==0) {
               return <div>Loading...</div>
             }
@@ -50,27 +54,23 @@ class DistrictDash extends React.Component{
               options.push(option)
             }
 
-            function handleChange(val) {
-              const selected = val.value
-              console.log(data)
 
-            }
-                          return (
+            return (
                 <div className="container data-dash">
                   <DashSelect
                       options={options}
-                      handleChange={handleChange}
+                      handleChange={this.handleChange}
                     />
                   <div className="dashboard">
                       <div className="row">
-                          <DashCard Title='4-yr & 5-yr cohort graduation rate'/>
-                          <DashCard Title='Chronically absent rate'/>
-                          <DashCard Title='Out-of-school suspension rate'/>
+                          <DashCard Title='4-yr & 5-yr cohort graduation rate' data={distData}/>
+                          <DashCard Title='Chronically absent rate' data={distData}/>
+                          <DashCard Title='Out-of-school suspension rate' data={distData}/>
                        </div>
                        <div className="row">
-                           <DashCard Title='MassCore Completion Rate'/>
-                           <DashCard Title='Jr. or Sr. taking AP/IB courses rate'/>
-                           <DashCard Title='College Enrollment & Persistent Rate'/>
+                           <DashCard Title='MassCore Completion Rate' data={distData}/>
+                           <DashCard Title='Jr. or Sr. taking AP/IB courses rate' data={distData}/>
+                           <DashCard Title='College Enrollment & Persistent Rate' data={distData}/>
                        </div>
                    </div>
                 </div>
