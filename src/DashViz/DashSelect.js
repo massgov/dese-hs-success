@@ -9,13 +9,13 @@ class DashSelect extends React.Component{
     super(props, context);
   };
   render() {
-    const {options, handleChange} = this.props
+    const {options, handleChange, value} = this.props
     return(
       <div className="dash-select">
         <p>Explore your district: </p>
         <Select
             name="select-district"
-            value="one"
+            value={value}
             options={options}
             onChange={handleChange}
           />

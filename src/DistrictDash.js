@@ -60,6 +60,7 @@ class DistrictDash extends React.Component{
                   <DashSelect
                       options={options}
                       handleChange={this.handleChange}
+                      value={selected}
                     />
                   <div className="dashboard">
                       <div className="row">
