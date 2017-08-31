@@ -51,27 +51,30 @@ class Data extends React.Component{
               return (
                 <div className="container">
                   <div className="row">
+                    <div className="col-md-12 center">
+                        <ChartTitle>*9th Grade Section Header*</ChartTitle>
+                        <hr />
+                    </div>
+                  </div>
+                  <div className="row">
                   <div className="col-md-6 center">
-                    <ChartTitle>9th Grade Course Performance</ChartTitle>
+                    <ChartSubTitle>4-Year Graduation Rate by Course Performance</ChartSubTitle>
                     <BlockChart data={blockData}/>
                   </div>
                   <div className="col-md-6">
                     <div className='center'>
-                        <ChartTitle>9th Grade Course Failure</ChartTitle>
-                        <ChartSubTitle>4-year Graduation Rate</ChartSubTitle>
+                        <ChartSubTitle>4-year Graduation Rate by Course Failure</ChartSubTitle>
                         <GroupedBarChart barData={barData} />
                      </div>
                      <hr/>
                      <p>Core subjects are English/Language Arts, Math, Science and Social Studies</p>
                      </div>
                    </div>
-                        <Description>
-                          <p>A student who passes all grade 9 courses is 14 times more likely to graduate high school in 4 years.</p>
-                          <p>If you have failed a course: find out if there is credit recovery or other options at your school to get back on track.</p>
-                        </Description>
                    <div className="row">
-
-
+                     <Description>
+                       <p>A student who passes all grade 9 courses is 14 times more likely to graduate high school in 4 years.</p>
+                       <p>If you have failed a course: find out if there is credit recovery or other options at your school to get back on track.</p>
+                     </Description>
                    </div>
                 </div>
 

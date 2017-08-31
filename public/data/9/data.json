@@ -1,13 +1,13 @@
 [
   [
     {
-      "metric": "Passed All",
+      "metric": "Passed All Courses",
       "description": "passed all courses in 9th grade",
       "count": 54038,
       "rate": 96
     },
     {
-      "metric": "Failed Any",
+      "metric": "Failed Any Courses",
       "description": "failed any courses in 9th grade",
       "count": 12817,
       "rate": 64

@@ -6,9 +6,9 @@ import CustomTooltip from './customTooltip'
 
 const GroupedBarChart = ({barData}) => {
   return (
-                     <ResponsiveContainer minHeight={400}>
+                     <ResponsiveContainer minHeight={450}>
                        <BarChart data={barData} margin={{top: 20, right: 20, left: 10, bottom: 20}}>
-                            <XAxis dataKey="label" label={<AxisLabel x={30} y={80} width={540} height={300}>Number of courses failed in 9th grade</AxisLabel>} keyfontSize = "1em"/>
+                            <XAxis dataKey="label" label={<AxisLabel x={30} y={80} width={540} height={350}>Number of courses failed in 9th grade</AxisLabel>} keyfontSize = "1em"/>
                             <YAxis label={<AxisLabel axisType='yAxis' x={25} y={180} width={0} height={0}>4-Year Graduation Rate</AxisLabel>}  fontSize = "1em" tickFormatter={toPercent}/>
                             <CartesianGrid strokeDasharray="3 3"/>
                             <Tooltip content={<CustomTooltip/>}/>

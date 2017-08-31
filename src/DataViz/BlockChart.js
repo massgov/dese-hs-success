@@ -27,7 +27,6 @@ class BlockChart extends React.Component{
                   <div>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{metric[0]}</Button>
                           <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{metric[1]}</Button>
-                          <ChartSubTitle>4-Year Graduation Rate</ChartSubTitle>
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
                           <Block array = {array} />

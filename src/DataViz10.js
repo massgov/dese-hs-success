@@ -58,12 +58,18 @@ class Data extends React.Component{
               return (
                 <div className="container">
                   <div className="row">
+                    <div className="col-md-12 center">
+                        <ChartTitle>*10th Grade Section Header*</ChartTitle>
+                        <hr />
+                    </div>
+                  </div>
+                  <div className="row">
                     <div className="col-md-6 center">
-                      <ChartTitle>10th Grade Attendance Behavior</ChartTitle>
+                      <ChartSubTitle>4-year Graduation Rate by Attendance Behavior </ChartSubTitle>
                       <BlockChart data={blockData1}/>
                     </div>
                     <div className="col-md-6 center">
-                      <ChartTitle>10th Grade Suspension Behavior</ChartTitle>
+                      <ChartSubTitle>4-year Graduation Rate by Suspension Behavior</ChartSubTitle>
                       <BlockChart data={blockData2}/>
                     </div>
                   </div>

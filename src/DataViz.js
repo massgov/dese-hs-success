@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import BlockChartDuo from './DataViz/BlockChartDuo'
+import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 
 class Data extends React.Component{
 
@@ -51,9 +52,18 @@ class Data extends React.Component{
               }
 
               return (
-                <div>
-                  <BlockChartDuo data={data} url={url}/>
+                <div className="container">
+                  <div className="row">
+                    <div className="col-md-12 center">
+                        <ChartTitle>*{url}th Grade Section Header*</ChartTitle>
+                        <hr />
+                    </div>
+                  </div>
+                  <div className="container">
+                      <BlockChartDuo data={data} url={url}/>
+                  </div>
                 </div>
+
 
               );
           };
