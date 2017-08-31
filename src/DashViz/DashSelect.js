@@ -12,7 +12,7 @@ class DashSelect extends React.Component{
     const {options, handleChange} = this.props
     return(
       <div className="dash-select">
-        <p>Find your district: </p>
+        <p>Explore your district: </p>
         <Select
             name="select-district"
             value="one"
