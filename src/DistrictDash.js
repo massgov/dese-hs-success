@@ -35,8 +35,13 @@ class DistrictDash extends React.Component{
       };
 
       handleChange = (val) => {
-        const selected = val.value
-        this.setState({selected})
+        if(val==null) {
+          this.setState({selected: 'State'})
+        }else{
+          const selected = val.value
+          this.setState({selected})
+        }
+
       };
           render = () =>  {
             const {data, selected} = this.state
