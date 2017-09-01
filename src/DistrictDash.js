@@ -41,20 +41,26 @@ class DistrictDash extends React.Component{
           const selected = val.value
           this.setState({selected})
         }
-
       };
+
+      handleClick = (event) =>  {
+        var selected = event.target.value;
+        this.setState({selected})
+      };
+
+
           render = () =>  {
             const {data, selected} = this.state
 
             const distData = data[`${selected}`]
-            console.log(data)
+            console.log(selected)
             if(data.length==0) {
               return <div>Loading...</div>
             }
 
             const districts = _.keysIn(data)
             var options = [];
-            for (var i=0; i<districts.length; i++){
+            for (var i=1; i<districts.length; i++){
               var option = { value: districts[i], label: districts[i] }
               options.push(option)
             }
@@ -62,12 +68,13 @@ class DistrictDash extends React.Component{
 
             return (
                 <div className="container data-dash">
-                  <DashSelect
-                      options={options}
-                      handleChange={this.handleChange}
-                      value={selected}
-                    />
-                  <div className="dashboard">
+                    <DashSelect
+                        options={options}
+                        handleChange={this.handleChange}
+                        handleClick={this.handleClick}
+                        value={selected}
+                      />
+                    <div className="container dashboard">
                       <div className="row">
                           <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="Gradper_4yr"/>
                           <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="Gradper_5yr"/>
