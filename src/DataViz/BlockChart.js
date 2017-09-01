@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+import Btn from '../Button'
 import './BlockChart.css'
 import PersonLegend from './PersonLegend'
 import BlockTable from './BlockTable'
@@ -17,16 +17,15 @@ class BlockChart extends React.Component{
         };
       };
 
-      isActive = (value) => {
-        return 'btn '+((value===this.state.selected) ?'active':'default');
-      };
+
       render = () =>  {
-          const {Yes, No, count, description, array, metric} = this.state;
+          const {Yes, No, count, description, array, metric, selected} = this.state;
+
           console.log(metric)
           return (
                   <div>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{metric[0]}</Button>
-                          <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{metric[1]}</Button>
+                          <Btn handleClick={this.handleClick} value={'0'} selected={selected}>{metric[0]}</Btn>
+                          <Btn handleClick={this.handleClick} value={'1'} selected={selected}>{metric[1]}</Btn>
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
                           <Block array = {array} />
