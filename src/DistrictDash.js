@@ -76,21 +76,21 @@ class DistrictDash extends React.Component{
                       />
                     <div className="container dashboard">
                       <div className="row">
-                          <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="Gradper_4yr"/>
-                          <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="Gradper_5yr"/>
-                          <DashCard Title='MassCore Completion Rate' data={distData} dataKey="MCorePer"/>
+                          <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="4 Year Graduation Percent"/>
+                          <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="5 Year Graduation Percent"/>
+                          <DashCard Title='MassCore Completion Rate' data={distData} dataKey="Mass Core Completion Percent"/>
 
                        </div>
                        <div className="row">
-                         <DashCard Title='Chronically Absent Rate' data={distData} dataKey="ChronicAbsRate"/>
-                         <DashCard Title='Out-of-school Suspension Rate' data={distData} dataKey="Out_Susp_Pct"/>
-                          <DashCard Title='Passed All 9th-Grade Courses Rate' data={distData} dataKey="Pass_Per"/>
+                         <DashCard Title='Chronically Absent Rate' data={distData} dataKey="Chronic Absence Percent"/>
+                         <DashCard Title='Out-of-school Suspension Rate' data={distData} dataKey="Out of School Suspension Percent"/>
+                          <DashCard Title='Passed All 9th-Grade Courses Rate' data={distData} dataKey="Passed All 9th Grade Courses Percent"/>
 
                        </div>
                        <div className="row">
-                           <DashCard Title='Jr. or Sr. Taking AP/IB Courses Rate' data={distData} dataKey="APIBcourse_per"/>
-                           <DashCard Title='College Enrollment Rate' data={distData} dataKey="PSEnrperc"/>
-                           <DashCard Title='College Persistent Rate' data={distData} dataKey="PSPersAny2ndperc"/>
+                           <DashCard Title='Jr. or Sr. Taking AP/IB Courses Rate' data={distData} dataKey="Enrolled in AP/IB Course Percent"/>
+                           <DashCard Title='College Enrollment Rate' data={distData} dataKey="College Enrollment Percent"/>
+                           <DashCard Title='College Persistent Rate' data={distData} dataKey="College Persistence Percent"/>
                        </div>
                    </div>
                 </div>
