@@ -1,4 +1,6 @@
 import React from 'react'
+import FootNoteLink from './FootNoteLink'
+
 
 class Content extends React.Component{
 
@@ -6,7 +8,7 @@ class Content extends React.Component{
     return (
       <div>
         <p>
-          Education is a key component in building a young person’s economic future. According to the US Census, on average a high school dropout earns $20,241 annually, compared to $30,645 a year for the typical high school grad and $56,665 for someone with a Bachelor’s Degree.[1]   College not only helps students make more money, it can provide them more opportunity. There are increasingly fewer job opportunities for workers without any postsecondary degree and even less for high school dropouts.[2]
+          Education is a key component in building a young person’s economic future. According to the US Census, on average a high school dropout earns $20,241 annually, compared to $30,645 a year for the typical high school grad and $56,665 for someone with a Bachelor’s Degree.<FootNoteLink index={1} />   College not only helps students make more money, it can provide them more opportunity. There are increasingly fewer job opportunities for workers without any postsecondary degree and even less for high school dropouts.<FootNoteLink index={2} />
         </p>
         <p>Getting through high school and preparing for college and careers can be challenging. There are some things students, families and schools can focus on to support a student’s success in  high school and beyond. Research shows that the ABC’s - Attendance, Behavior & Course Performance – are powerful predictors of success in high school and later. Help ensure that your students show up, are engaged in their school work and preparing for their future.</p>
         <p>We followed a cohort of students through their 4-year journey in high school and  looked at the how students who met certain indicators compare to those who did not. It highlights that the ABCs do matter:</p>
