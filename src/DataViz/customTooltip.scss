@@ -1,0 +1,9 @@
+@import '_variables.scss';
+
+.custom-tooltip {
+  background-color: $color-white;
+  padding:10px;
+  border: 1px solid $color-gray;
+  text-align: left;
+  max-width: 330px; 
+}

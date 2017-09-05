@@ -1,0 +1,54 @@
+@import '_variables.scss';
+
+.center{
+  text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.table {
+  th {
+      text-align: center;
+  }
+  td {
+      width: 50%;
+  }
+}
+
+
+.table_blockchart {
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+}
+
+.block-chart {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+}
+
+.block {
+    -webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
+    mask: url(/images/person.svg) no-repeat 50% 50%;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    float: left;
+    height: 9%;
+    width: 9%;
+    margin: 0.5%;
+    position: relative;
+    opacity: 1;
+}
+
+.color_Yes {
+    color: $color-white;
+    background: $color-primary-green;
+}
+
+.color_No {
+    color: $color-black;
+    background: $color-gray-light;
+}
