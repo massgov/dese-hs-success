@@ -11,6 +11,7 @@ import DataViz10 from './DataViz10'
 import Narrative from './Narrative'
 import Header from './Header'
 import Footer from './Footer'
+import FootNote from './FootNote'
 import Navigation from './Navigation'
 import DistrictDash from './DistrictDash'
 import './App.css'
@@ -33,6 +34,7 @@ const App = () => (
         </div>
         <DistrictDash />
         <Footer />
+        <FootNote />
       </div>
 
     </Router>

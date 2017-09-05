@@ -1,0 +1,38 @@
+@import '_variables.scss';
+
+
+@mixin dark-view {
+    a {
+        color: $color-white;
+        text-decoration: underline;
+        &:active,
+        &:visited {
+            color: $color-white;
+        }
+        &:hover,
+        &:focus {
+            color: $color-white;
+        }
+    }
+    color: $color-white;
+    padding: 30px;
+}
+
+.sources-section {
+    @include dark-view;
+    background-color: $color-black;
+}
+
+.page-scroll sup {
+    font-size: 60%;
+    color: $color-primary-darker;
+}
+
+.sources-section li {
+    background: transparent;
+    transition: background 250ms ease-in-out;
+}
+
+.sources-section li:target {
+    background: rgba(255, 255, 255, 0.3);
+}
