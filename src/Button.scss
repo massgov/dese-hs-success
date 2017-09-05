@@ -1,0 +1,43 @@
+@import '_variables.scss';
+
+.disableClick {
+    pointer-events: none;
+    color: $color-gray;
+    border-color: $color-gray;
+}
+
+.btn-primary {
+    color: $color-primary-blue;
+    background-color: $color-white;
+    border-color: $color-primary-blue;
+    margin: 6px 3px;
+    padding: 10px 20px;
+    border-radius: 0;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: $color-white;
+    background-color: $color-primary-blue;
+    border-color: $color-primary-blue;
+}
+
+.btn-primary:hover {
+    color: $color-white;
+    background-color: $color-primary-blue;
+    border-color: $color-primary-blue;
+}
+
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: $color-white;
+    background-color: $color-primary-blue;
+    border-color: $color-primary-blue;
+}
