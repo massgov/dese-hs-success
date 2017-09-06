@@ -2,21 +2,24 @@ import React from 'react'
 import {Surface, Symbols} from 'recharts'
 import FootNoteLink from '../FootNoteLink'
 
-const customLegend = (props) => {
-  const { payload } = props
-  const dataKey = [payload[0].dataKey, payload[1].dataKey]
-  const color = [payload[0].color, payload[1].color]
+const LegendItem = ({ index, payload }) => {
+  const dataKey = payload[index].dataKey
+  const color = payload[index].color
+  return(
+    <span>
+      <Surface width={10} height={10}>
+        <Symbols cx={5} cy={5} type="square" size={70} fill={color} />
+      </Surface>
+      <span>{dataKey}</span>
+    </span>
+  )
+}
 
+const customLegend = ({ payload }) => {
       return (
         <div className="customized-legend">
-          <Surface width={10} height={10} viewBox="0 0 10 10">
-            <Symbols cx={5} cy={5} type="square" size={50} fill={color[0]} />
-          </Surface>
-          <span>{dataKey[0]} </span>
-          <Surface width={10} height={10} viewBox="0 0 10 10">
-            <Symbols cx={5} cy={5} type="square" size={50} fill={color[1]} />
-          </Surface>
-          <span>{dataKey[1]}</span>
+          <LegendItem index={0} payload={payload}/> &nbsp;
+          <LegendItem index={1} payload={payload}/>
           <FootNoteLink index={3} />
         </div>
       )
