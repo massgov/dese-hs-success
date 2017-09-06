@@ -67,7 +67,6 @@ class Data extends React.Component{
                         <GroupedBarChart barData={barData} />
                      </div>
                      <hr/>
-                     <p>Core subjects are English/Language Arts, Math, Science and Social Studies</p>
                      </div>
                    </div>
                    <div className="row">
