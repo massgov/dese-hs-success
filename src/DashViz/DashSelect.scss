@@ -2,10 +2,49 @@
 
 .dash-select {
   background-color:$color-gray;
-  padding:20px 20%;
+  padding:20px 5%;
   margin: 0;
 }
 
 .dash-select p {
   color: $color-white;
+  margin-bottom: 0;
+  display: block;
+}
+
+.Select {
+  display: inline-table;
+  width: 100%;
+}
+
+.Select .Select-control {
+  border-radius: 0;
+  padding: 2px;
+}
+
+.Select-placeholder, .Select--single > .Select-control .Select-value {
+  padding-top: 3px;
+}
+
+.btn-primary {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .Select {
+    width: 60%;
+  }
+  .btn-primary {
+    margin-left: 3px;
+  }
+}
+
+// @media (min-width: 992px) {
+//
+// }
+
+@media (min-width: 1200px) {
+  .dash-select p {
+    display: inline;
+  }
 }

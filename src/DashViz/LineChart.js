@@ -5,7 +5,6 @@ import {ResponsiveContainer,LineChart, Line, XAxis, YAxis, Tooltip, Text} from '
 const SimpleLineChart = React.createClass({
 	render () {
     const {data, dataKey} = this.props
-    console.log(dataKey)
   	return (
       <ResponsiveContainer maxHeight={200}>
       	<LineChart data={data}
