@@ -21,6 +21,7 @@
 .sources-section {
     @include dark-view;
     background-color: $color-black;
+    padding: 25px 0;
 }
 
 .page-scroll sup {
