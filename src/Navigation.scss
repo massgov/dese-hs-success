@@ -86,10 +86,21 @@
   .navbar {
     padding: 0;
   }
+  .navbar-fixed-top {
+    position: relative;
+  }
   .navbar-collapse{
     display: inline;
     padding: 0;
   }
   #current-section {
     display: none; }
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    margin-top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
