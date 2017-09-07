@@ -1,6 +1,13 @@
 import React from 'react'
-import {ResponsiveContainer,LineChart, Line, XAxis, YAxis, Tooltip, Text} from 'recharts'
+import {ResponsiveContainer,LineChart, Line, XAxis, YAxis, Tooltip, Text, Dot} from 'recharts'
 
+const CustomActiveDot = (props) => {
+	const { index, cx, cy, fill, r, value} = props
+	console.log(index)
+	return (
+		<Dot cx={cx} cy={cy} r={r} fill={fill} />
+	)
+}
 
 const SimpleLineChart = React.createClass({
 	render () {
@@ -12,7 +19,7 @@ const SimpleLineChart = React.createClass({
          <XAxis dataKey="Yr"/>
          <YAxis/>
          <Tooltip/>
-         <Line type="monotone" dataKey={dataKey} stroke="#8884d8" activeDot={{r: 5}}/>
+         <Line type="monotone" dataKey={dataKey} stroke="#14558f" activeDot={<CustomActiveDot />} animationDuration={500}/>
         </LineChart>
       </ResponsiveContainer>
     );
