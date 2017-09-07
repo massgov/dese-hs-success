@@ -33,8 +33,11 @@ class Navigation extends React.Component {
 
   render() {
     const { grade, value } = this.state
+    const { sticky } = this.props
+    var fixed
+    if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
     return (
-        <nav className="container navbar navbar-inverse" role="navigation" id="navigation">
+        <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
               <span className="navbar-brand" id="current-section">{grade}</span>
               <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
