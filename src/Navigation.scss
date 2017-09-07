@@ -67,7 +67,7 @@
   &.active {
     @include active-menu
   }
-  &:hover, &:active, &:focus{
+  &:hover, &:active{
     @include active-menu
   }
 }
