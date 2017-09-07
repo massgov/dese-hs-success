@@ -1,5 +1,5 @@
 import React from 'react'
-import Btn from '../Button'
+import Btn from '../Btn'
 import './BlockChart.css'
 import PersonLegend from './PersonLegend'
 import BlockTable from './BlockTable'

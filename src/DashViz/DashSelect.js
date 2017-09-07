@@ -2,7 +2,7 @@ import React from 'react'
 import './DashSelect.css'
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-import Btn from '../Button'
+import Btn from '../Btn'
 
 
 class DashSelect extends React.Component{
