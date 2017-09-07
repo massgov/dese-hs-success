@@ -4,6 +4,7 @@
 @mixin active-state {
   background-color: transparent;
   color: $color-white;
+  border-radius: 0;
   border-bottom: 3px solid $color-primary-yellow;
 }
 
@@ -21,6 +22,12 @@
 }
 
 .navbar-collapse{
+  display: none;
+  padding: 0;
+}
+
+.navbar-expand{
+  display: block;
   padding: 0;
 }
 
@@ -55,9 +62,6 @@
 
 .navbar-inverse .navbar-toggle {
   border: 1px solid $color-white;
-}
-
-.btn-inverse{
   color: $color-white;
   border-radius: 0;
   &.active {
@@ -82,26 +86,10 @@
   .navbar {
     padding: 0;
   }
-  .navbar-text {
-    float: left;
-    margin-right: 15px;
-    margin-left: 15px; }
+  .navbar-collapse{
+    display: inline;
+    padding: 0;
+  }
   #current-section {
     display: none; }
-}
-
-@media all and (min-width: 991px) {
-  #current-section {
-    display: auto; }
-  .neg-space-col-md {
-    margin-top: -30px; }
-  #top {
-    padding: 0; }
-}
-
-@media all and (min-width: 1440px) {
-  #current-section {
-    display: none; }
-  #top {
-    padding: 50px 0 0; }
 }
