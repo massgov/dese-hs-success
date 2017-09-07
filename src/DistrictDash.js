@@ -74,7 +74,7 @@ class DistrictDash extends React.Component{
                         handleClick={this.handleClick}
                         value={selected}
                       />
-                    <div className="container dashboard">
+                    <div className="dashboard">
                       <div className="row">
                           <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="4 Year Graduation Percent"/>
                           <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="5 Year Graduation Percent"/>
