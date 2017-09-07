@@ -22,9 +22,9 @@ class Content extends React.Component{
           <div className="col-md-12">
             <p>We followed a cohort of students through their 4-year journey in high school and  looked at the how students who met certain indicators compare to those who did not. It highlights that the ABCs do matter:</p>
             <ul>
-              <li><i className="glyphicon glyphicon-education color-primary" aria-hidden="true" /> A student who passes all grade 9 courses is more likely to graduate high school in 4 years than a student who fails one or more courses in ninth grade.</li>
-              <li><i className="glyphicon glyphicon-education color-primary" aria-hidden="true" /> Students who are chronically absent (miss more than 10% of days) are less likely graduate than those with high attendance.</li>
-              <li><i className="glyphicon glyphicon-education color-primary" aria-hidden="true" /> Students who take higher level coursework (higher level math courses or Advanced Placement courses) are more likely to go to and stay in college.</li>
+              <li><i className="glyphicon glyphicon-education list-icon" aria-hidden="true" /> A student who passes all grade 9 courses is more likely to graduate high school in 4 years than a student who fails one or more courses in ninth grade.</li>
+              <li><i className="glyphicon glyphicon-education list-icon" aria-hidden="true" /> Students who are chronically absent (miss more than 10% of days) are less likely graduate than those with high attendance.</li>
+              <li><i className="glyphicon glyphicon-education list-icon" aria-hidden="true" /> Students who take higher level coursework (higher level math courses or Advanced Placement courses) are more likely to go to and stay in college.</li>
             </ul>
           </div>
         </div>

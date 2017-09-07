@@ -11,14 +11,3 @@ p {
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
-
-ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 1rem;
-  text-indent: -1rem;
-  li {
-    font-size: $base-font-size;
-    padding-left: 1rem;
-  }
-}

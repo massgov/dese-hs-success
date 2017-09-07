@@ -1,5 +1,17 @@
 @import '_variables.scss';
 
-.color-primary {
+.list-icon {
   color: $color-primary-green;
+  margin-right: 10px;
+}
+
+ul{
+  list-style: none;
+  margin-left: 0;
+  padding-left: 2.5rem;
+  text-indent: -1.7rem;
+  li {
+    font-size: $base-font-size;
+    padding-left: 1rem;
+  }
 }
