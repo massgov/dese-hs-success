@@ -6,20 +6,11 @@ import Btn from './Btn'
 class Navigation extends React.Component {
   constructor(props, context){
     super(props, context);
-    this.state = {
-      grade: '9th Grade',
-      value: 'navbar-collapse'
-    }
+    // this.state = {
+    //   grade: '9th Grade',
+    //   value: this.props.value
+    // }
   }
-  handleClick = (e) =>  {
-    e.preventDefault();
-    console.log(e.target.innerText);
-    this.setState({
-      grade : e.target.innerText,
-      value : 'navbar-collapse'
-    })
-
-  };
 
   toggleClick = (e) =>  {
     const value = e.currentTarget.value
@@ -32,7 +23,7 @@ class Navigation extends React.Component {
   };
 
   render() {
-    const { grade, value } = this.state
+    const { grade, value, handleClick } = this.props
     const { sticky } = this.props
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
@@ -44,10 +35,10 @@ class Navigation extends React.Component {
             </div>
             <div className={value}>
               <ul className="nav nav-tabs nav-justified flex-column">
-                <li className="nav-item"  onClick={this.handleClick} ><NavLink className="nav-link" to={`/9`}>9th Grade</NavLink></li>
-                <li className="nav-item"  onClick={this.handleClick} ><NavLink className="nav-link" to={`/10`}>10th Grade</NavLink></li>
-                <li className="nav-item"  onClick={this.handleClick} ><NavLink className="nav-link" to={`/11`}>11th Grade</NavLink></li>
-                <li className="nav-item"  onClick={this.handleClick} ><NavLink className="nav-link" to={`/12`}>12th Grade</NavLink></li>
+                <li className="nav-item"  onClick={handleClick} ><a className="nav-link" value={9}>9th Grade</a></li>
+                <li className="nav-item"  onClick={handleClick} ><a className="nav-link" value={10}>10th Grade</a></li>
+                <li className="nav-item"  onClick={handleClick} ><a className="nav-link" value={11}>11th Grade</a></li>
+                <li className="nav-item"  onClick={handleClick} ><a className="nav-link" value={12}>12th Grade</a></li>
               </ul>
             </div>
         </nav>
