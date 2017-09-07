@@ -53,7 +53,7 @@ class Data extends React.Component{
             const url = this.props.match.url
 
               if(blockData1.length==0) {
-                return <div>Loading...</div>
+                return <div className="container">Loading...</div>
               }
 
               return (

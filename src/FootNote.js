@@ -4,7 +4,7 @@ import './FootNote.css'
 const FootNote = () => {
   return(
     <div className="sources-section">
-    <div className="container">
+    <div className="row">
         <h1 id="footnote-label" className="sr-only">Footnotes</h1>
         <ol>
             <li id="footnote-1">http://www.pbs.org/wgbh/frontline/article/by-the-numbers-dropping-out-of-high-school/</li>
