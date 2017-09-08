@@ -18,17 +18,10 @@ class Data extends React.Component{
               this.fetchData()
           };
 
-          componentDidUpdate = (prevProps) =>  {
-              let oldId = prevProps.match.url
-              let newId = this.props.match.url
-              if (newId !== oldId)
-              this.fetchData()
-          };
-
           fetchData = () =>  {
               var _this = this;
               axios.all([
-                      axios.get('/data' + this.props.match.url +'/data.json'),
+                      axios.get('/data/11/data.json'),
                   ])
                   .then(axios.spread(function(result) {
                       _this.setState({

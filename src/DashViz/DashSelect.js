@@ -16,8 +16,11 @@ class DashSelect extends React.Component{
 
   render() {
     const {options, handleChange, handleClick, value} = this.props
+    const { sticky } = this.props
+    var fixed
+    if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
     return(
-      <div className="dash-select row">
+      <div className={`dash-select row ${fixed}`}>
         <p>Explore your district: </p>
         <Select
             name="select-district"

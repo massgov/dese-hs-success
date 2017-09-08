@@ -24,7 +24,7 @@ class Data extends React.Component{
       fetchData = () =>  {
               var _this = this;
               axios.all([
-                      axios.get('/data' + this.props.match.url +'/data.json'),
+                      axios.get('/data/9/data.json'),
                   ])
                   .then(axios.spread(function(result) {
                     var data = eval(result.data)

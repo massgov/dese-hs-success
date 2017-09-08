@@ -21,6 +21,14 @@
   border: 0;
 }
 
+.navbar-fixed-top {
+    position: fixed;
+    margin-top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 .navbar-collapse{
   display: none;
   padding: 0;
@@ -85,6 +93,9 @@
 @media all and (min-width: 768px) {
   .navbar {
     padding: 0;
+  }
+  .navbar-fixed-top {
+    position: relative;
   }
   .navbar-collapse{
     display: inline;

@@ -21,17 +21,10 @@ class Data extends React.Component{
               this.fetchData()
           };
 
-          componentDidUpdate = (prevProps) =>  {
-              let oldId = prevProps.match.url
-              let newId = this.props.match.url
-              if (newId !== oldId)
-              this.fetchData()
-          };
-
           fetchData = () =>  {
                   var _this = this;
                   axios.all([
-                          axios.get('/data' + this.props.match.url +'/data.json'),
+                          axios.get('/data/10/data.json'),
                       ])
                       .then(axios.spread(function(result) {
                         var data = eval(result.data)
@@ -50,7 +43,6 @@ class Data extends React.Component{
 
           render = () =>  {
             const {blockData1, blockData2} = this.state;
-            const url = this.props.match.url
 
               if(blockData1.length==0) {
                 return <div className="container">Loading...</div>
