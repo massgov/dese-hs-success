@@ -6,10 +6,9 @@ import Btn from './Btn'
 class Navigation extends React.Component {
   constructor(props, context){
     super(props, context);
-    // this.state = {
-    //   grade: '9th Grade',
-    //   value: this.props.value
-    // }
+    this.state = {
+      value: 'navbar-collapse'
+    }
   }
 
   toggleClick = (e) =>  {
@@ -23,14 +22,14 @@ class Navigation extends React.Component {
   };
 
   render() {
-    const { grade, value, handleClick } = this.props
-    const { sticky } = this.props
+    const { grade, handleClick, sticky } = this.props
+    const { value } = this.state
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
     return (
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
-              <span className="navbar-brand" id="current-section">{grade}</span>
+              <span className="navbar-brand" id="current-section">{grade}th Grade</span>
               <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
             </div>
             <div className={value}>

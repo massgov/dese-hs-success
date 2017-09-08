@@ -33,7 +33,6 @@ class App extends React.Component {
     super(props, context);
     this.state = {
       grade: 9,
-      value: 'navbar-collapse'
     }
   }
 
@@ -41,7 +40,6 @@ class App extends React.Component {
     e.preventDefault();
     this.setState({
       grade : e.target.getAttribute("value"),
-      value : 'navbar-collapse'
     })
 
   };
@@ -61,7 +59,7 @@ class App extends React.Component {
                           sticky = true
                         } else { sticky = false }
                         return (
-                          <Navigation handleClick={this.handleClick} sticky={sticky} value={value} grade={grade}/>
+                          <Navigation handleClick={this.handleClick} sticky={sticky} grade={grade}/>
                         )
                       }
                     }
