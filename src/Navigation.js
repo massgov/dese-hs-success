@@ -21,6 +21,13 @@ class Navigation extends React.Component {
 
   };
 
+  onNavClick = (e) => {
+    this.props.handleClick(e);
+    this.setState({
+      value: 'navbar-collapse'
+    })
+  }
+
   render() {
     const { grade, handleClick, sticky } = this.props
     const { value } = this.state

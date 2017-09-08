@@ -27,7 +27,6 @@ class GradeDash extends React.Component {
     super(props, context);
     this.state = {
       grade: 9,
-      clicked: false
     }
   }
 
@@ -35,7 +34,6 @@ class GradeDash extends React.Component {
     e.preventDefault();
     this.setState({
       grade : e.target.getAttribute("value"),
-      clicked: true
     })
 
   };
@@ -43,7 +41,7 @@ class GradeDash extends React.Component {
     const { clicked, grade } = this.state
     console.log(clicked)
     return (
-              <StickyContainer key={1}>
+          <StickyContainer key={1}>
                   <Sticky>
                     {
                       (props) => {
@@ -52,7 +50,7 @@ class GradeDash extends React.Component {
                           sticky = true
                         } else { sticky = false }
                         return (
-                          <Navigation handleClick={this.handleClick} sticky={sticky} grade={grade} clicked={clicked}/>
+                          <Navigation handleClick={this.handleClick} sticky={sticky} grade={grade}/>
                         )
                       }
                     }
