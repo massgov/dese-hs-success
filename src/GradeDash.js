@@ -38,8 +38,7 @@ class GradeDash extends React.Component {
 
   };
   render() {
-    const { clicked, grade } = this.state
-    console.log(clicked)
+    const { grade } = this.state
     return (
           <StickyContainer key={1}>
                   <Sticky>

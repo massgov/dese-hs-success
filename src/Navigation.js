@@ -3,11 +3,14 @@ import { NavLink} from 'react-router-dom'
 import './Navigation.css'
 import Btn from './Btn'
 
+
+
 class Navigation extends React.Component {
   constructor(props, context){
     super(props, context);
     this.state = {
-      value: 'navbar-collapse'
+      value: 'navbar-collapse',
+      active: '9'
     }
   }
 
@@ -24,15 +27,21 @@ class Navigation extends React.Component {
   onNavClick = (e) => {
     this.props.handleClick(e);
     this.setState({
-      value: 'navbar-collapse'
+      value: 'navbar-collapse',
+      active: e.target.getAttribute('value')
     })
   }
 
   render() {
     const { grade, handleClick, sticky } = this.props
-    const { value } = this.state
+    const { value, active } = this.state
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
+
+    const grades = [9,10,11,12]
+    const navItems = grades.map((grade) =>
+      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a className={`nav-link ${(grade == active) ? 'active' : ''}`} value={grade}>{grade} Grade</a></li>
+    )
     return (
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
@@ -41,10 +50,7 @@ class Navigation extends React.Component {
             </div>
             <div className={value}>
               <ul className="nav nav-tabs nav-justified flex-column">
-                <li className="nav-item"  onClick={handleClick} ><a className="nav-link" value={9}>9th Grade</a></li>
-                <li className="nav-item"  onClick={handleClick} ><a className="nav-link" value={10}>10th Grade</a></li>
-                <li className="nav-item"  onClick={handleClick} ><a className="nav-link" value={11}>11th Grade</a></li>
-                <li className="nav-item"  onClick={handleClick} ><a className="nav-link" value={12}>12th Grade</a></li>
+                {navItems}
               </ul>
             </div>
         </nav>
