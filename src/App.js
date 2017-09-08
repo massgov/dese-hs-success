@@ -56,7 +56,6 @@ class App extends React.Component {
                   <Sticky>
                     {
                       (props) => {
-                        console.log(props)
                         var sticky
                         if (props.isSticky){
                           sticky = true
