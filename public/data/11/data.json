@@ -1,34 +1,23 @@
-[
   [
     {
-      "indicator": "AP",
-      "metric": "Completed",
-      "count": 17902,
-      "rate_enroll": 87,
-      "rate_persist": 86
+      "description": "68% of 11th graders pass Algebra II or a higher level math class. 32% either fail or don’t take such a course. ",
+      "count_pass": 436,
+      "count_fail": 206,
+      "count_pass_hightlight": 436,
+      "count_fail_hightlight": 206
     },
     {
-      "indicator": "AP",
-      "metric": "Did Not Complete",
-      "count": 47100,
-      "rate_enroll": 61,
-      "rate_persist": 56
-    },
-  ],
-  [
-    {
-      "indicator": "Algebra",
-      "metric": "Completed",
-      "count": 45592,
-      "rate_enroll": 77,
-      "rate_persist": 74
+      "description": "Of those who passed, 78% went on to college. Just 49% of students who didn’t’ take a math class enrolled in higher education.",
+      "count_pass": 436,
+      "count_fail": 206,
+      "count_pass_hightlight": 340,
+      "count_fail_hightlight": 101
     },
     {
-      "indicator": "Algebra",
-      "metric": "Did Not Complete",
-      "count": 19409,
-      "rate_enroll": 49,
-      "rate_persist": 43
-    }
+      "description": "71% of students who passed 11th grad math remained enrolled in college after 1 year. That figure is only 38% for the other group.",
+      "count_pass": 436,
+      "count_fail": 206,
+      "count_pass_hightlight": 308,
+      "count_fail_hightlight": 79
+    },
   ]
-]
