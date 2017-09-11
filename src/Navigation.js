@@ -40,12 +40,12 @@ class Navigation extends React.Component {
 
     const grades = [9,10,11,12]
     const navItems = grades.map((grade) =>
-      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a className={`nav-link ${(grade == active) ? 'active' : ''}`} value={grade}>{grade} Grade</a></li>
+      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a className={`nav-link ${(grade == active) ? 'active' : ''}`} value={grade}>{grade}<sup>th</sup> Grade</a></li>
     )
     return (
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
-              <span className="navbar-brand" id="current-section">{grade}th Grade</span>
+              <span className="navbar-brand" id="current-section">{grade}<sup>th</sup> Grade</span>
               <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
             </div>
             <div className={value}>
