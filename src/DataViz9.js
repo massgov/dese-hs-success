@@ -52,7 +52,7 @@ class Data extends React.Component{
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12 center">
-                        <ChartTitle>*9th Grade Section Header*</ChartTitle>
+                        <ChartTitle>Passing Grade: Failing just one course early can set a student back</ChartTitle>
                         <hr />
                     </div>
                   </div>
