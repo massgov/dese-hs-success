@@ -21,7 +21,7 @@ class Data extends React.Component{
           fetchData = () =>  {
               var _this = this;
               axios.all([
-                      axios.get('/data/11/data.json'),
+                      axios.get('/data/12/data.json'),
                   ])
                   .then(axios.spread(function(result) {
                       _this.setState({
@@ -38,7 +38,6 @@ class Data extends React.Component{
 
           render = () =>  {
             const {data} = this.state;
-            const url = this.props.match.url
 
               if(data.length==0) {
                 return <div className="container">Loading...</div>
@@ -48,12 +47,12 @@ class Data extends React.Component{
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12 center">
-                        <ChartTitle>*{url}th Grade Section Header*</ChartTitle>
+                        <ChartTitle>*12th Grade Section Header*</ChartTitle>
                         <hr />
                     </div>
                   </div>
                   <div className="container">
-                      <BlockChartDuo data={data} url={url}/>
+                      <BlockChartDuo data={data}/>
                   </div>
                 </div>
 

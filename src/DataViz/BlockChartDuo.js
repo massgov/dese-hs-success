@@ -41,9 +41,6 @@ class BlockChart extends React.Component{
 
       render = () =>  {
         const {count, clickedButton, selectedOption, indicator, metric, array} = this.state
-        const outcomeOptions = (this.props.url==="/10")?
-        (<div>Outcome: On-time graduation</div>):
-        (<Options selectedOption={this.state.selectedOption} handleOptionChange={this.handleOptionChange} />)
           return (
             <div>
               <div className="col-md-4">
@@ -53,7 +50,7 @@ class BlockChart extends React.Component{
                       <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('0')}`} value={0}>{indicator[0]}</Button>
                       <Button onClick={this.handleClick} className={`btn btn-primary + ${this.isActive('1')}`} value={1}>{indicator[1]}</Button>
                 <hr />
-                  {outcomeOptions}
+                  <Options selectedOption={this.state.selectedOption} handleOptionChange={this.handleOptionChange} />
                 </form>
                 <hr />
                 <PersonLegend>1% of the total number of students</PersonLegend>
