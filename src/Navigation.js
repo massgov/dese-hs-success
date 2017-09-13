@@ -46,7 +46,7 @@ class Navigation extends React.Component {
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
               <span className="navbar-brand" id="current-section">{grade}<sup>th</sup> Grade</span>
-              <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <span className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
+              <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Select a different grade</Btn>
             </div>
             <div className={value}>
               <ul className="nav nav-tabs nav-justified flex-column">
