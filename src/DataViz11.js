@@ -53,15 +53,7 @@ class Data extends React.Component{
                         <hr />
                     </div>
                   </div>
-                  <div className="row">
-                    <div className="col-md-12 center">
                       <BlockChartCount data={blockData}/>
-                    </div>
-                  </div>
-                  <div className="row">
-                  </div>
-
-
                 </div>
 
               );
