@@ -3,26 +3,39 @@ import Description from '../Description'
 import LineChart from './LineChart'
 import './DashCard.css'
 
-let ymin = 0
-let ymax = 0
- //    if (dataKey == '4 Year Graduation Percent'){
- //      ymin = 0
- //      ymax = 100
- //    } else if (datakey == '5 Year Graduation Percent') {
- //      ymin = 4
- //      ymax = 100
- //    } else if (datakey == 'Mass Core Completion Percent') {
- //      ymin = 0
- //      ymax = 100
- //    } else if (datakey == 'Mass Core Completion Percent') {
- //      ymin = 0
- //      ymax = 100
- //    }
+let ymin = 0;
+let ymax = 100; 
 
 const DataCard =({Title, data, dataKey}) => {
-    //console.log(dataKey);
     if(dataKey){
-    	//console.log(data);
+    	if ( dataKey === '4 Year Graduation Percent' ){
+    		ymin = 0;
+    		ymax = 100;
+    	} else if ( dataKey === '5 Year Graduation Percent' ){
+    		ymin = 4;
+    		ymax = 100;
+    	} else if ( dataKey === 'Mass Core Completion Percent' ){
+    		ymin = 0;
+    		ymax = 100;
+    	} else if ( dataKey === 'Chronic Absence Percent' ){
+    		ymin = 0;
+    		ymax = 100;
+    	} else if ( dataKey === 'Out of School Suspension Percent' ){
+    		ymin = 0;
+    		ymax = 12;
+    	} else if ( dataKey === 'Passed All 9th Grade Courses Percent' ){
+    		ymin = 0;
+    		ymax = 100;
+    	} else if ( dataKey === 'Enrolled in AP/IB Course Percent' ){
+    		ymin = 0;
+    		ymax = 100;
+    	} else if ( dataKey === 'College Enrollment Percent' ){
+    		ymin = 0;
+    		ymax = 97;
+    	} else if ( dataKey === 'College Persistence Percent' ){
+    		ymin = 0;
+    		ymax = 94;
+    	}
     }
     return(
       <div className="col-md-4">

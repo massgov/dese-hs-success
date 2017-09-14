@@ -1,8 +1,10 @@
+//import d3 from 'd3'
 import PropTypes from 'react'
 import React from 'react'
 import {ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Text, Dot} from 'recharts'
 
-var value, x, y, index, xTick, fill, tooltipValue; 
+var value, x, y, index, xTick, active;
+var lastFill = '#14558f' 
 
 const CustomizedXAxisTick = React.createClass({
   render () {
@@ -36,25 +38,26 @@ const CustomizedLabel = React.createClass({
       x = 0
       y = 0
       value = ''
-    }
-    return <text x={x} y={y} dy={-10} fill={'#14558f'} fontSize={15} textAnchor="middle">{value}</text>
+    } 
+    return <text x={x} y={y} dy={-10} dx={5} fill={lastFill} fontSize={15} textAnchor='middle'>{value}</text>
   }
 });
 
 export function CustomTooltip(props) {
+  const { payload } = props;
   if (props.active) {
+    //d3.select('.recharts-label-list').attr('fill','#ffffff')
     const { payload } = props;
     if( payload[0].value != 'Null' ){
       value = payload[0].value + '%'
-    } else { value = payload[0].value }
+    } else { value = payload[0].value + '*'}
     return (
-      <div className='custom-tooltip'>
-        <p className='descr_year'>{`${(payload[0].payload.Yr)}`}</p>
-        <p className='descr_value'>{`${(value)}`}</p>
+      <div className='custom-tooltip-district'>
+        <text className='descr_value'>{`${(value)}`}</text>
       </div>
     );
   }
-
+  //lastFill = '#14558f'
   return null;
 }
 
@@ -82,7 +85,7 @@ const SimpleLineChart = React.createClass({
       	<LineChart data={data}
               margin={{top: 15, right: 30, left: -20, bottom: 5}}>
          <XAxis padding={{ left: 0 }} dataKey="Yr" type="number" domain={[2010, 2016]} tick={<CustomizedXAxisTick/>}/>
-         <YAxis type="number" domain={[0, 100]} tick={<CustomizedYAxisTick/>}/>
+         <YAxis type="number" domain={[ymin, ymax]} tick={<CustomizedYAxisTick/>}/>
          <Tooltip content={<CustomTooltip/>}/>
          <Line type="monotone" dataKey={dataKey} stroke="#14558f" activeDot={<CustomActiveDot />} animationDuration={500} label={<CustomizedLabel lastData={value} lastIndex={index}/>}/>
         </LineChart>

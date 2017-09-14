@@ -56,7 +56,7 @@ class DistrictDash extends React.Component{
 
             const distData = data[`${selected}`]
             console.log(selected)
-            if(data.length==0) {
+            if(data.length === 0) {
               return <div>Loading...</div>
             }
 
