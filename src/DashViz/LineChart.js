@@ -99,7 +99,7 @@ const SimpleLineChart = React.createClass({
   	return (
       <ResponsiveContainer maxHeight={200}>
       	<LineChart data={data}
-              margin={{top: 15, right: 30, left: -20, bottom: 5}}>
+              margin={{top: 22, right: 30, left: -10, bottom: 5}}>
          <XAxis padding={{ left: 0 }} dataKey="Yr" type="number" domain={[2010, 2016]} tick={<CustomizedXAxisTick/>}/>
          <YAxis type="number" domain={[ymin, ymax]} tick={<CustomizedYAxisTick/>}/>
          <Tooltip content={<CustomTooltip lastData={value} lastYear={year}/>}/>
