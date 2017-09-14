@@ -44,10 +44,13 @@ const CustomizedLabel = React.createClass({
 export function CustomTooltip(props) {
   if (props.active) {
     const { payload } = props;
-    console.log(payload);
+    if( payload[0].value != 'Null' ){
+      value = payload[0].value + '%'
+    } else { value = payload[0].value }
     return (
       <div className='custom-tooltip'>
-        <p className='descr'>{`${(payload[0].value)}`}%</p>
+        <p className='descr_year'>{`${(payload[0].payload.Yr)}`}</p>
+        <p className='descr_value'>{`${(value)}`}</p>
       </div>
     );
   }
