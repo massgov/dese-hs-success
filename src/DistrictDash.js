@@ -52,6 +52,7 @@ class DistrictDash extends React.Component{
 
           render = () =>  {
             const {data, selected} = this.state
+            console.log(data)
 
             const distData = data[`${selected}`]
             console.log(selected)

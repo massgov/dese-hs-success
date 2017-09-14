@@ -21,7 +21,7 @@ class BlockChart extends React.Component{
       render = () =>  {
           const {Yes, No, count, description, array, metric, selected} = this.state;
 
-          console.log(metric)
+
           return (
                   <div>
                           <Btn handleClick={this.handleClick} value={'0'} selected={selected}>{metric[0]}</Btn>
