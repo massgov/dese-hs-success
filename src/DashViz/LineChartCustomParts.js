@@ -1,7 +1,6 @@
 import React from 'react'
 import {Dot} from 'recharts';
 
-
 export const CustomizedXAxisTick = ({x, y, stroke, payload}) => {
     return (
       <g transform={`translate(${x},${y})`}>
@@ -62,3 +61,10 @@ export const CustomizedDot = ({cx, cy, stroke, fill, r, payload, value, index, l
       <Dot cx={cx} cy={cy} r={r} stroke={stroke} fill={'#fff'} />
     );
 }
+
+
+export const CustomActiveDot = ({ index, cx, cy, fill, r, value}) => {
+  return (
+    <Dot cx={cx} cy={cy} r={r} fill={fill} />
+  )
+};

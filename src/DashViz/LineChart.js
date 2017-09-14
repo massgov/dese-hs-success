@@ -1,15 +1,8 @@
 import React from 'react';
-import {ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Text, Dot} from 'recharts';
-import {CustomizedXAxisTick, CustomizedYAxisTick, CustomTooltip, CustomizedLabel, CustomizedDot} from './LineChartCustomParts'
+import {ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip} from 'recharts';
+import {CustomizedXAxisTick, CustomizedYAxisTick, CustomTooltip, CustomizedLabel, CustomizedDot, CustomActiveDot} from './LineChartCustomParts'
 
 var value, index, xTick, active, year;
-
-const CustomActiveDot = (props) => {
-  const { index, cx, cy, fill, r, value} = props
-  return (
-    <Dot cx={cx} cy={cy} r={r} fill={fill} />
-  )
-};
 
 const SimpleLineChart = ({data, dataKey, ymin, ymax}) => {
     if(data){
@@ -31,7 +24,7 @@ const SimpleLineChart = ({data, dataKey, ymin, ymax}) => {
          <Tooltip content={<CustomTooltip lastData={value} lastYear={year}/>}/>
          <Line type="monotone" dataKey={dataKey} stroke="#14558f" animationDuration={500}
 					 dot={<CustomizedDot lastIndex={index}/>}
-					 activeDot={<CustomActiveDot lastData={value} lastIndex={index}/>}
+					 activeDot={<CustomActiveDot/>}
 					 label={<CustomizedLabel lastData={value} lastIndex={index}/>} />
         </LineChart>
       </ResponsiveContainer>
