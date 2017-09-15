@@ -30,7 +30,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
     		sentenceP1 = ' of 2016 cohort ';
     		sentenceP2 = ' in ';
     		boldKey = 'graduated in 5 years';
-    		ymin = 4;
+    		ymin = 0;
     		ymax = 100;
     	} else if ( dataKey === 'Mass Core Completion Percent' ){
     		sentence = ' of 2016 cohort graduated in 5 years in  '
@@ -47,15 +47,15 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
     		sentenceP2 = ' in ';
     		boldKey = 'at least one out-of-school suspension';
     		ymin = 0;
-    		ymax = 12;
+    		ymax = 20;
     	} else if ( dataKey === 'Passed All 9th Grade Courses Percent' ){
-    		sentenceP1 = ' of your 9th graders ';
+    		sentenceP1 = ' of 9th graders ';
     		sentenceP2 = ' in ';
     		boldKey = 'passed all 9th grade courses';
     		ymin = 0;
     		ymax = 100;
     	} else if ( dataKey === 'Enrolled in AP/IB Course Percent' ){
-    		sentenceP1 = ' of juniors seniors ';
+    		sentenceP1 = ' of juniors/seniors ';
     		sentenceP2 = ' in ';
     		boldKey = 'took at least one AP/IB courses';
     		ymin = 0;
@@ -65,13 +65,13 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
     		sentenceP2 = ' in ';
     		boldKey = 'enrolled in college';
     		ymin = 0;
-    		ymax = 97;
+    		ymax = 100;
     	} else if ( dataKey === 'College Persistence Percent' ){
     		sentenceP1 = ' of high schools students who enrolled in college in 2014 ';
     		sentenceP2 = ' in ';
     		boldKey = 'stayed in college';
     		ymin = 0;
-    		ymax = 94;
+    		ymax = 100;
     	}
     }
     return(

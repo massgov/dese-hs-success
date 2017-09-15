@@ -21,11 +21,10 @@ var value, countValue;
 export const CustomTooltip = (props) => {
   const { payload } = props;
   if (props.active) {
-    console.log(props);
     const { payload } = props;
     if( payload[0].value != 'Null' ){
       value = payload[0].value + '%';
-      countValue = payload[0]['payload'][props.dataCount]
+      countValue = payload[0]['payload'][props.dataCount].toLocaleString();
     } else { value = payload[0].value + '*'}
     if(props.lastData == payload[0].value && props.lastYear == payload[0]['payload']['Yr']) {
       return (
