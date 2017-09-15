@@ -55,7 +55,6 @@ export function CustomTooltip(props) {
     if( payload[0].value != 'Null' ){
       value = payload[0].value + '%'
     } else { value = payload[0].value + '*'}
-    console.log(props)
     if(props.lastData == payload[0].value && props.lastYear == payload[0]['payload']['Yr']) {
       return null;
     } else {
