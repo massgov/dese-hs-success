@@ -22,7 +22,7 @@ const SimpleLineChart = ({data, dataKey, dataCount, ymin, ymax}) => {
          <XAxis padding={{ left: 0 }} dataKey="Yr" type="number" domain={[2010, 2016]} tick={<CustomizedXAxisTick/>}/>
          <YAxis padding={{ bottom: 0 }} type="number" domain={[ymin, ymax]} tick={<CustomizedYAxisTick/>}/>
          <Tooltip content={<CustomTooltip lastData={value} lastYear={year} dataCount={dataCount}/>}/>
-         <Line type="monotone" dataKey={dataKey} stroke="#14558f" animationDuration={500}
+         <Line type="monotone" dataKey={dataKey} stroke="#14558f" animationDuration={300}
            dot={<CustomizedDot lastIndex={index}/>}
            activeDot={<CustomActiveDot/>}
            label={<CustomizedLabel lastData={value} lastIndex={index}/>} />
