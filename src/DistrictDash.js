@@ -96,32 +96,32 @@ class DistrictDash extends React.Component{
                           <div className="col-md-12 center">
                             <ChartTitle>Cohort Graduation Rates</ChartTitle>
                           </div>
-                            <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="4 Year Graduation Percent"/>
-                            <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="5 Year Graduation Percent"/>
+                            <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="4 Year Graduation Percent" dataCount="4 Year Cohort Total"/>
+                            <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="5 Year Graduation Percent" dataCount="4 Year Cohort Total"/>
                          </div>
 
                          <div className="row">
                           <div className="col-md-12 center">
                             <ChartTitle>Attendance and Behavior</ChartTitle>
                           </div>
-                           <DashCard Title='Chronically Absent Rate' data={distData} dataKey="Chronic Absence Percent"/>
-                           <DashCard Title='Out-of-school Suspension Rate' data={distData} dataKey="Out of School Suspension Percent"/>
+                           <DashCard Title='Chronically Absent Rate' data={distData} dataKey="Chronic Absence Percent" dataCount="Chronic Absence Count"/>
+                           <DashCard Title='Out-of-school Suspension Rate' data={distData} dataKey="Out of School Suspension Percent" dataCount="Out of School Suspension Count"/>
                          </div>
 
                          <div className="row">
                           <div className="col-md-12 center">
                             <ChartTitle>Course Performance</ChartTitle>
                           </div>
-                            <DashCard Title='Passed All 9th-Grade Courses Rate' data={distData} dataKey="Passed All 9th Grade Courses Percent"/>
-                            <DashCard Title='Jr. or Sr. Taking AP/IB Courses Rate' data={distData} dataKey="Enrolled in AP/IB Course Percent"/>
+                            <DashCard Title='Passed All 9th-Grade Courses Rate' data={distData} dataKey="Passed All 9th Grade Courses Percent" dataCount="Passed All 9th Grade Courses Count"/>
+                            <DashCard Title='Jr. or Sr. Taking AP/IB Courses Rate' data={distData} dataKey="Enrolled in AP/IB Course Percent" dataCount="Enrolled in AP/IB Course Count"/>
                          </div>
 
                          <div className="row">
                           <div className="col-md-12 center">
                             <ChartTitle>College Enrollment and Persistence</ChartTitle>
                           </div>
-                            <DashCard Title='College Enrollment Rate' data={distData} dataKey="College Enrollment Percent"/>
-                            <DashCard Title='College Persistent Rate' data={distData} dataKey="College Persistence Percent"/>
+                            <DashCard Title='College Enrollment Rate' data={distData} dataKey="College Enrollment Percent" dataCount="College Persistence Count"/>
+                            <DashCard Title='College Persistent Rate' data={distData} dataKey="College Persistence Percent" dataCount="College Enrollment Count"/>
                          </div>
 
                      </div>

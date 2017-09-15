@@ -7,8 +7,9 @@ let ymin = 0;
 let ymax = 100; 
 var year, index, value, sentence, sentenceP1, sentenceP2, boldKey, boldKey2;
 
-const DataCard =({Title, data, dataKey}) => {
+const DataCard =({Title, data, dataKey, dataCount}) => {
     	if(data){ 
+            console.log(data)
 	      for(let i = data.length-1; i > -1; i--) {
 	        if(data[i][dataKey] != 'Null') {
 	          year = data[i]['Yr'];
@@ -78,7 +79,7 @@ const DataCard =({Title, data, dataKey}) => {
           <div className="dash-card">
             <p><strong>{value}%</strong>{sentenceP1}<strong>{boldKey}</strong>{sentenceP2}{year}.</p>
             <hr />
-            <LineChart data={data} dataKey={dataKey} ymin={ymin} ymax={ymax}/>
+            <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
           </div>
       </div>
     )

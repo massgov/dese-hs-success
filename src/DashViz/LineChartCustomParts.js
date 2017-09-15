@@ -17,20 +17,27 @@ export const CustomizedYAxisTick = ({x, y, stroke, payload}) => {
     );
 }
 
-var value;
+var value, countValue;
 export const CustomTooltip = (props) => {
   const { payload } = props;
   if (props.active) {
+    console.log(props);
     const { payload } = props;
     if( payload[0].value != 'Null' ){
-      value = payload[0].value + '%'
+      value = payload[0].value + '%';
+      countValue = payload[0]['payload'][props.dataCount]
     } else { value = payload[0].value + '*'}
     if(props.lastData == payload[0].value && props.lastYear == payload[0]['payload']['Yr']) {
-      return null;
+      return (
+        <div className='custom-tooltip-district'>
+          <text className='descr_value'> ({`${(countValue)}`})</text>
+        </div>
+        )
     } else {
       return (
         <div className='custom-tooltip-district'>
           <text className='descr_value'>{`${(value)}`}</text>
+          <text className='descr_value'> ({`${(countValue)}`})</text>
         </div>
       );
     }
