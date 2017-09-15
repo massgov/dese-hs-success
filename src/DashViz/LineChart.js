@@ -2,9 +2,9 @@ import React from 'react';
 import {ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip} from 'recharts';
 import {CustomizedXAxisTick, CustomizedYAxisTick, CustomTooltip, CustomizedLabel, CustomizedDot, CustomActiveDot} from './LineChartCustomParts'
 
-var value, index, xTick, active, year, countValue;
 
 const SimpleLineChart = ({data, dataKey, dataCount, ymin, ymax}) => {
+  var value, index, year, countValue;
     if(data){
       for(let i = data.length-1; i > -1; i--) {
         if(data[i][dataKey] != 'Null') {
