@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
+// import { Button } from 'react-bootstrap'
 import './Btn.css'
 
 const Btn = (props) => {
@@ -11,10 +11,10 @@ const Btn = (props) => {
     passedClass = 'btn-primary'
   }
   const isActive = (value, selected) => {
-    return ((value===selected) ?'active':'default');
+    return ((value==selected) ?'active':'default');
   };
   return(
-      <Button onClick={handleClick} className={`btn ${passedClass} ${isActive(value, selected)}`} value={value} type="button">{children}</Button>
+      <button onClick={handleClick} className={`btn ${passedClass} ${isActive(value, selected)}`} value={value} type="button">{children}</button>
   )
 }
 

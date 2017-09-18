@@ -6,7 +6,6 @@ import './DashCard.css'
 const DataCard =({Title, data, dataKey, dataCount}) => {
       var year, index, value, sentence, studentGroup, cardKey;
     	if(data){
-            console.log(data)
 	      for(let i = data.length-1; i > -1; i--) {
 	        if(data[i][dataKey] != 'Null') {
 	          year = data[i]['Yr'];

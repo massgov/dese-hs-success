@@ -25,8 +25,6 @@ class BlockChart extends React.Component{
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
           });
-
-          console.log(array)
           return(
                 <div>
                   <div className="row">
