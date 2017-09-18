@@ -1,0 +1,12 @@
+@import '_variables.scss';
+
+.introduction {
+  background-color: $color-gray-lighter;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: left; 
+}
+
+.introduction p {
+  font-size: 2em;
+}

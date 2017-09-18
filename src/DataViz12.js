@@ -3,6 +3,7 @@ import axios from 'axios'
 import BlockChartCount from './DataViz/BlockChartCount'
 import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
+import Description from './Description'
 
 class Data extends React.Component{
 
@@ -49,11 +50,20 @@ class Data extends React.Component{
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12 center">
-                        <ChartTitle>AP Courses Set Students Ahead</ChartTitle>
+                        <ChartTitle>Get Ahead: AP course work and college success</ChartTitle>
+                        <hr />
+                        <Description>
+                        <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to got to college, stay in college and earn college degrees on time, providing an opportunity to save significant amounts of money. The narrative visualization below provides details around the ties between advanced placement and college sucess.</p>
+                        </Description>
                         <hr />
                     </div>
                   </div>
                       <BlockChartCount data={blockData}/>
+                  <div className="row">
+                    <Description>
+                      <p>Action Steps: Did not take an AP course..do this!</p>
+                    </Description>
+                  </div>
                 </div>
 
               );
