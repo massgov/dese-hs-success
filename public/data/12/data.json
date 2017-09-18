@@ -1,20 +1,26 @@
 [
   {
-    "description": "39% of 12th graders pass AP courses. 61% either fail or don’t take such a course.",
+    "description": ["","of 12th graders pass AP courses. ", "either fail or don’t take such a course."],
+    "rate_pass": 0.39,
+    "rate_fail":0.61,
     "count_pass": 253,
     "count_fail": 396,
     "count_pass_hightlight": 253,
     "count_fail_hightlight": 396
   },
   {
-    "description": "Of those who passed, 86% went on to college. Just 58% of students who didn’t pass or take enrolled in higher education.",
+    "description": ["Of those who passed,", "went on to college. Just", "of students who didn’t pass or take enrolled in higher education."],
+    "rate_pass": 0.86,
+    "rate_fail":0.58,
     "count_pass": 253,
     "count_fail": 396,
     "count_pass_hightlight": 218,
     "count_fail_hightlight": 228
   },
   {
-    "description": "81% of students who passed AP courses in 12th grade remained enrolled in college after 1 year. That figure is only 46% for the other group.",
+    "description": ["","of students who passed AP courses in 12th grade remained enrolled in college after 1 year. That figure is only","for the other group."],
+    "rate_pass": 0.81,
+    "rate_fail":0.46,
     "count_pass": 253,
     "count_fail": 396,
     "count_pass_hightlight": 206,
