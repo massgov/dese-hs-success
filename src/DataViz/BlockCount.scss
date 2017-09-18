@@ -80,14 +80,22 @@ position: relative;
   position: relative;
 }
 
-.legendgroup{
-  display: inline;
-  float: left;
-  width: 20%;
-}
 .legendblock {
     display: inline;
     float: left;
     height: 16px;
-    width: 8%;
+    width: 2%;
+    margin: 2px;
+}
+
+@media all and (min-width: 768px) {
+  .legendgroup{
+    float: left;
+    width: 18%;;
+    margin-right: 2%;
+  }
+
+  .legendblock {
+      width: 8%;
+  }
 }
