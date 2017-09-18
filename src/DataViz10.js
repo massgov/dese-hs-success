@@ -60,19 +60,18 @@ class Data extends React.Component{
                     <div className="col-md-6 center">
                       <ChartSubTitle>4-year Graduation Rate by Attendance Behavior<FootNoteLink index={4}/></ChartSubTitle>
                       <BlockChart data={blockData1}/>
+                      <Description>
+                        <p>A student’s success in school begins by engaging them and making sure they come to school regularly. That may seem obvious. What’s less obvious is that the consequences of low attendance are serious for all children and for the community, not just the students who miss school. Research shows that missing 10 percent of the school, or about 18 days in most school districts, negatively affects a student’s academic performance. That’s just two days a month. This is known as chronic absence.</p>
+                      </Description>
                     </div>
                     <div className="col-md-6 center">
                       <ChartSubTitle>4-year Graduation Rate by Suspension Behavior</ChartSubTitle>
                       <BlockChart data={blockData2}/>
+                      <Description>
+                        <p>Individuals who receive a suspension are more likely to be struggling to stay on track at school. Their risk of failing to finish high school is not surprisingly elevated. Our findings ….</p>
+                      </Description>
                     </div>
                   </div>
-                  <div className="row">
-                    <Description>
-                      <p>Attendance and Behavior matters in all grades!</p>
-                    </Description>
-                  </div>
-
-
                 </div>
 
               );

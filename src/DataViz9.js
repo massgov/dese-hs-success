@@ -71,8 +71,7 @@ class Data extends React.Component{
                    </div>
                    <div className="row">
                      <Description>
-                       <p>A student who passes all grade 9 courses is 14 times more likely to graduate high school in 4 years.</p>
-                       <p>If you have failed a course: find out if there is credit recovery or other options at your school to get back on track.</p>
+                       <p>The transition from middle school to high school is a big one, perhaps bigger than appears at first blush: Not only do students’ academic workloads increase, but simultaneously, so does their independence and responsibility.  A lengthy, detailed guide from the National High School Center states that “more students fail ninth grade than any other grade in high school, and a disproportionate number of students who are held back in ninth grade subsequently drop out.”</p>
                      </Description>
                    </div>
                 </div>

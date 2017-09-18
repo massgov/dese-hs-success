@@ -3,6 +3,7 @@ import axios from 'axios'
 import BlockChartCount from './DataViz/BlockChartCount'
 import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
+import Description from './Description'
 
 class Data extends React.Component{
 
@@ -54,6 +55,11 @@ class Data extends React.Component{
                     </div>
                   </div>
                       <BlockChartCount data={blockData}/>
+                  <div className="row">
+                    <Description>
+                      <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to earn college degrees on time, providing an opportunity to save significant amounts of money. In fact, we found that students….</p>
+                    </Description>
+                  </div>
                 </div>
 
               );

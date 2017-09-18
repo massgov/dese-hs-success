@@ -3,6 +3,7 @@ import axios from 'axios'
 import BlockChartCount from './DataViz/BlockChartCount'
 import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
+import Description from './Description'
 
 class Data extends React.Component{
 
@@ -49,11 +50,16 @@ class Data extends React.Component{
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12 center">
-                        <ChartTitle>Steady Course: Behavioral habits and on-time graduation</ChartTitle>
+                        <ChartTitle>College Success Starts in Math Class</ChartTitle>
                         <hr />
                     </div>
                   </div>
                       <BlockChartCount data={blockData}/>
+                    <div className="row">
+                      <Description>
+                        <p>Algebra II is a rigorous math class that builds on content covered in Algebra I. Although students may feel that they ‘won’t use math’ after high school, the academic and life skills developed through taking and passing this class can prepare students to succeed in college and beyond. In other words, if a student has receives the relevant math education in high school, two things become much more likely. First, that child will have a higher likelihood of going to college. And second, that child will likely be more successful in college and careers beyond.</p>
+                      </Description>
+                    </div>
                 </div>
 
               );
