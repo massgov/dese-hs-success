@@ -1,34 +1,23 @@
 [
-  [
-    {
-      "indicator": "Math",
-      "metric": "Completed",
-      "count": 51679,
-      "rate_enroll": 72,
-      "rate_persist": 68
-    },
-    {
-      "indicator": "Math",
-      "metric": "Did Not Complete",
-      "count": 51679,
-      "rate_enroll": 59,
-      "rate_persist": 53
-    },
-  ],
-  [
-    {
-      "indicator": "Science",
-      "metric": "Completed",
-      "count": 42298,
-      "rate_enroll": 61,
-      "rate_persist": 55
-    },
-    {
-      "indicator": "Science",
-      "metric": "Did Not Complete",
-      "count": 22661,
-      "rate_enroll": 50,
-      "rate_persist": 40
-    }
-  ]
+  {
+    "description": "39% of 12th graders pass AP courses. 61% either fail or don’t take such a course.",
+    "count_pass": 253,
+    "count_fail": 396,
+    "count_pass_hightlight": 253,
+    "count_fail_hightlight": 396
+  },
+  {
+    "description": "Of those who passed, 86% went on to college. Just 58% of students who didn’t pass or take enrolled in higher education.",
+    "count_pass": 253,
+    "count_fail": 396,
+    "count_pass_hightlight": 218,
+    "count_fail_hightlight": 228
+  },
+  {
+    "description": "81% of students who passed AP courses in 12th grade remained enrolled in college after 1 year. That figure is only 46% for the other group.",
+    "count_pass": 253,
+    "count_fail": 396,
+    "count_pass_hightlight": 206,
+    "count_fail_hightlight": 184
+  },
 ]
