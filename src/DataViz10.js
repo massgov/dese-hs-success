@@ -48,7 +48,7 @@ class Data extends React.Component{
               }
 
               return (
-                <div className="container">
+                <div className="container" id="grade10" name="grade10">
                   <div className="row">
                     <div className="col-md-12 center">
                       <GradeHeader>10th Grade Steady Course</GradeHeader>
