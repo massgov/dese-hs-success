@@ -4,7 +4,6 @@ import BlockChart from './DataViz/BlockChart'
 import GroupedBarChart from './DataViz/GroupedBarChart'
 import BarChartText from './DataViz/BarChartText'
 import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
-import Description from './Description'
 
 class Data extends React.Component{
 
@@ -53,7 +52,10 @@ class Data extends React.Component{
                   <div className="row">
                     <div className="col-md-12 center">
                         <ChartTitle>Passing Grade: Failing just one course early can set a student back</ChartTitle>
-                        <hr />
+                    </div>
+                    <div className="col-md-12">
+                        <p>The transition from middle school to high school is a big one, perhaps bigger than appears at first blush: Not only do students’ academic workloads increase, but simultaneously, so does their independence and responsibility.  A lengthy, detailed guide from the National High School Center states that “more students fail ninth grade than any other grade in high school, and a disproportionate number of students who are held back in ninth grade subsequently drop out.”</p>
+                      <hr />
                     </div>
                   </div>
                   <div className="row">
@@ -68,11 +70,6 @@ class Data extends React.Component{
                      </div>
                      <hr/>
                      </div>
-                   </div>
-                   <div className="row">
-                     <Description>
-                       <p>The transition from middle school to high school is a big one, perhaps bigger than appears at first blush: Not only do students’ academic workloads increase, but simultaneously, so does their independence and responsibility.  A lengthy, detailed guide from the National High School Center states that “more students fail ninth grade than any other grade in high school, and a disproportionate number of students who are held back in ninth grade subsequently drop out.”</p>
-                     </Description>
                    </div>
                 </div>
 
