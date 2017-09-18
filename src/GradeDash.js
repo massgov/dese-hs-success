@@ -2,6 +2,7 @@ import React from 'react';
 import DataViz from './DataViz'
 import DataViz9 from './DataViz9'
 import DataViz10 from './DataViz10'
+import DataViz11 from './DataViz11'
 import Navigation from './Navigation'
 import { StickyContainer, Sticky } from 'react-sticky';
 
@@ -13,6 +14,12 @@ const renderGrade = (currentGrade) => {
               break;
           case 10:
               return <DataViz10 />
+              break;
+          case 11:
+              return <DataViz11 />
+              break;
+          case 12:
+              return <DataViz />
               break;
           default:
               return <DataViz9 />
