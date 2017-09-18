@@ -32,8 +32,8 @@ position: relative;
     left: 0;
     top:0;
     display: grid;
-    grid-gap: 0.7% 0.34%;
-    grid-template-columns: repeat(43, 2%);
+    grid-gap: 0.7% 0.28%;
+    grid-template-columns: repeat(44, 2%);
     grid-template-rows: repeat(15, 6%);
     grid-auto-flow: column;
 }
