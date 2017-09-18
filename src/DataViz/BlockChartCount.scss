@@ -1,0 +1,11 @@
+@import '_variables.scss';
+
+.highlight_Yes{
+  color: $color-primary-green;
+  font-weight: $font-bold;
+}
+
+.highlight_No{
+  color: $color-gray;
+  font-weight: $font-bold;
+}

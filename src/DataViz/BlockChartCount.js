@@ -8,20 +8,23 @@ import BlockCount from './BlockCount'
 import { ChartSubTitle } from './ChartTitle'
 import Description from '../Description'
 import BlockCountLegend from './BlockCountLegend'
+import './BlockChartCount.css'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
         super(props, context);
-        const {Yes_1, Yes_2, No_1, No_2, description, array} = this.getData('0');
+        const {Yes_1, Yes_2, No_1, No_2, description, array, rate_pass, rate_fail} = this.getData('0');
+        console.log(rate_pass)
         this.state = {
           selected: 0,
-          Yes_1, Yes_2, No_1, No_2, description, array
+          Yes_1, Yes_2, No_1, No_2, description, array, rate_pass, rate_fail
         };
       };
 
 
       render = () =>  {
-          const {Yes_1, Yes_2, No_1, No_2, description, array, selected} = this.state;
+          const {Yes_1, Yes_2, No_1, No_2, description, array, selected, rate_pass, rate_fail} = this.state;
+          console.log(rate_pass)
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
           });
@@ -38,7 +41,7 @@ class BlockChart extends React.Component{
                   </div>
                     <div className="row">
                     <div className="col-md-12">
-                          <Description>{description}</Description>
+                          <p>{description[0]} <span className="highlight_Yes">{rate_pass}%</span> {description[1]} <span className="highlight_No">{rate_fail}%</span> {description[2]}</p>
                     </div>
                   </div>
                   <div className="row">
@@ -65,6 +68,8 @@ class BlockChart extends React.Component{
             Yes_2: getData.Yes_2,
             No_1: getData.No_1,
             No_2: getData.No_2,
+            rate_pass: getData.rate_pass,
+            rate_fail: getData.rate_fail,
             description: getData.description,
             selected: selected,
             array: getData.array
@@ -78,8 +83,10 @@ class BlockChart extends React.Component{
         const No_1 = data.count_fail_hightlight;
         const No_2 = data.count_fail-No_1;
         const description = data.description;
+        const rate_pass = data.rate_pass*100;
+        const rate_fail = data.rate_fail*100;
         var array = this.createArray(Yes_1, Yes_2, No_1, No_2)
-        return { Yes_1, Yes_2, No_1, No_2, description, array}
+        return { Yes_1, Yes_2, No_1, No_2, description, array, rate_pass, rate_fail}
       }
 
       createArray = (Yes_1, Yes_2, No_1, No_2) => {
