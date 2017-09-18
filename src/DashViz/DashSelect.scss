@@ -16,11 +16,13 @@
 .Select {
   display: inline-table;
   width: 100%;
+  z-index: 100;
 }
 
 .Select .Select-control {
   border-radius: 0;
   padding: 2px;
+
 }
 
 .Select-placeholder, .Select--single > .Select-control .Select-value {
