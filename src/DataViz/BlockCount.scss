@@ -70,3 +70,24 @@ position: relative;
     color: $color-black;
     background: $color-gray-alt;
 }
+
+.outline {
+  background-color: none;
+  border: 1px solid $color-gray;
+}
+
+.legend{
+  position: relative;
+}
+
+.legendgroup{
+  display: inline;
+  float: left;
+  width: 20%;
+}
+.legendblock {
+    display: inline;
+    float: left;
+    height: 16px;
+    width: 8%;
+}

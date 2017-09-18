@@ -7,6 +7,7 @@ import BlockTable from './BlockTable'
 import BlockCount from './BlockCount'
 import { ChartSubTitle } from './ChartTitle'
 import Description from '../Description'
+import BlockCountLegend from './BlockCountLegend'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
@@ -21,6 +22,10 @@ class BlockChart extends React.Component{
 
       render = () =>  {
           const {Yes_1, Yes_2, No_1, No_2, description, array, selected} = this.state;
+          const uniqueArray = array.filter(function(item, pos){
+            return array.indexOf(item)== pos;
+          });
+
           console.log(array)
           return(
                 <div>
@@ -39,8 +44,10 @@ class BlockChart extends React.Component{
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-md-12 center">
+                    <div className="col-md-12">
                           <BlockCount array = {array} />
+                          <hr />
+                          <BlockCountLegend legendArray={uniqueArray} selected={selected}/>
                     </div>
                   </div>
                 </div>
