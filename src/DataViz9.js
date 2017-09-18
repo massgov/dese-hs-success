@@ -3,7 +3,7 @@ import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'
 import GroupedBarChart from './DataViz/GroupedBarChart'
 import BarChartText from './DataViz/BarChartText'
-import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
+import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 
 class Data extends React.Component{
 
@@ -51,7 +51,8 @@ class Data extends React.Component{
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12 center">
-                        <ChartTitle>Passing Grade: Failing just one course early can set a student back</ChartTitle>
+                        <GradeHeader>9th Grade Passing Grade</GradeHeader>
+                        <ChartTitle>Failing just one course early can set a student back</ChartTitle>
                     </div>
                     <div className="col-md-12">
                       <p>The transition from middle school to high school is a big one, perhaps bigger than appears at first blush: Not only do students’ academic workloads increase, but simultaneously, so does their independence and responsibility. More students fail ninth grade than any other grade in high school, and a disproportionate number of students who are held back in ninth grade subsequently drop out. A student who passes all grade 9 courses is 14 times more likely to graduate high school in 4 years. Below, explore in detail the link between failing a course in ninth grade and on-time graduation.</p>

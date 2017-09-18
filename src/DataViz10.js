@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'
-import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
+import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
 
 class Data extends React.Component{
@@ -51,7 +51,8 @@ class Data extends React.Component{
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12 center">
-                        <ChartTitle>Steady Course: Behavioral habits and on-time graduation</ChartTitle>
+                      <GradeHeader>10th Grade Steady Course</GradeHeader>
+                        <ChartTitle>Behavioral habits and on-time graduation</ChartTitle>
                     </div>
                   </div>
                   <div className="row">
