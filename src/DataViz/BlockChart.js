@@ -21,7 +21,7 @@ class BlockChart extends React.Component{
       render = () =>  {
           const {Yes, No, count, description, array, metric, selected} = this.state;
 
-          console.log(metric)
+
           return (
                   <div>
                           <Btn handleClick={this.handleClick} value={'0'} selected={selected}>{metric[0]}</Btn>
@@ -29,7 +29,7 @@ class BlockChart extends React.Component{
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
                           <Block array = {array} />
-                          <PersonLegend>1% out of <b>{count}</b> students who <b>{description}</b></PersonLegend>
+                          <PersonLegend>1% out of <b>{count.toLocaleString()}</b> students who <b>{description}</b></PersonLegend>
                       </div>
                   </div>
           );

@@ -1,7 +1,14 @@
+@import '_variables.scss';
+
 .dash-card {
-  background-color: white; 
+  background-color: $color-white;
   width: 100%;
-  height: 330px;
-  margin-bottom: 30px;
+  height: 280px;
+  margin-bottom: 15px;
   padding: 20px;
+}
+
+.dash-card__hightlight{
+  color: $color-primary-blue;
+  font-weight: $font-bold;
 }

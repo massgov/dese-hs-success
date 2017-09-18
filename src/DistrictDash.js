@@ -6,6 +6,7 @@ import axios from 'axios'
 // import Baby from 'babyparse'
 import _ from 'lodash'
 import { StickyContainer, Sticky } from 'react-sticky';
+import SectionTitle from './SectionTitle';
 
 class DistrictDash extends React.Component{
   constructor(props, context) {
@@ -52,10 +53,11 @@ class DistrictDash extends React.Component{
 
           render = () =>  {
             const {data, selected} = this.state
+            //console.log(data)
 
             const distData = data[`${selected}`]
-            console.log(selected)
-            if(data.length==0) {
+            //console.log(selected)
+            if(data.length === 0) {
               return <div>Loading...</div>
             }
 
@@ -91,22 +93,37 @@ class DistrictDash extends React.Component{
                   <div >
                       <div className="dashboard">
                         <div className="row">
-                            <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="4 Year Graduation Percent"/>
-                            <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="5 Year Graduation Percent"/>
-                            <DashCard Title='MassCore Completion Rate' data={distData} dataKey="Mass Core Completion Percent"/>
+                          <div className="col-md-12 center">
+                            <SectionTitle>Cohort Graduation Rates</SectionTitle>
+                          </div>
+                            <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="4 Year Graduation Percent" dataCount="4 Year Cohort Total"/>
+                            <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="5 Year Graduation Percent" dataCount="4 Year Cohort Total"/>
+                         </div>
 
-                         </div>
                          <div className="row">
-                           <DashCard Title='Chronically Absent Rate' data={distData} dataKey="Chronic Absence Percent"/>
-                           <DashCard Title='Out-of-school Suspension Rate' data={distData} dataKey="Out of School Suspension Percent"/>
-                            <DashCard Title='Passed All 9th-Grade Courses Rate' data={distData} dataKey="Passed All 9th Grade Courses Percent"/>
+                          <div className="col-md-12 center">
+                            <SectionTitle>Attendance and Behavior</SectionTitle>
+                          </div>
+                           <DashCard Title='Chronically Absent Rate' data={distData} dataKey="Chronic Absence Percent" dataCount="Chronic Absence Count"/>
+                           <DashCard Title='Out-of-school Suspension Rate' data={distData} dataKey="Out of School Suspension Percent" dataCount="Out of School Suspension Count"/>
+                         </div>
 
-                         </div>
                          <div className="row">
-                             <DashCard Title='Jr. or Sr. Taking AP/IB Courses Rate' data={distData} dataKey="Enrolled in AP/IB Course Percent"/>
-                             <DashCard Title='College Enrollment Rate' data={distData} dataKey="College Enrollment Percent"/>
-                             <DashCard Title='College Persistent Rate' data={distData} dataKey="College Persistence Percent"/>
+                          <div className="col-md-12 center">
+                            <SectionTitle>Course Performance</SectionTitle>
+                          </div>
+                            <DashCard Title='Passed All 9th-Grade Courses Rate' data={distData} dataKey="Passed All 9th Grade Courses Percent" dataCount="Passed All 9th Grade Courses Count"/>
+                            <DashCard Title='Jr. or Sr. Taking AP/IB Courses Rate' data={distData} dataKey="Enrolled in AP/IB Course Percent" dataCount="Enrolled in AP/IB Course Count"/>
                          </div>
+
+                         <div className="row">
+                          <div className="col-md-12 center">
+                            <SectionTitle>College Enrollment and Persistence</SectionTitle>
+                          </div>
+                            <DashCard Title='College Enrollment Rate' data={distData} dataKey="College Enrollment Percent" dataCount="College Persistence Count"/>
+                            <DashCard Title='College Persistent Rate' data={distData} dataKey="College Persistence Percent" dataCount="College Enrollment Count"/>
+                         </div>
+
                      </div>
                   </div>
           </StickyContainer>

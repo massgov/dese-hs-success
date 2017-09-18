@@ -1,0 +1,24 @@
+@import '_variables.scss';
+
+.section-divider-title {
+  color: $color-gray;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 5px;
+
+  &:before {
+      border-top: 2px solid $color-gray-light;
+      content:"";
+      margin: 0 auto; /* this centers the line to the full width specified */
+      position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+      top: 50%; left: 0; right: 0; bottom: 0;
+      width: 100%;
+      z-index: -1;
+  }
+
+  span {
+      /* to hide the lines from behind the text, you have to set the background color the same as the container */
+      background: $color-gray-lighter;
+      padding: 0 15px;
+  }
+}
