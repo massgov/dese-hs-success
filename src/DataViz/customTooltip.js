@@ -20,7 +20,7 @@ export default class CustomTooltip extends React.Component{
           <h4>Failed {number} courses:</h4>
           <hr />
           <p style={{color: `${color_all}`}}>Among <b>{total_all}</b> students who failed {number} courses, <b>{all}%</b> graduated in 4 years</p>
-          <p style={{color: `${color_core}`}}>Among <b>{total_core}</b> students who failed {number} core courses, <b>{core}%</b> graduated in 4 years</p>
+          <p style={{color: `${color_core}`}}>Among <b>{total_core}</b> students who failed {number} <b>core</b> courses, <b>{core}%</b> graduated in 4 years</p>
 
         </div>
       );

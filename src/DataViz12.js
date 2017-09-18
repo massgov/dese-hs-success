@@ -4,6 +4,7 @@ import BlockChartCount from './DataViz/BlockChartCount'
 import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
 import Description from './Description'
+import Introduction from './Introduction'
 
 class Data extends React.Component{
 
@@ -50,11 +51,10 @@ class Data extends React.Component{
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12 center">
-                        <ChartTitle>Get Ahead: AP course work and college success</ChartTitle>
-                        <hr />
-                        <Description>
-                        <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to got to college, stay in college and earn college degrees on time, providing an opportunity to save significant amounts of money. The narrative visualization below provides details around the ties between advanced placement and college sucess.</p>
-                        </Description>
+                        <ChartTitle>Jump Start: AP course work and college success</ChartTitle>
+                        <Introduction>
+                        <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to go to college, stay in college and earn college degrees on time, providing an opportunity to save significant amounts of money. The narrative visualization below provides details around the ties between advanced placement course work and college sucess.</p>
+                        </Introduction>
                         <hr />
                     </div>
                   </div>

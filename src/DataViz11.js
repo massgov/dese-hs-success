@@ -4,6 +4,7 @@ import BlockChartCount from './DataViz/BlockChartCount'
 import {ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
 import Description from './Description'
+import Introduction from './Introduction'
 
 class Data extends React.Component{
 
@@ -51,10 +52,9 @@ class Data extends React.Component{
                   <div className="row">
                     <div className="col-md-12 center">
                         <ChartTitle>Math Matters: Relationship between 11th grade math and college enrollment</ChartTitle>
-                        <hr />
-                        <Description>
-                        <p>Algebra II is a rigorous math class that builds on content covered in Algebra I. Although students may feel that they ‘won’t use math’ after high school, the academic and life skills developed through taking and passing this class can prepare students to succeed in college and beyond. In other words, if a student has receives the relevant math education in high school, two things become much more likely. First, that child will have a higher likelihood of going to college. And second, that child will likely be more successful in college and careers beyond. The narrative visualization below provides details around the ties between Algebra II and college success.</p>
-                        </Description>
+                        <Introduction>
+                        <p>Algebra II is a rigorous math class that builds on content covered in Algebra I. Although students may feel that they ‘won’t use math’ after high school, the academic and life skills developed through taking and passing this class can prepare students to succeed in college and beyond In other words, if a student has receives the relevant math education in high school, two things become much more likely. First, that child will have a higher likelihood of going to college. And second, that child will likely be more successful in college and careers beyond. The narrative visualization below provides details around the ties between Algebra II and college success.</p>
+                        </Introduction>
                         <hr />
                     </div>
                   </div>
