@@ -1,0 +1,13 @@
+.btn-group {margin-bottom: 10px;}
+
+@media only screen and (max-width: 767px) {
+  .btn-group {
+    display: block;
+  }
+
+  .btn-group .btn {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+}

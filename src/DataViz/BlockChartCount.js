@@ -1,5 +1,6 @@
 import React from 'react'
 import Btn from '../Btn'
+import BtnGroup from '../BtnGroup'
 import './BlockChart.css'
 import PersonLegend from './PersonLegend'
 import BlockTable from './BlockTable'
@@ -21,15 +22,29 @@ class BlockChart extends React.Component{
       render = () =>  {
           const {Yes_1, Yes_2, No_1, No_2, description, array, selected} = this.state;
           console.log(array)
-          return (
-                  <div>
+          return(
+                <div>
+                  <div className="row">
+                    <div className="col-md-12 center">
+                        <BtnGroup>
                           <Btn handleClick={this.handleClick} value={0} selected={selected}>1. Passed and Not Passed</Btn>
                           <Btn handleClick={this.handleClick} value={1} selected={selected}>2. College Enrollment</Btn>
                           <Btn handleClick={this.handleClick} value={2} selected={selected}>3. College Persistent</Btn>
-                          <Description>{description}</Description>
-                          <BlockCount array = {array} />
-                          <PersonLegend>100 students</PersonLegend>
+                        </BtnGroup>
+                    </div>
                   </div>
+                    <div className="row">
+                    <div className="col-md-12">
+                          <Description>{description}</Description>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12 center">
+                          <BlockCount array = {array} />
+                    </div>
+                  </div>
+                </div>
+
           );
       };
 
