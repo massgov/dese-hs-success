@@ -52,7 +52,7 @@ class Data extends React.Component{
                         <ChartTitle>AP Courses Set Students Ahead</ChartTitle>
                     </div>
                     <div className="col-md-12">
-                      <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to earn college degrees on time, providing an opportunity to save significant amounts of money. In fact, we found that students….</p>
+                      <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to go to college, stay in college and earn college degrees on time, providing an opportunity to save significant amounts of money. The narrative visualization below provides details around the ties between advanced placement course work and college sucess.</p>
                       <hr />
                     </div>
                   </div>
