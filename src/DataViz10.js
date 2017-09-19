@@ -51,8 +51,8 @@ class Data extends React.Component{
                 <div className="container">
                   <div className="row">
                     <div className="col-md-12 center">
-                      <GradeHeader>10th Grade Steady Course</GradeHeader>
-                        <ChartTitle>Behavioral habits and on-time graduation</ChartTitle>
+                      <GradeHeader>10th Grade</GradeHeader>
+                        <ChartTitle> Steady Course: Behavioral habits and on-time graduation</ChartTitle>
                     </div>
                   </div>
                   <div className="row">

@@ -46,11 +46,11 @@ class Data extends React.Component{
               }
 
               return (
-                <div className="container">
+                <div className="container target-grade" id="grade12" name="grade12">
                   <div className="row">
                     <div className="col-md-12 center">
-                      <GradeHeader>12th Grade Jump Start</GradeHeader>
-                        <ChartTitle>AP Courses Set Students Ahead</ChartTitle>
+                      <GradeHeader>12th Grade</GradeHeader>
+                        <ChartTitle>Jump Start: AP courses set students ahead</ChartTitle>
                     </div>
                     <div className="col-md-12">
                       <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to go to college, stay in college and earn college degrees on time, providing an opportunity to save significant amounts of money. The narrative visualization below provides details around the ties between advanced placement course work and college sucess.</p>
