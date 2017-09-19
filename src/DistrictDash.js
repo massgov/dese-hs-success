@@ -61,13 +61,14 @@ class DistrictDash extends React.Component{
               return <div>Loading...</div>
             }
 
-            const districts = _.keysIn(data)
+            var districts = _.keysIn(data)
+            districts = districts.sort()
             var options = [];
-            for (var i=1; i<districts.length; i++){
+            for (var i=0; i<districts.length; i++){
               var option = { value: districts[i], label: districts[i] }
               options.push(option)
             }
-
+            options.splice(259,1)
 
             return (
               <StickyContainer key={2} className="container data-dash">
