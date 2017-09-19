@@ -32,7 +32,7 @@ class Navigation extends React.Component {
     })
     var h = e.target.getAttribute('href')
     var top = document.getElementById(h).offsetTop;
-    window.scrollTo(0, top);
+    window.scrollTo(0, top-40);
     return true
   }
 
