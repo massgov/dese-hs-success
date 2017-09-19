@@ -40,7 +40,7 @@ class Navigation extends React.Component {
     const { grade, handleClick, sticky } = this.props
     const { value, active } = this.state
     var fixed
-    if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
+    if (sticky) { fixed = "navbar-fixed-top row"} else {fixed = ""}
 
     const grades = [9,10,11,12]
     const navItems = grades.map((grade) =>
