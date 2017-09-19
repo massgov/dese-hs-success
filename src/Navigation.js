@@ -30,6 +30,9 @@ class Navigation extends React.Component {
       value: 'navbar-collapse',
       active: e.target.getAttribute('value')
     })
+    var h = e.target.getAttribute('href')
+    var top = document.getElementById(h).offsetTop;
+    window.scrollTo(0, top);
     return true
   }
 
@@ -41,7 +44,7 @@ class Navigation extends React.Component {
 
     const grades = [9,10,11,12]
     const navItems = grades.map((grade) =>
-      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`#grade${grade}`} className={`nav-link ${(grade == active) ? 'active' : ''}`} value={grade}>{grade}<sup>th</sup> Grade</a></li>
+      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`grade${grade}`} className={`nav-link ${(grade == active) ? 'active' : ''}`} value={grade}>{grade}<sup>th</sup> Grade</a></li>
     )
     return (
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
