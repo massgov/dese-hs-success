@@ -8,13 +8,16 @@ class Content extends React.Component{
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-12">
             <p>
-              Education is a key component in building a young person’s economic future. According to the US Census, on average a high school dropout earns $20,241 annually, compared to $30,645 a year for the typical high school grad and $56,665 for someone with a Bachelor’s Degree.<FootNoteLink index={1} />   College not only helps students make more money, it can provide them more opportunity. There are increasingly fewer job opportunities for workers without any postsecondary degree and even less for high school dropouts.<FootNoteLink index={2} />
+People tend to look at grades and standardized test scores to figure out how a student is doing. This strategy is useful, but it doesn’t give us the whole story. That’s why it’s important to look at factors that help us predict academic performance, on-time high school graduation rates, and even a student’s likelihood to go to and stay in college. We need to look at what really influences grades and test scores.
             </p>
-          </div>
-          <div className="col-md-6">
-            <p>Getting through high school and preparing for college and careers can be challenging. There are some things students, families and schools can focus on to support a student’s success in  high school and beyond. Research shows that the ABC’s - Attendance, Behavior & Course Performance – are powerful predictors of success in high school and later. Help ensure that your students show up, are engaged in their school work and preparing for their future.</p>
+            <p>
+Attendance, behavior, and course performance – the ABCs – give us much-needed insight into the success of a student in high school and beyond. By focusing on key metrics during specific time periods of a high school student’s academic career, we’re able to highlight some specific events, warning signs, and keys to success that can impact each student’s life.
+            </p>
+            <p>
+              Job opportunities for people without a college degree are increasingly limited, and that can have a major impact on income and quality of life. U.S. Census data show the average annual income for someone without a high school diploma is $20,241. The average annual income for someone with a Bachelor’s Degree is $56,665
+            </p>
           </div>
         </div>
         <div className="row">
