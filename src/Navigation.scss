@@ -2,7 +2,7 @@
 
 
 @mixin active-state {
-  background-color: transparent;
+  background-color: $color-primary-blue;
   color: $color-white;
   border-radius: 0;
   border-bottom: 3px solid $color-primary-yellow;
@@ -39,8 +39,9 @@
   padding: 0;
 }
 
-.navbar-inverse{
-  background-color: $color-gray;
+.nav{
+  color: $color-white;
+  background-color: $color-primary-blue;
 }
 
 .nav, .nav-tabs {
@@ -91,6 +92,11 @@
 }
 
 @media all and (min-width: 768px) {
+
+  .nav{
+    background-color: $color-white;
+  }
+
   .navbar {
     padding: 0;
   }
