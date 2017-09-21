@@ -1,5 +1,6 @@
 import React from 'react'
 import "./BlockCount.css"
+import './Legend.css'
 
 const BlockCountLegend = ({legendArray, selected}) => {
   var legendDescription
@@ -32,9 +33,9 @@ const BlockCountLegend = ({legendArray, selected}) => {
   return (
     <div className="legend">
       <div className="legendgroup">
-        <div className="legendblock outline"></div><span>= 100 students</span>
+        <div className="legendblock outline"></div><span className="legend-text">= 100 students</span>
       </div>
-      {legend}
+        <span className="legend-text">{legend}</span>
     </div>
   )
 }
