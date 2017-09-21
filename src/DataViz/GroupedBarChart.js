@@ -17,7 +17,7 @@ const GroupedBarChart = ({barData}) => {
                             <Tooltip content={<CustomTooltip/>}/>
                             <Legend verticalAlign="top" content={CustomLegend}/>
                             <Bar dataKey="All subjects" fill="#14558f" formatter={toPercent}/>
-                            <Bar dataKey="Core subjects" fill="#43956f" formatter={toPercent}/>
+                            <Bar dataKey="Core subjects" fill="#f6c51b" formatter={toPercent}/>
                        </BarChart>
                      </ResponsiveContainer>
           );
