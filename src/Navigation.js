@@ -20,7 +20,7 @@ class Navigation extends React.Component {
     super(props, context);
     this.state = {
       value: 'navbar-collapse',
-      active: '9'
+      active: ''
     }
   }
 
