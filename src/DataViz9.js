@@ -75,7 +75,6 @@ class Data extends React.Component{
                         <ChartSubTitle>4-year Graduation Rate by Course Failure</ChartSubTitle>
                         <GroupedBarChart barData={barData} />
                      </div>
-                     <hr/>
                      </div>
                    </div>
                 </div>
