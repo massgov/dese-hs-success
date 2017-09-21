@@ -20,7 +20,6 @@ class Navigation extends React.Component {
     super(props, context);
     this.state = {
       value: 'navbar-collapse',
-      active: ''
     }
   }
 
@@ -38,7 +37,6 @@ class Navigation extends React.Component {
     this.props.handleClick(e);
     this.setState({
       value: 'navbar-collapse',
-      active: e.target.getAttribute('value')
     })
     var h = e.target.getAttribute('href')
     var top = document.getElementById(h).offsetTop;
@@ -46,20 +44,20 @@ class Navigation extends React.Component {
     return true
   }
 
-  isActive = (grade, active) => {
+  isActive = (grade) => {
     const currentSection = scrollToSection()
     const sectionId = 'grade'+grade
-    return (currentSection==sectionId) || (grade == active) ? 'active' : ''
+    return (currentSection==sectionId) ? 'active' : ''
   }
   render() {
     const { grade, handleClick, sticky } = this.props
-    const { value, active } = this.state
+    const { value } = this.state
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
 
     const grades = [9,10,11,12]
     const navItems = grades.map((grade) =>
-      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`grade${grade}`} id={`grade${grade}1`} className={`nav-link ${this.isActive(grade, active)}`} value={grade}>{grade}<sup>th</sup> Grade</a></li>
+      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`grade${grade}`} id={`grade${grade}1`} className={`nav-link ${this.isActive(grade)}`} value={grade}>{grade}<sup>th</sup> Grade</a></li>
     )
     return (
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
