@@ -7,7 +7,7 @@ import $ from 'jquery'
 export const scrollToSection = () => {
   var $id
   $('.target-grade').each(function() {
-      if ($(window).scrollTop() >= ($(this).offset().top) - 10) {
+      if ($(window).scrollTop() >= ($(this).offset().top) - 100) {
           $id = $(this).attr('id');
       }
   });

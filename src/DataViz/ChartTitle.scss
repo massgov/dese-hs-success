@@ -1,0 +1,17 @@
+@import '_variables.scss';
+
+h2.grade-header{
+  font-size: $small-font-size;
+  text-transform: uppercase;
+  background-color: $color-primary-blue;
+  color: $color-white;
+  padding: 15px 0;
+}
+
+h3.chart-title {
+  span{
+  border-bottom: 3px solid $color-primary-yellow;
+  padding-bottom: 10px;
+  display: inline-block;
+  }
+}

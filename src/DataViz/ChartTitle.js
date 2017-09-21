@@ -1,15 +1,16 @@
 import React from 'react'
+import './ChartTitle.css'
 
 
 export const GradeHeader = ({children}) => {
   return (
-    <h2>{children}</h2>
+    <h2 className="grade-header">{children}</h2>
   )
 }
 
 export const ChartTitle = ({children}) => {
   return (
-    <h3>{children}</h3>
+    <h3 className="chart-title"><span>{children}</span></h3>
   )
 }
 

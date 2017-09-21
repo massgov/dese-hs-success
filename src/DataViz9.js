@@ -6,6 +6,7 @@ import BarChartText from './DataViz/BarChartText'
 import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import $ from 'jquery'
 import {scrollToSection} from './Navigation'
+import './DataViz.css'
 
 class Data extends React.Component{
 
