@@ -4,6 +4,8 @@ import BlockChart from './DataViz/BlockChart'
 import GroupedBarChart from './DataViz/GroupedBarChart'
 import BarChartText from './DataViz/BarChartText'
 import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
+import $ from 'jquery'
+import {scrollToSection} from './Navigation'
 
 class Data extends React.Component{
 
@@ -47,8 +49,11 @@ class Data extends React.Component{
                 return <div className="container">Loading...</div>
               }
 
+
+              $(window).scroll(scrollToSection)
+
               return (
-                <div className="container" id="grade9" name="grade9">
+                <div className="container target-grade" id="grade9" name="grade9">
                   <div className="row">
                     <div className="col-md-12 center">
                         <GradeHeader>9th Grade</GradeHeader>

@@ -7,28 +7,6 @@ import Navigation from './Navigation'
 import { StickyContainer, Sticky } from 'react-sticky';
 
 
-// const renderGrade = (currentGrade) => {
-//         switch(currentGrade) {
-//           case 9:
-//               return <DataViz9 />
-//               break;
-//           case 10:
-//               return <DataViz10 />
-//               break;
-//           case 11:
-//               return <DataViz11 />
-//               break;
-//           case 12:
-//               return <DataViz12 />
-//               break;
-//           default:
-//               return <DataViz9 />
-//               break;
-//     }
-// }
-
-
-
 class GradeDash extends React.Component {
   constructor(props, context){
     super(props, context);

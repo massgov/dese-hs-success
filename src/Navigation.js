@@ -2,7 +2,17 @@ import React from 'react'
 import { NavLink} from 'react-router-dom'
 import './Navigation.css'
 import Btn from './Btn'
+import $ from 'jquery'
 
+export const scrollToSection = () => {
+  var $id
+  $('.target-grade').each(function() {
+      if ($(window).scrollTop() >= ($(this).offset().top) - 10) {
+          $id = $(this).attr('id');
+      }
+  });
+  return ($id)
+}
 
 
 class Navigation extends React.Component {
@@ -36,6 +46,11 @@ class Navigation extends React.Component {
     return true
   }
 
+  isActive = (grade, active) => {
+    const currentSection = scrollToSection()
+    const sectionId = 'grade'+grade
+    return (currentSection==sectionId) || (grade == active) ? 'active' : ''
+  }
   render() {
     const { grade, handleClick, sticky } = this.props
     const { value, active } = this.state
@@ -44,7 +59,7 @@ class Navigation extends React.Component {
 
     const grades = [9,10,11,12]
     const navItems = grades.map((grade) =>
-      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`grade${grade}`} className={`nav-link ${(grade == active) ? 'active' : ''}`} value={grade}>{grade}<sup>th</sup> Grade</a></li>
+      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`grade${grade}`} id={`grade${grade}1`} className={`nav-link ${this.isActive(grade, active)}`} value={grade}>{grade}<sup>th</sup> Grade</a></li>
     )
     return (
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
