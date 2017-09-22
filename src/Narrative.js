@@ -23,7 +23,7 @@ Attendance, behavior, and course performance – the ABCs – give us much-neede
         <div className="row">
           <hr />
           <div className="col-md-12">
-            <p>We followed a group of students through their 4-year journey in high school and  looked at the how students who met certain indicators compare to those who did not. It highlights that the ABCs do matter:</p>
+            <p>We followed a group of students through their 4-year journey in high school and looked at the how students who met certain indicators compare to those who did not. It highlights that the ABCs do matter:</p>
             <ul>
               <li><i className="glyphicon glyphicon-education list-icon" aria-hidden="true" /> Students who pass all grade 9 courses are much more likely to graduate high school han students who fail just one grade 9 course.</li>
               <li><i className="glyphicon glyphicon-education list-icon" aria-hidden="true" /> Students who miss more than 10% of school days are far less likely to graduates than their peers.</li>
