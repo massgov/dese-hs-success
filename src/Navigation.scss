@@ -39,10 +39,12 @@
   padding: 0;
 }
 
-.nav{
+.nav, .navbar-inverse, .navbar-header{
   color: $color-white;
   background-color: $color-primary-blue;
 }
+
+
 
 .nav, .nav-tabs {
   width: 100%;
