@@ -22,7 +22,7 @@ class DashSelect extends React.Component{
     return(
       <div className={`dash-select row ${fixed}`}>
         <Btn handleClick={handleClick} value={'State'} selected={value}>View statewide data</Btn>
-        <p> or filter by your district:  </p>
+        <span> or filter by your district:  </span>
         <Select
             name="select-district"
             value={value}
