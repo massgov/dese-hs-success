@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import BlockChartCount from './DataViz/BlockChartCount'
+import BlockChartCount1 from './DataViz/BlockChartCount1'
 import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
 
@@ -57,7 +57,7 @@ class Data extends React.Component{
                       <p>Advanced Placement (AP) courses offer high school students the chance to receive college course credit before they even move into their dorms. The chance to get a head start on college credits is a major benefit to AP courses, as are the cost savings that come with reducing the number of college classes a student needs to take. However, perhaps the most important advantage to AP courses is that they expose students to college-level academics. This head start is invaluable in helping a student jump into a college atmosphere.</p>
                     </div>
                     <div className="col-md-8">
-                      <BlockChartCount data={blockData}/>
+                      <BlockChartCount1 data={blockData}/>
                     </div>
                   </div>
                 </div>
