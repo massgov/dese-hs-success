@@ -16,7 +16,6 @@ class App extends React.Component {
         <Header />
           <Narrative />
           <GradeDash />
-          <Narrative />
           <DistrictDash />
         <Footer />
         <FootNote />
