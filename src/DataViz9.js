@@ -58,10 +58,10 @@ class Data extends React.Component{
                   <div className="row">
                     <div className="col-md-12 center">
                         <GradeHeader>9th Grade</GradeHeader>
-                        <ChartTitle> Passing Grade: Failing just one course early can set a student back</ChartTitle>
+                        <ChartTitle>Passing Grade: Failing just one course early in high school can set a student back</ChartTitle>
                     </div>
                     <div className="col-md-12">
-                      <p>The transition from middle school to high school is a big one, perhaps bigger than appears at first blush: Not only do students’ academic workloads increase, but simultaneously, so does their independence and responsibility. More students fail ninth grade than any other grade in high school, and a disproportionate number of students who are held back in ninth grade subsequently drop out. A student who passes all grade 9 courses is 14 times more likely to graduate high school in 4 years. Below, explore in detail the link between failing a course in ninth grade and on-time graduation.</p>
+                      <p>The jump from middle school to high school is a big one. Students face greater academic challenges, and have social hurdles and new responsibilities to deal with. This transition can be hard to adjust to, which is one of the reasons why more students fail courses in their freshman year than any other in high school. This often leads to higher dropout rates and This increases the chances a student may be retained or drop out later in high school, and decreases the chances a student will graduate from high school in four 4 years.</p>
                       <hr />
                     </div>
                   </div>
@@ -72,7 +72,7 @@ class Data extends React.Component{
                   </div>
                   <div className="col-md-6">
                     <div className='center'>
-                        <ChartSubTitle>4-year Graduation Rate by Course Failure</ChartSubTitle>
+                        <ChartSubTitle>With each course failed, a student’s chance of graduating is reduced</ChartSubTitle>
                         <GroupedBarChart barData={barData} />
                      </div>
                      </div>

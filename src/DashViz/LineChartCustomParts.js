@@ -29,14 +29,14 @@ export const CustomTooltip = (props) => {
     if(props.lastData == payload[0].value && props.lastYear == payload[0]['payload']['Yr']) {
       return (
         <div className='custom-tooltip-district'>
-          <text className='descr_value'> ({`${(countValue)}`})</text>
+          <text className='descr_value'> of {`${(countValue)}`} students</text>
         </div>
         )
     } else {
       return (
         <div className='custom-tooltip-district'>
           <text className='descr_value'>{`${(value)}`}</text>
-          <text className='descr_value'> ({`${(countValue)}`})</text>
+          <text className='descr_value'> of {`${(countValue)}`} students</text>
         </div>
       );
     }

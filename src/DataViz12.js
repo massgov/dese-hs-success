@@ -51,13 +51,15 @@ class Data extends React.Component{
                     <div className="col-md-12 center">
                       <GradeHeader>12th Grade</GradeHeader>
                         <ChartTitle>Jump Start: AP courses set students ahead</ChartTitle>
+                        <hr />
                     </div>
-                    <div className="col-md-12">
-                      <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to go to college, stay in college and earn college degrees on time, providing an opportunity to save significant amounts of money. The narrative visualization below provides details around the ties between advanced placement course work and college sucess.</p>
-                      <hr />
+                    <div className="col-md-8">
+                      <BlockChartCount data={blockData}/>
+                    </div>
+                    <div className="col-md-4">
+                      <p>Advanced Placement (AP) courses offer high school students the chance to receive college course credit before they even move into their dorms. The chance to get a head start on college credits is a major benefit to AP courses, as are the cost savings that come with reducing the number of college classes a student needs to take. However, perhaps the most important advantage to AP courses is that they expose students to college-level academics. This head start is invaluable in helping a student jump into a college atmosphere.</p>
                     </div>
                   </div>
-                      <BlockChartCount data={blockData}/>
                 </div>
 
               );

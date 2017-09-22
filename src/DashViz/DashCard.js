@@ -18,11 +18,11 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
         let ymin = 0, ymax = 100;
       	switch (dataKey) {
     	  case '4 Year Graduation Percent':
-      		studentGroup = '2015 cohort';
+      		studentGroup = ' 2016 high school graduates';
       		cardKey = 'graduated in 4 years';
           break;
     	  case '5 Year Graduation Percent':
-      		studentGroup = '2016 cohort';
+      		studentGroup = 'the 2015 highschool graduates';
       		cardKey = 'graduated in 5 years';
           break;
     	  case 'Chronic Absence Percent':

@@ -21,14 +21,14 @@ class DashSelect extends React.Component{
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
     return(
       <div className={`dash-select row ${fixed}`}>
-        <p>Explore your district: </p>
+        <Btn handleClick={handleClick} value={'State'} selected={value}>View statewide data</Btn>
+        <p> or filter by your district:  </p>
         <Select
             name="select-district"
             value={value}
             options={options}
             onChange={handleChange}
           />
-        <Btn handleClick={handleClick} value={'State'} selected={value}>View Massachusetts Data</Btn>
       </div>
     )
   }
