@@ -1,7 +1,7 @@
 import React from 'react'
 import Btn from '../Btn'
 import './BlockChart.css'
-import PersonLegend from './PersonLegend'
+import BlockLegend from './BlockLegend'
 import BlockTable from './BlockTable'
 import Block from './Block'
 import { ChartSubTitle } from './ChartTitle'
@@ -29,7 +29,7 @@ class BlockChart extends React.Component{
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
                           <Block array = {array} />
-                          <PersonLegend>1% of <b>{count.toLocaleString()}</b> students who <b>{description}</b></PersonLegend>
+                          <BlockLegend type="person">1% of <b>{count.toLocaleString()}</b> students who <b>{description}</b></BlockLegend>
                       </div>
                   </div>
           );

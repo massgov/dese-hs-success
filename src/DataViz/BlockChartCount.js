@@ -2,7 +2,7 @@ import React from 'react'
 import Btn from '../Btn'
 import BtnGroup from '../BtnGroup'
 import './BlockChart.css'
-import PersonLegend from './PersonLegend'
+import BlockLegend from './BlockLegend'
 import BlockTable from './BlockTable'
 import BlockCount from './BlockCount'
 import { ChartSubTitle } from './ChartTitle'
@@ -50,6 +50,7 @@ class BlockChart extends React.Component{
                             <BlockCount array = {array}>pass</BlockCount>
                             <BlockCount array = {array2}>fail</BlockCount>
                           </div>
+                          <BlockLegend type="default">100 students</BlockLegend>
                     </div>
                   </div>
                 </div>
