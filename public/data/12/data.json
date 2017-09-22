@@ -5,8 +5,8 @@
     "rate_fail":0.61,
     "count_pass": 253,
     "count_fail": 396,
-    "count_pass_hightlight": 253,
-    "count_fail_hightlight": 396
+    "count_pass_hightlight": 0,
+    "count_fail_hightlight": 0
   },
   {
     "description": ["Of those who passed,", "went on to college. Just", "of students who didn’t pass or take enrolled in higher education."],
