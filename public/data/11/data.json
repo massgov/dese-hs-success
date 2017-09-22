@@ -5,8 +5,8 @@
       "rate_fail":0.32,
       "count_pass": 436,
       "count_fail": 206,
-      "count_pass_hightlight": 436,
-      "count_fail_hightlight": 206
+      "count_pass_hightlight": 0,
+      "count_fail_hightlight": 0
     },
     {
       "description": ["Of those who passed,", "went on to college. Just", "of students who didn’t take a math class enrolled in higher education."],

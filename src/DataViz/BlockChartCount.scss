@@ -1,5 +1,13 @@
 @import '_variables.scss';
 
+
+.block-group{
+  width: 100%;
+  margin: 0 auto;
+  display: inline;
+  text-align: center;
+}
+
 .highlight_Yes{
   color: $color-primary-green;
   font-weight: $font-bold;
