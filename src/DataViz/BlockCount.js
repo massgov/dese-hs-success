@@ -12,7 +12,7 @@ const Block = ({array, children}) => {
   return (
       <div className="block-group-item">
         <div className="block-count-chart">
-          <h4>{children}</h4>
+          <h5>{children}</h5>
           {blockPeople}
         </div>
       </div>

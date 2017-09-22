@@ -24,7 +24,7 @@ class BlockChart extends React.Component{
 
       render = () =>  {
           const {Yes_1, Yes_2, No_1, No_2, description, array, array2, selected, rate_pass, rate_fail} = this.state;
-                  console.log(array, array2)
+          const {grade, subject} = this.props
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
           });
@@ -33,9 +33,9 @@ class BlockChart extends React.Component{
                   <div className="row">
                     <div className="col-md-12 center">
                         <BtnGroup>
-                          <Btn handleClick={this.handleClick} value={0} selected={selected}>1. Passed and Not Passed</Btn>
-                          <Btn handleClick={this.handleClick} value={1} selected={selected}>2. College Enrollment</Btn>
-                          <Btn handleClick={this.handleClick} value={2} selected={selected}>3. College Persistent</Btn>
+                          <Btn handleClick={this.handleClick} value={0} selected={selected}>1. Participated in {subject}</Btn>
+                          <Btn handleClick={this.handleClick} value={1} selected={selected}>2. Enrolled in College</Btn>
+                          <Btn handleClick={this.handleClick} value={2} selected={selected}>3. Stayed in College</Btn>
                         </BtnGroup>
                     </div>
                   </div>
@@ -47,8 +47,8 @@ class BlockChart extends React.Component{
                   <div className="row">
                     <div className="col-md-12 center">
                           <div className="block-group">
-                            <BlockCount array = {array}>pass</BlockCount>
-                            <BlockCount array = {array2}>fail</BlockCount>
+                            <BlockCount array = {array}>Took and passed {subject}</BlockCount>
+                            <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
                           </div>
                           <BlockLegend type="default">100 students</BlockLegend>
                     </div>
