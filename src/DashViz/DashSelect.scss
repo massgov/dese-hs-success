@@ -1,7 +1,7 @@
 @import '_variables.scss';
 
 .dash-select {
-  background-color:$color-gray;
+  background-color:$color-gray-dark;
   padding:5px 5%;
   margin: 0;
   font-size: 1.6rem;
@@ -31,20 +31,20 @@
   margin-left: 0;
 }
 
+.backToTop{
+  display: inline;
+}
 
-  .btn.backToTop{
-    margin-top: 12px;
-    display: none;
-    border-radius: 0;
-    padding: 3px 6px;
-  }
+.btn.backToTop_btn{
+  margin-top: 12px;
+  display: none;
+  border-radius: 0;
+}
 
-.dash-select.navbar-fixed-top{
-  a.backToTop_link{
-    color: $color-white;
-    text-decoration: underline;
-    display: block;
-  }
+a.backToTop_link{
+  color: $color-white;
+  text-decoration: underline;
+  display: block;
 }
 
 @media (min-width: 1199px) {
@@ -55,14 +55,9 @@
     margin-left: 3px;
   }
 
-  .dash-select.navbar-fixed-top{
-    .btn.backToTop{
-      margin-top: 8px;
-      display: inline-block;
-    }
-    a.backToTop_link{
-      display: none;
-    }
+  .btn.backToTop_btn{
+    margin-top: 10px;
+    display: inline-block;
   }
   a.backToTop_link{
     display: none;
