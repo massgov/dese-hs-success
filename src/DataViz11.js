@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import BlockChartCount from './DataViz/BlockChartCount'
-import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
+import {GradeHeader, ChartTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
 
 class Data extends React.Component{
@@ -41,7 +41,7 @@ class Data extends React.Component{
           render = () =>  {
             const {blockData} = this.state;
 
-              if(blockData.length==0) {
+              if(blockData.length===0) {
                 return <div className="container">Loading...</div>
               }
 

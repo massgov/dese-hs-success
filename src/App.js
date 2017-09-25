@@ -5,7 +5,6 @@ import FootNote from './FootNote'
 import DataStory from './DataStory'
 import DistrictDash from './DistrictDash'
 import './App.css'
-import { StickyContainer, Sticky } from 'react-sticky';
 
 
 class App extends React.Component {

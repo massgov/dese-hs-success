@@ -30,7 +30,7 @@ class DashSelect extends React.Component{
             options={options}
             onChange={handleChange}
           />
-        <Button bsSize="small pull-right" className="backToTop" href="#header" aria-label="Back to top"><i className="glyphicon glyphicon-arrow-up" aria-hidden="true" /></Button>
+        <Button bsSize="small" className="backToTop pull-right" href="#header" aria-label="Back to top"><i className="glyphicon glyphicon-arrow-up" aria-hidden="true" /></Button>
         <a href="#header" className="backToTop_link pull-right">Back to top</a>
       </div>
     )

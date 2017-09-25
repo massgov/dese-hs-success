@@ -43,7 +43,7 @@ class Data extends React.Component{
           render = () =>  {
             const {blockData1, blockData2} = this.state;
 
-              if(blockData1.length==0) {
+              if(blockData1.length===0) {
                 return <div className="container">Loading...</div>
               }
 
