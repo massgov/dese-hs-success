@@ -42,13 +42,16 @@
 .nav, .navbar-inverse, .navbar-header{
   color: $color-white;
   background-color: $color-primary-blue;
+  float: none;
 }
 
-
-
-.nav, .nav-tabs {
-  width: 100%;
-}
+    .navbar-toggle {
+        display: block;
+        float:right;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+    }
 
 .nav {
   li{
@@ -93,6 +96,7 @@
   display: block;
 }
 
+
 @media all and (min-width: 1199px) {
 
   .nav{
@@ -108,6 +112,9 @@
   .navbar-collapse{
     display: inline;
     padding: 0;
+  }
+  .navbar-toggle {
+      display: none;
   }
   #current-section {
     display: none; }
