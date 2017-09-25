@@ -94,7 +94,7 @@ class DistrictDash extends React.Component{
                     }
                   </Sticky>
                   <div >
-                      <div className="dashboard" id="district" name="district">
+                      <div className="dashboard target-nav" id="district" name="district">
                         <div className="row">
                           <div className="col-md-12 center">
                             <SectionTitle>Cohort Graduation Rates</SectionTitle>

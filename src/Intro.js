@@ -6,7 +6,7 @@ class Content extends React.Component{
 
   render = () =>  {
     return (
-      <div className="container" id="intro" name="intro">
+      <div className="container target-nav" id="intro" name="intro">
         <div className="row">
           <div className="col-md-12">
             <p>

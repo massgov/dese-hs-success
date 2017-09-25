@@ -54,7 +54,7 @@ class Data extends React.Component{
               $(window).scroll(scrollToSection)
 
               return (
-                <div className="container target-grade" id="grade9" name="grade9">
+                <div className="container target-nav" id="grade9" name="grade9">
                   <div className="row">
                     <div className="col-md-12 center">
                         <GradeHeader>9th Grade</GradeHeader>

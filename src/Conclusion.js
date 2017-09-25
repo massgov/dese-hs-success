@@ -6,7 +6,7 @@ class Conclusion extends React.Component{
 
   render = () =>  {
     return (
-      <div className="container"  id="conclusion" name="conclusion">
+      <div className="container target-nav"  id="conclusion" name="conclusion">
         <div className="row">
           <div className="col-md-12">
             <h2>Conclusion</h2>
