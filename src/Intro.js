@@ -1,6 +1,6 @@
 import React from 'react'
 import FootNoteLink from './FootNoteLink'
-import './Narrative.css'
+import './Intro.css'
 
 class Content extends React.Component{
 
