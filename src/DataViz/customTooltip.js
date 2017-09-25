@@ -18,8 +18,8 @@ export default class CustomTooltip extends React.Component{
           <div className="custom-tooltip">
             <h4>Failed {number} course:</h4>
             <hr />
-            <p style={{color: `${color_all}`}}>Among <b>{total_all}</b> students who failed {number} course, <b>{all}%</b> graduated in 4 years.</p>
-            <p style={{color: `${color_core}`}}>Among <b>{total_core}</b> students who failed {number} core course, <b>{core}%</b> graduated in 4 years.</p>
+            <p>Among <span style={{color: `${color_all}`}}><b>{total_all}</b></span> students who failed {number} course, <span style={{color: `${color_all}`}}><b>{all}%</b></span> graduated in 4 years.</p>
+            <p>Among <span style={{color: `${color_core}`}}><b>{total_core}</b></span> students who failed {number} Core course, <span style={{color: `${color_core}`}}><b>{core}%</b></span> graduated in 4 years.</p>
           </div>
         )
       }      
@@ -27,8 +27,8 @@ export default class CustomTooltip extends React.Component{
         <div className="custom-tooltip">
           <h4>Failed {number} courses:</h4>
           <hr />
-          <p style={{color: `${color_all}`}}>Among <b>{total_all}</b> students who failed {number} courses, <b>{all}%</b> graduated in 4 years.</p>
-          <p style={{color: `${color_core}`}}>Among <b>{total_core}</b> students who failed {number} core courses, <b>{core}%</b> graduated in 4 years.</p>
+          <p>Among <span style={{color: `${color_all}`}}><b>{total_all}</b></span> students who failed {number} courses, <span style={{color: `${color_all}`}}><b>{all}%</b></span> graduated in 4 years.</p>
+          <p>Among <span style={{color: `${color_core}`}}><b>{total_core}</b></span> students who failed {number} core courses, <span style={{color: `${color_core}`}}><b>{core}%</b></span> graduated in 4 years.</p>
         </div>
       );
     }
