@@ -31,11 +31,40 @@
   margin-left: 0;
 }
 
-@media (min-width: 768px) {
+
+  .btn.backToTop{
+    margin-top: 12px;
+    display: none;
+    border-radius: 0;
+    padding: 3px 6px;
+  }
+
+.dash-select.navbar-fixed-top{
+  a.backToTop_link{
+    color: $color-white;
+    text-decoration: underline;
+    display: block;
+  }
+}
+
+@media (min-width: 1199px) {
   .Select {
     width: 60%;
   }
   .btn-primary {
     margin-left: 3px;
+  }
+
+  .dash-select.navbar-fixed-top{
+    .btn.backToTop{
+      margin-top: 8px;
+      display: inline-block;
+    }
+    a.backToTop_link{
+      display: none;
+    }
+  }
+  a.backToTop_link{
+    display: none;
   }
 }

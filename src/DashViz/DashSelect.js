@@ -3,6 +3,7 @@ import './DashSelect.css'
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import Btn from '../Btn'
+import { Button } from 'react-bootstrap'
 
 
 class DashSelect extends React.Component{
@@ -29,6 +30,8 @@ class DashSelect extends React.Component{
             options={options}
             onChange={handleChange}
           />
+        <Button bsSize="small pull-right" className="backToTop" href="#header" aria-label="Back to top"><i className="glyphicon glyphicon-arrow-up" aria-hidden="true" /></Button>
+        <a href="#header" className="backToTop_link pull-right">Back to top</a>
       </div>
     )
   }
