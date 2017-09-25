@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavLink} from 'react-router-dom'
 import './Navigation.css'
 import Btn from './Btn'
 import $ from 'jquery'
@@ -11,7 +10,6 @@ export const scrollToSection = () => {
           $id = $(this).attr('id');
       }
   });
-    console.log($id)
   return ($id)
 }
 
@@ -21,6 +19,7 @@ class Navigation extends React.Component {
     super(props, context);
     this.state = {
       value: 'navbar-collapse',
+      grade: 9
     }
   }
 
@@ -35,13 +34,14 @@ class Navigation extends React.Component {
   };
 
   onNavClick = (e) => {
-    this.props.handleClick(e);
+    e.preventDefault();
     this.setState({
       value: 'navbar-collapse',
+      grade : e.target.getAttribute("value"),
     })
     var h = e.target.getAttribute('href')
     var top = document.getElementById(h).offsetTop;
-    window.scrollTo(0, top-40);
+    window.scrollTo(0, top);
     return true
   }
 
@@ -50,9 +50,15 @@ class Navigation extends React.Component {
     const sectionId = id
     return (currentSection==sectionId) ? 'active' : ''
   }
+
+  isScrolledTo = () => {
+   const currentSection = scrollToSection()
+   return currentSection
+ }
+
   render() {
-    const { grade, handleClick, sticky } = this.props
-    const { value } = this.state
+    const { sticky } = this.props
+    const { value, grade } = this.state
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
 
@@ -63,8 +69,8 @@ class Navigation extends React.Component {
     return (
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
-              <span className="navbar-brand" id="current-section">{grade}<sup>th</sup> Grade</span>
-              <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Select a different grade</Btn>
+              <span className="navbar-brand" id="current-section">{this.isScrolledTo()}</span>
+              <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <i className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
             </div>
             <div className={value}>
               <ul className="nav nav-tabs nav-justified flex-column">

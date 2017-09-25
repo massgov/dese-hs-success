@@ -10,22 +10,7 @@ import { StickyContainer, Sticky } from 'react-sticky';
 
 
 class GradeDash extends React.Component {
-  constructor(props, context){
-    super(props, context);
-    this.state = {
-      grade: 9,
-    }
-  }
-
-  handleClick = (e) =>  {
-    e.preventDefault();
-    this.setState({
-      grade : e.target.getAttribute("value"),
-    })
-
-  };
   render() {
-    const { grade } = this.state
     return (
           <StickyContainer key={1}>
                   <Sticky>
@@ -36,7 +21,7 @@ class GradeDash extends React.Component {
                           sticky = true
                         } else { sticky = false }
                         return (
-                          <Navigation handleClick={this.handleClick} sticky={sticky} grade={grade}/>
+                          <Navigation sticky={sticky}/>
                         )
                       }
                     }
