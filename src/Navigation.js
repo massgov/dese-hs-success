@@ -67,7 +67,10 @@ class Navigation extends React.Component {
             </div>
             <div className={value}>
               <ul className="nav nav-tabs nav-justified flex-column">
+                <li className="nav-item" onClick={this.onNavClick} ><a href={`#intro`} id={`conclusion1`} className={`nav-link ${this.isActive(grade)}`} value={grade}>Intro</a></li>
                 {navItems}
+                <li className="nav-item" onClick={this.onNavClick} ><a href={`#conclusion`} id={`conclusion1`} className={`nav-link ${this.isActive(grade)}`} value={grade}>Conclusion</a></li>
+                <li className="nav-item" onClick={this.onNavClick} ><a href={`#district`} id={`district1`} className={`nav-link ${this.isActive(grade)}`} value={grade}>Explore Your District</a></li>
               </ul>
             </div>
         </nav>

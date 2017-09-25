@@ -5,7 +5,7 @@ class Content extends React.Component{
 
   render = () =>  {
     return (
-      <header className="page-header">
+      <header className="page-header" id="header" name="header">
         <div className="container">
           <div className="row">
             <div className="col-md-8">
