@@ -1,10 +1,8 @@
 import React from 'react';
-import Intro from './Intro'
-import Conclusion from './Conclusion'
 import Header from './Header'
 import Footer from './Footer'
 import FootNote from './FootNote'
-import GradeDash from './GradeDash'
+import DataStory from './DataStory'
 import DistrictDash from './DistrictDash'
 import './App.css'
 import { StickyContainer, Sticky } from 'react-sticky';
@@ -15,9 +13,7 @@ class App extends React.Component {
     return (
       <div className="wrapper">
         <Header />
-          <Intro />
-          <GradeDash />
-          <Conclusion />
+          <DataStory />
           <DistrictDash />
         <Footer />
         <FootNote />
