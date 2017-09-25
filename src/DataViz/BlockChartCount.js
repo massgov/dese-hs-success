@@ -13,17 +13,16 @@ import './BlockChartCount.css'
 class BlockChart extends React.Component{
       constructor(props, context) {
         super(props, context);
-        const {Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail} = this.getData('0');
-        console.log(rate_pass)
+        const { Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail } = this.getData('0');
         this.state = {
           selected: 0,
-          Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail
+          Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail
         };
       };
 
 
       render = () =>  {
-          const {Yes_1, Yes_2, No_1, No_2, description, array, array2, selected, rate_pass, rate_fail} = this.state;
+          const { Yes_1, Yes_2, No_1, No_2, description, array, array2, selected, rate_pass, rate_fail, total_count_pass, total_count_fail } = this.state;
           const {grade, subject} = this.props
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
@@ -31,6 +30,8 @@ class BlockChart extends React.Component{
           const fail = Math.round(rate_fail);
           const pass = Math.round(rate_pass);
           if(uniqueArray[0] === "No"){
+            const fail = total_count_fail.toLocaleString();
+            const pass = total_count_pass.toLocaleString();
             return (
               <div>
                   <div className="row">
@@ -43,20 +44,27 @@ class BlockChart extends React.Component{
                     </div>
                   </div>
                     <div className="row">
-                    <div className="col-md-12">
-                          <p>{description[0]} <span className="highlight_No">{pass}%</span> {description[1]} <span className="highlight_No">{fail}%</span> {description[2]}</p>
+                    <div className="col-md-6 center">
+                          <p>{description[0]} <span className="highlight_No">{pass}</span> {description[1]}</p>
+                    </div>
+                    <div className="col-md-6 center">
+                          <p>{description[2]} <span className="highlight_No">{fail}</span> {description[3]}</p>
                     </div>
                   </div>
                   <div className="row">
                     <div className="col-md-12 center">
-                          <div className="block-group">
-                            <BlockCount array = {array}>Took and passed {subject}</BlockCount>
-                            <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
-                          </div>
-                          <BlockLegend type="default">100 students</BlockLegend>
+                        <div className="block-group">
+                            <div className="col-md-6 center">
+                              <BlockCount array = {array}>Took and passed {subject}</BlockCount>
+                            </div>
+                            <div className="col-md-6 center">
+                              <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
+                            </div>
+                        </div>
                     </div>
+                    <BlockLegend type="default">100 students</BlockLegend>
                   </div>
-                </div>
+              </div>
 
             )
           }
@@ -72,18 +80,25 @@ class BlockChart extends React.Component{
                     </div>
                   </div>
                     <div className="row">
-                    <div className="col-md-12">
-                          <p>{description[0]} <span className="highlight_Yes">{pass}%</span> {description[1]} <span className="highlight_Yes">{fail}%</span> {description[2]}</p>
+                    <div className="col-md-6 center">
+                          <p>{description[0]} <span className="highlight_Yes">{pass}%</span> {description[1]}</p>
+                    </div>
+                    <div className="col-md-6 center">
+                          <p>{description[2]} <span className="highlight_Yes">{fail}%</span> {description[3]}</p>
                     </div>
                   </div>
                   <div className="row">
                     <div className="col-md-12 center">
                           <div className="block-group">
-                            <BlockCount array = {array}>Took and passed {subject}</BlockCount>
-                            <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
+                            <div className="col-md-6 center">
+                              <BlockCount array = {array}>Took and passed {subject}</BlockCount>
+                            </div>
+                            <div className="col-md-6 center">
+                              <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
+                            </div>
                           </div>
-                          <BlockLegend type="default">100 students</BlockLegend>
-                    </div>
+                      </div>
+                      <BlockLegend type="default">100 students</BlockLegend>
                   </div>
                 </div>
 
@@ -97,6 +112,7 @@ class BlockChart extends React.Component{
 
       setData = (selected) => {
         const getData = this.getData(selected);
+        console.log(getData);
         this.setState({
             Yes_1: getData.Yes_1,
             Yes_2: getData.Yes_2,
@@ -104,6 +120,8 @@ class BlockChart extends React.Component{
             No_2: getData.No_2,
             rate_pass: getData.rate_pass,
             rate_fail: getData.rate_fail,
+            total_count_pass: getData.total_count_pass,
+            total_count_fail: getData.total_count_fail,
             description: getData.description,
             selected: selected,
             array: getData.array,
@@ -120,9 +138,11 @@ class BlockChart extends React.Component{
         const description = data.description;
         const rate_pass = data.rate_pass*100;
         const rate_fail = data.rate_fail*100;
+        const total_count_pass = data.total_count_pass;
+        const total_count_fail = data.total_count_fail;
         var array = this.createArray(Yes_1, Yes_2)
         var array2 = this.createArray(No_1, No_2)
-        return { Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail}
+        return { Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail }
       }
 
       createArray = (Yes, No) => {
