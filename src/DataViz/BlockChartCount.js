@@ -28,6 +28,38 @@ class BlockChart extends React.Component{
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
           });
+          const fail = Math.round(rate_fail);
+          const pass = Math.round(rate_pass);
+          if(uniqueArray[0] === "No"){
+            return (
+              <div>
+                  <div className="row">
+                    <div className="col-md-12 center">
+                        <BtnGroup>
+                          <Btn handleClick={this.handleClick} value={0} selected={selected}>1. Participated in {subject}</Btn>
+                          <Btn handleClick={this.handleClick} value={1} selected={selected}>2. Enrolled in College</Btn>
+                          <Btn handleClick={this.handleClick} value={2} selected={selected}>3. Stayed in College</Btn>
+                        </BtnGroup>
+                    </div>
+                  </div>
+                    <div className="row">
+                    <div className="col-md-12">
+                          <p>{description[0]} <span className="highlight_No">{pass}%</span> {description[1]} <span className="highlight_No">{fail}%</span> {description[2]}</p>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12 center">
+                          <div className="block-group">
+                            <BlockCount array = {array}>Took and passed {subject}</BlockCount>
+                            <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
+                          </div>
+                          <BlockLegend type="default">100 students</BlockLegend>
+                    </div>
+                  </div>
+                </div>
+
+            )
+          }
           return(
                 <div>
                   <div className="row">
@@ -41,7 +73,7 @@ class BlockChart extends React.Component{
                   </div>
                     <div className="row">
                     <div className="col-md-12">
-                          <p>{description[0]} <span className="highlight_Yes">{rate_pass}%</span> {description[1]} <span className="highlight_No">{rate_fail}%</span> {description[2]}</p>
+                          <p>{description[0]} <span className="highlight_Yes">{pass}%</span> {description[1]} <span className="highlight_Yes">{fail}%</span> {description[2]}</p>
                     </div>
                   </div>
                   <div className="row">
