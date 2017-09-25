@@ -18,7 +18,7 @@
       "count_fail_hightlight": 101
     },
     {
-      "description": ["","of students who passed 11th grad math remained enrolled in college after 1 year. That figure is only","for the other group."],
+      "description": ["","of students who passed 11th grade math remained enrolled in college after 1 year. That figure is only","for the other group."],
       "rate_pass": 0.71,
       "rate_fail":0.38,
       "count_pass": 436,
