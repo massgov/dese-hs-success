@@ -2,6 +2,7 @@ import React from 'react'
 import './Navigation.css'
 import Btn from './Btn'
 import $ from 'jquery'
+import _ from 'lodash'
 
 export const scrollToSection = () => {
   var $id
@@ -68,14 +69,20 @@ class Navigation extends React.Component {
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
 
-    const targets = [["intro", "Intro"],["grade9","9th Grade"],["grade10","10th Grade"],["grade11","11th Grade"],["grade12", "12th Grade"],["conclusion", "Get on Track"],["district", "Explore Your District"]]
-    const navItems = targets.map((id) =>
+    const targets = {"intro": ["intro", "Intro"],"grade9":["grade9","9th Grade"],"grade10":["grade10","10th Grade"],"grade11":["grade11","11th Grade"],"grade12":["grade12", "12th Grade"],"conclusion":["conclusion", "Get on Track"],"district":["district", "Explore Your District"]}
+    const navItems = _.map(targets, (id) =>
       <li key={id[0]} className="nav-item" onClick={this.onNavClick} ><a href={`${id[0]}`} id={`${id[0]}1`} className={`nav-link ${this.isActive(id[0])}`} value={id[0]}>{id[1]}</a></li>
     )
+    const currentSectionName = () => {
+      console.log(this.isScrolledTo())
+      const id = this.isScrolledTo()
+      if (id) return targets[id][1]
+
+    }
     return (
         <nav className={`navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
-              <span className="navbar-brand" id="current-section">{this.isScrolledTo()}</span>
+              <span className="navbar-brand" id="current-section">{currentSectionName()}</span>
               <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <i className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
             </div>
             <div className={value}>
