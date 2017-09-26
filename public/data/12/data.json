@@ -7,6 +7,8 @@
     "count_fail": 396,
     "count_pass_hightlight": 0,
     "count_fail_hightlight": 0,
+    "count_pass_faded": 0,
+    "count_fail_faded": 0,
     "total_count_pass": 25314,
     "total_count_fail": 39645
   },
@@ -18,6 +20,8 @@
     "count_fail": 396,
     "count_pass_hightlight": 218,
     "count_fail_hightlight": 228,
+    "count_pass_faded": 0,
+    "count_fail_faded": 0,
     "total_count_pass": 21767,
     "total_count_fail": 22816
   },
@@ -29,6 +33,8 @@
     "count_fail": 396,
     "count_pass_hightlight": 206,
     "count_fail_hightlight": 184,
+    "count_pass_faded": 12,
+    "count_fail_faded": 44,
     "total_count_pass": 20560,
     "total_count_fail": 18353
   },

@@ -132,25 +132,30 @@ class BlockChart extends React.Component{
       getData = (selected) => {
         const data = this.props.data[selected];
         const Yes_1 = data.count_pass_hightlight;
-        const Yes_2 = data.count_pass-Yes_1;
+        const Yes_alt = data.count_pass_faded;
+        const Yes_2 = data.count_pass-Yes_1-Yes_alt;
         const No_1 = data.count_fail_hightlight;
-        const No_2 = data.count_fail-No_1;
+        const No_alt = data.count_fail_faded;
+        const No_2 = data.count_fail-No_1-No_alt;
         const description = data.description;
         const rate_pass = data.rate_pass*100;
         const rate_fail = data.rate_fail*100;
         const total_count_pass = data.total_count_pass;
         const total_count_fail = data.total_count_fail;
-        var array = this.createArray(Yes_1, Yes_2)
-        var array2 = this.createArray(No_1, No_2)
+        var array = this.createArray(Yes_1, Yes_alt, Yes_2)
+        var array2 = this.createArray(No_1, No_alt, No_2)
         return { Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail }
       }
 
-      createArray = (Yes, No) => {
+      createArray = (Hightlight, Faded, Grayout) => {
         var arr=[]
-        for(var y=0; y<Yes; y++){
+        for(var y=0; y<Hightlight; y++){
           arr.push('Yes');
         };
-        for(var n=0; n<No; n++){
+        for(var y=0; y<Faded; y++){
+          arr.push('alt');
+        };
+        for(var n=0; n<Grayout; n++){
           arr.push('No');
         };
         return arr
