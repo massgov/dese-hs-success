@@ -67,14 +67,15 @@ class Navigation extends React.Component {
       <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`${grade}`} id={`${grade}1`} className={`nav-link ${this.isActive(grade)}`} value={grade}>{grade}</a></li>
     )
     return (
-        <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
+        <nav className={`navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
               <span className="navbar-brand" id="current-section">{this.isScrolledTo()}</span>
               <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <i className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
             </div>
             <div className={value}>
-              <ul className="nav nav-tabs nav-justified flex-column">
+              <ul className="nav nav-tabs flex-column">
                 {navItems}
+                <li key="district" className="nav-item pull-right nav-item_last" onClick={this.onNavClick} ><a href="district" className={`nav-link ${this.isActive("district")}`} value="district">Explore Your District</a></li>
               </ul>
             </div>
         </nav>

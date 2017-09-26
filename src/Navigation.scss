@@ -6,6 +6,7 @@
   color: $color-white;
   border-radius: 0;
   border-bottom: 3px solid $color-primary-yellow;
+  padding: 12px 15px 12px;
 }
 
 @mixin active-menu {
@@ -16,7 +17,7 @@
 
 .navbar {
   margin: 0 auto 30px;
-  padding: 0 15px;
+  padding: 0;
   border-radius: 0;
   border: 0;
 }
@@ -55,11 +56,19 @@
 
 .nav {
   li{
+    width: 100%;
+    &:last-child{
+      border-top: 1px solid lighten($color-gray,30%);
+      margin-top: 8px;
+      padding-top: 5px;
+      border-bottom: none;
+    }
     a{
       color: lighten($color-gray,30%);
-      border: none;
       border-radius: 0;
-      padding: 12px 15px;
+      border: none;
+      padding: 12px 15px 15px;
+      text-align: center;
       &.active {
         @include active-state;
       }
@@ -78,16 +87,9 @@
   border: 1px solid $color-white;
   color: $color-white;
   border-radius: 0;
-  &.active {
+  &.active, &:hover, &:active {
     @include active-menu
   }
-  &:hover, &:active{
-    @include active-menu
-  }
-}
-
-.nav-item {
-    padding-left: 0;
 }
 
 
@@ -101,10 +103,29 @@
 
   .nav{
     background-color: $color-white;
+    margin: 0 auto;
+    li{
+      max-width: 12%;
+      a{
+        text-align: center;
+        margin: 0 auto;
+      }
+      &:first-child{
+        width: 10%;
+      }
+      &:last-child{
+        max-width: 18%;
+        padding-top: 0;
+        margin-top: 0;
+        border-top: none;
+        border-left: 1px solid lighten($color-gray,30%);
+      }
+    }
   }
 
   .navbar {
     padding: 0;
+    background-color: $color-white;
   }
   .navbar-fixed-top {
     position: fixed;
@@ -118,6 +139,13 @@
   }
   #current-section {
     display: none; }
+}
+.nav-item {
+  padding: 0;
+}
+
+.nav-item_last{
+  border-top: none;
 }
 
 .target-nav{
