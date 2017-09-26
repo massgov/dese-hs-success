@@ -23,7 +23,7 @@ export const CustomTooltip = (props) => {
   if (props.active) {
     const { payload } = props;
     if( payload[0].value != 'Null' ){
-      value = payload[0].value + '%';
+      value = ( Math.round( payload[0].value * 10 ) / 10 ) + '%';
       countValue = payload[0]['payload'][props.dataCount].toLocaleString();
     } else { value = payload[0].value + '*'}
     if(props.lastData == payload[0].value && props.lastYear == payload[0]['payload']['Yr']) {
@@ -48,7 +48,7 @@ export const CustomizedLabel = ({index, lastIndex, x, y, lastData}) => {
     if (index == lastIndex) {
         x = x;
         y = y;
-        value = lastData + '%';
+        value = ( Math.round( lastData * 10 ) / 10 ) + '%';
     } else {
       x = 0
       y = 0

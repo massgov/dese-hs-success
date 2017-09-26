@@ -56,7 +56,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
     return(
       <div className="col-md-6">
           <div className="dash-card">
-            <p><span className="dash-card__hightlight">{value}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year}.</p>
+            <p><span className="dash-card__hightlight">{Math.round( value * 10 ) / 10}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year}.</p>
             <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
           </div>
       </div>

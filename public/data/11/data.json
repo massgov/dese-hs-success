@@ -1,6 +1,6 @@
   [
     {
-      "description": ["","of 11th graders pass Algebra II or a higher level math class.","", "either fail or don’t take such a course."],
+      "description": [""," 11th graders passed Algebra II or a higher level math class.","", "either failed or don’t take such a course."],
       "rate_pass": 0.68,
       "rate_fail":0.32,
       "count_pass": 436,
