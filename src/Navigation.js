@@ -68,7 +68,7 @@ class Navigation extends React.Component {
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
 
-    const targets = [["intro", "Intro"],["grade9","9th Grade"],["grade10","10th Grade"],["grade11","11th Grade"],["grade12", "12th Grade"],["conclusion", "Conclusion"],["district", "Explore Your District"]]
+    const targets = [["intro", "Intro"],["grade9","9th Grade"],["grade10","10th Grade"],["grade11","11th Grade"],["grade12", "12th Grade"],["conclusion", "Get on Track"],["district", "Explore Your District"]]
     const navItems = targets.map((id) =>
       <li key={id[0]} className="nav-item" onClick={this.onNavClick} ><a href={`${id[0]}`} id={`${id[0]}1`} className={`nav-link ${this.isActive(id[0])}`} value={id[0]}>{id[1]}</a></li>
     )
@@ -79,7 +79,7 @@ class Navigation extends React.Component {
               <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <i className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
             </div>
             <div className={value}>
-              <ul className="nav nav-tabs flex-column">
+              <ul className="nav nav-tabs">
                 {navItems}
               </ul>
             </div>
