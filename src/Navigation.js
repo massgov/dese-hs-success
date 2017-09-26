@@ -13,6 +13,13 @@ export const scrollToSection = () => {
   return ($id)
 }
 
+export const animatePageScroll = (target) => {
+    var h = target.getAttribute('href')
+    var top = document.getElementById(h).offsetTop;
+    $('html, body').animate({
+        scrollTop: top
+    }, 500);
+  }
 
 class Navigation extends React.Component {
   constructor(props, context){
@@ -35,28 +42,18 @@ class Navigation extends React.Component {
 
   onNavClick = (e) => {
     e.preventDefault();
+    const target = e.target
     this.setState({
       value: 'navbar-collapse',
-      currentId : e.target.getAttribute("value"),
+      currentId : target.getAttribute("value"),
     })
-    var h = e.target.getAttribute('href')
-    var top = document.getElementById(h).offsetTop;
-    window.scrollTo(0, top);
+    animatePageScroll(target)
     return true
   }
 
 
   isActive = (id) => {
-    //const currentSection = this.hasScrolled()
     var currentSection = scrollToSection()
-    // var previousSection = currentSection
-    // if (currentSection != previousSection){
-    //   this.setState({
-    //     currentId: currentSection
-    //   })
-    // }
-    //const { currentId } = this.state
-    console.log(currentSection)
     return (currentSection===id) ? 'active' : ''
   }
 
