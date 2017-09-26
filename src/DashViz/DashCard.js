@@ -18,12 +18,26 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
         let ymin = 0, ymax = 100;
       	switch (dataKey) {
     	  case '4 Year Graduation Percent':
-      		studentGroup = ' 2016 high school graduates';
+      		studentGroup = ' students who started high school in';
       		cardKey = 'graduated in 4 years';
+          return (
+            <div className="col-md-6">
+              <div className="dash-card">
+                <p><span className="dash-card__hightlight">{Math.round( value * 10 ) / 10}%</span> of {studentGroup} {year-4} <span className="dash-card__hightlight">{cardKey}</span>.</p>
+                <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
+              </div>
+            </div> )
           break;
     	  case '5 Year Graduation Percent':
-      		studentGroup = 'the 2015 highschool graduates';
-      		cardKey = 'graduated in 5 years';
+      		studentGroup = ' students who started high school in';
+      		cardKey = 'graduated in 5 years or less';
+          return (
+            <div className="col-md-6">
+              <div className="dash-card">
+                <p><span className="dash-card__hightlight">{Math.round( value * 10 ) / 10}%</span> of {studentGroup} {year-5} <span className="dash-card__hightlight">{cardKey}</span>.</p>
+                <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
+              </div>
+            </div> )
           break;
     	  case 'Chronic Absence Percent':
       		studentGroup = 'high school students';
@@ -41,7 +55,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
           break;
       	case 'Enrolled in AP/IB Course Percent':
       		studentGroup = 'juniors/seniors';
-      		cardKey = 'took at least one AP/IB courses';
+      		cardKey = 'took at least one AP/IB course';
           break;
       	case 'College Enrollment Percent':
       		studentGroup = 'high school students';
@@ -56,7 +70,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
     return(
       <div className="col-md-6">
           <div className="dash-card">
-            <p><span className="dash-card__hightlight">{value}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year}.</p>
+            <p><span className="dash-card__hightlight">{Math.round( value * 10 ) / 10}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year}.</p>
             <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
           </div>
       </div>

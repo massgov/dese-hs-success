@@ -1,6 +1,6 @@
 [
   {
-    "description": ["","of 12th graders took an AP course.", "", " didn’t take such a course."],
+    "description": ["","of 12th graders took an AP course.", "", " did not take such a course."],
     "rate_pass": 0.39,
     "rate_fail": 0.61,
     "count_pass": 253,
@@ -11,7 +11,7 @@
     "total_count_fail": 39645
   },
   {
-    "description": ["Of those who took an AP course,", "went on to college.","Just", "of students who didn’t take an AP course enrolled in higher education."],
+    "description": ["Of those who took an AP course,", "went on to college.","Just", "of students who did not take an AP course enrolled in higher education."],
     "rate_pass": 0.86,
     "rate_fail": 0.58,
     "count_pass": 253,
@@ -22,7 +22,7 @@
     "total_count_fail": 22816
   },
   {
-    "description": ["","of students who took AP courses in 12th grade remained enrolled in college after 1 year.","That figure is only","for the other group."],
+    "description": ["","of students who took AP courses in 12th grade remained enrolled in college after 1 year.","That figure is only","for those that did not take an AP course."],
     "rate_pass": 0.81,
     "rate_fail": 0.46,
     "count_pass": 253,
