@@ -124,6 +124,12 @@
         border-top: none;
         border-left: 1px solid lighten($color-gray,30%);
         //float: right;
+        background-color: $color-gray-lighter;
+        a{
+          &.active, &:hover, &:active, &:focus {
+            background-color: $color-gray-dark;
+          }
+        }
       }
     }
   }
