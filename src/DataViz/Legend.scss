@@ -1,0 +1,16 @@
+@import '_variables.scss';
+
+.legend-text{
+  font-size: $tiny-font-size;
+}
+
+.legend-icon{
+    // -webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
+    // mask: url(/images/person.svg) no-repeat 50% 50%;
+    // -webkit-mask-size: contain;
+    // mask-size: contain;
+    border: 1px solid $color-gray;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+}

@@ -4,7 +4,6 @@
 @mixin dark-view {
     a {
         color: $color-white;
-        text-decoration: underline;
         &:active,
         &:visited {
             color: $color-white;
@@ -37,5 +36,10 @@
 }
 
 .sources-section li:target {
-    color: $color-primary-yellow;
+    color: $color-white;
+    background-color: $color-white;
+}
+
+.sources-section li:target a {
+  color: $color-black; 
 }

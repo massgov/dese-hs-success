@@ -2,7 +2,7 @@
 
 
 @mixin active-state {
-  background-color: transparent;
+  background-color: $color-primary-blue;
   color: $color-white;
   border-radius: 0;
   border-bottom: 3px solid $color-primary-yellow;
@@ -15,7 +15,7 @@
 }
 
 .navbar {
-  margin-top: 20px;
+  margin: 0 auto 30px;
   padding: 0 15px;
   border-radius: 0;
   border: 0;
@@ -39,13 +39,19 @@
   padding: 0;
 }
 
-.navbar-inverse{
-  background-color: $color-gray;
+.nav, .navbar-inverse, .navbar-header{
+  color: $color-white;
+  background-color: $color-primary-blue;
+  float: none;
 }
 
-.nav, .nav-tabs {
-  width: 100%;
-}
+    .navbar-toggle {
+        display: block;
+        float:right;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+    }
 
 .nav {
   li{
@@ -90,17 +96,30 @@
   display: block;
 }
 
-@media all and (min-width: 768px) {
+
+@media all and (min-width: 1199px) {
+
+  .nav{
+    background-color: $color-white;
+  }
+
   .navbar {
     padding: 0;
   }
   .navbar-fixed-top {
-    position: relative;
+    position: fixed;
   }
   .navbar-collapse{
     display: inline;
     padding: 0;
   }
+  .navbar-toggle {
+      display: none;
+  }
   #current-section {
     display: none; }
+}
+
+.target-nav{
+  padding-top: 50px;
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import Btn from '../Btn'
 import BtnGroup from '../BtnGroup'
 import './BlockChart.css'
-import PersonLegend from './PersonLegend'
+import BlockLegend from './BlockLegend'
 import BlockTable from './BlockTable'
 import BlockCount from './BlockCount'
 import { ChartSubTitle } from './ChartTitle'
@@ -13,43 +13,92 @@ import './BlockChartCount.css'
 class BlockChart extends React.Component{
       constructor(props, context) {
         super(props, context);
-        const {Yes_1, Yes_2, No_1, No_2, description, array, rate_pass, rate_fail} = this.getData('0');
-        console.log(rate_pass)
+        const { Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail } = this.getData('0');
         this.state = {
           selected: 0,
-          Yes_1, Yes_2, No_1, No_2, description, array, rate_pass, rate_fail
+          Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail
         };
       };
 
 
       render = () =>  {
-          const {Yes_1, Yes_2, No_1, No_2, description, array, selected, rate_pass, rate_fail} = this.state;
-          console.log(rate_pass)
+          const { Yes_1, Yes_2, No_1, No_2, description, array, array2, selected, rate_pass, rate_fail, total_count_pass, total_count_fail } = this.state;
+          const {grade, subject} = this.props
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
           });
+          const fail = Math.round(rate_fail);
+          const pass = Math.round(rate_pass);
+          if(uniqueArray[0] === "No"){
+            const fail = total_count_fail.toLocaleString();
+            const pass = total_count_pass.toLocaleString();
+            return (
+              <div>
+                  <div className="row">
+                    <div className="col-md-12 center">
+                        <BtnGroup>
+                          <Btn handleClick={this.handleClick} value={0} selected={selected}>1. Participated in {subject}</Btn>
+                          <Btn handleClick={this.handleClick} value={1} selected={selected}>2. Enrolled in College</Btn>
+                          <Btn handleClick={this.handleClick} value={2} selected={selected}>3. Stayed in College</Btn>
+                        </BtnGroup>
+                    </div>
+                  </div>
+                    <div className="row">
+                    <div className="col-md-6 center">
+                          <p>{description[0]} <span className="highlight_No">{pass}</span> {description[1]}</p>
+                    </div>
+                    <div className="col-md-6 center">
+                          <p>{description[2]} <span className="highlight_No">{fail}</span> {description[3]}</p>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12 center">
+                        <div className="block-group">
+                            <div className="col-md-6 center">
+                              <BlockCount array = {array}>Took and passed {subject}</BlockCount>
+                            </div>
+                            <div className="col-md-6 center">
+                              <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
+                            </div>
+                        </div>
+                    </div>
+                    <BlockLegend type="default">100 students</BlockLegend>
+                  </div>
+              </div>
+
+            )
+          }
           return(
                 <div>
                   <div className="row">
                     <div className="col-md-12 center">
                         <BtnGroup>
-                          <Btn handleClick={this.handleClick} value={0} selected={selected}>1. Passed and Not Passed</Btn>
-                          <Btn handleClick={this.handleClick} value={1} selected={selected}>2. College Enrollment</Btn>
-                          <Btn handleClick={this.handleClick} value={2} selected={selected}>3. College Persistent</Btn>
+                          <Btn handleClick={this.handleClick} value={0} selected={selected}>1. Participated in {subject}</Btn>
+                          <Btn handleClick={this.handleClick} value={1} selected={selected}>2. Enrolled in College</Btn>
+                          <Btn handleClick={this.handleClick} value={2} selected={selected}>3. Stayed in College</Btn>
                         </BtnGroup>
                     </div>
                   </div>
                     <div className="row">
-                    <div className="col-md-12">
-                          <p>{description[0]} <span className="highlight_Yes">{rate_pass}%</span> {description[1]} <span className="highlight_No">{rate_fail}%</span> {description[2]}</p>
+                    <div className="col-md-6 center">
+                          <p>{description[0]} <span className="highlight_Yes">{pass}%</span> {description[1]}</p>
+                    </div>
+                    <div className="col-md-6 center">
+                          <p>{description[2]} <span className="highlight_Yes">{fail}%</span> {description[3]}</p>
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-md-12">
-                          <BlockCount array = {array} />
-                          <hr />
-                          <BlockCountLegend legendArray={uniqueArray} selected={selected}/>
-                    </div>
+                    <div className="col-md-12 center">
+                          <div className="block-group">
+                            <div className="col-md-6 center">
+                              <BlockCount array = {array}>Took and passed {subject}</BlockCount>
+                            </div>
+                            <div className="col-md-6 center">
+                              <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
+                            </div>
+                          </div>
+                      </div>
+                      <BlockLegend type="default">100 students</BlockLegend>
                   </div>
                 </div>
 
@@ -63,6 +112,7 @@ class BlockChart extends React.Component{
 
       setData = (selected) => {
         const getData = this.getData(selected);
+        console.log(getData);
         this.setState({
             Yes_1: getData.Yes_1,
             Yes_2: getData.Yes_2,
@@ -70,9 +120,12 @@ class BlockChart extends React.Component{
             No_2: getData.No_2,
             rate_pass: getData.rate_pass,
             rate_fail: getData.rate_fail,
+            total_count_pass: getData.total_count_pass,
+            total_count_fail: getData.total_count_fail,
             description: getData.description,
             selected: selected,
-            array: getData.array
+            array: getData.array,
+            array2: getData.array2
         });
       };
 
@@ -85,23 +138,20 @@ class BlockChart extends React.Component{
         const description = data.description;
         const rate_pass = data.rate_pass*100;
         const rate_fail = data.rate_fail*100;
-        var array = this.createArray(Yes_1, Yes_2, No_1, No_2)
-        return { Yes_1, Yes_2, No_1, No_2, description, array, rate_pass, rate_fail}
+        const total_count_pass = data.total_count_pass;
+        const total_count_fail = data.total_count_fail;
+        var array = this.createArray(Yes_1, Yes_2)
+        var array2 = this.createArray(No_1, No_2)
+        return { Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail }
       }
 
-      createArray = (Yes_1, Yes_2, No_1, No_2) => {
-        var arr=[];
-        for(var y=0; y<Yes_1; y++){
-          arr.push('Yes_1');
+      createArray = (Yes, No) => {
+        var arr=[]
+        for(var y=0; y<Yes; y++){
+          arr.push('Yes');
         };
-        for(var y=0; y<Yes_2; y++){
-          arr.push('Yes_2');
-        };
-        for(var n=0; n<No_2; n++){
-          arr.push('No_2');
-        };
-        for(var n=0; n<No_1; n++){
-          arr.push('No_1');
+        for(var n=0; n<No; n++){
+          arr.push('No');
         };
         return arr
       };

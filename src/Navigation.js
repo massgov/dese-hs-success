@@ -1,8 +1,17 @@
 import React from 'react'
-import { NavLink} from 'react-router-dom'
 import './Navigation.css'
 import Btn from './Btn'
+import $ from 'jquery'
 
+export const scrollToSection = () => {
+  var $id
+  $('.target-nav').each(function() {
+      if ($(window).scrollTop() >= ($(this).offset().top) - 100) {
+          $id = $(this).attr('id');
+      }
+  });
+  return ($id)
+}
 
 
 class Navigation extends React.Component {
@@ -10,7 +19,7 @@ class Navigation extends React.Component {
     super(props, context);
     this.state = {
       value: 'navbar-collapse',
-      active: '9'
+      grade: 9
     }
   }
 
@@ -25,28 +34,43 @@ class Navigation extends React.Component {
   };
 
   onNavClick = (e) => {
-    this.props.handleClick(e);
+    e.preventDefault();
     this.setState({
       value: 'navbar-collapse',
-      active: e.target.getAttribute('value')
+      grade : e.target.getAttribute("value"),
     })
+    var h = e.target.getAttribute('href')
+    var top = document.getElementById(h).offsetTop;
+    window.scrollTo(0, top);
+    return true
   }
 
+  isActive = (id) => {
+    const currentSection = scrollToSection()
+    const sectionId = id
+    return (currentSection==sectionId) ? 'active' : ''
+  }
+
+  isScrolledTo = () => {
+   const currentSection = scrollToSection()
+   return currentSection
+ }
+
   render() {
-    const { grade, handleClick, sticky } = this.props
-    const { value, active } = this.state
+    const { sticky } = this.props
+    const { value, grade } = this.state
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
 
-    const grades = [9,10,11,12]
+    const grades = ["intro","grade9","grade10","grade11","grade12","conclusion","district"]
     const navItems = grades.map((grade) =>
-      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a className={`nav-link ${(grade == active) ? 'active' : ''}`} value={grade}>{grade}<sup>th</sup> Grade</a></li>
+      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`${grade}`} id={`${grade}1`} className={`nav-link ${this.isActive(grade)}`} value={grade}>{grade}</a></li>
     )
     return (
         <nav className={`container navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
             <div className="navbar-header">
-              <span className="navbar-brand" id="current-section">{grade}<sup>th</sup> Grade</span>
-              <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Select a different grade</Btn>
+              <span className="navbar-brand" id="current-section">{this.isScrolledTo()}</span>
+              <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <i className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>
             </div>
             <div className={value}>
               <ul className="nav nav-tabs nav-justified flex-column">

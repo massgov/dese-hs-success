@@ -1,5 +1,13 @@
 @import '_variables.scss';
 
+
+.block-group{
+  width: 100%;
+  margin: 0 auto;
+  display: inline;
+  text-align: center;
+}
+
 .highlight_Yes{
   color: $color-primary-green;
   font-weight: $font-bold;
@@ -8,4 +16,9 @@
 .highlight_No{
   color: $color-gray;
   font-weight: $font-bold;
+}
+
+.col-md-6.center p{
+	padding-right: 10px;
+	padding-left: 10px;
 }

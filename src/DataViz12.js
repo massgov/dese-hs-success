@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import BlockChartCount from './DataViz/BlockChartCount'
-import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
+import {GradeHeader, ChartTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
 
 class Data extends React.Component{
@@ -46,18 +46,20 @@ class Data extends React.Component{
               }
 
               return (
-                <div className="container target-grade" id="grade12" name="grade12">
+                <div className="container target-nav" id="grade12" name="grade12">
                   <div className="row">
                     <div className="col-md-12 center">
                       <GradeHeader>12th Grade</GradeHeader>
                         <ChartTitle>Jump Start: AP courses set students ahead</ChartTitle>
+                        <hr />
                     </div>
-                    <div className="col-md-12">
-                      <p>Research shows that students who succeed in rigorous course work such as Advanced Placement are developing college-level knowledge and skills while still in high school. These students are more likely than their peers to go to college, stay in college and earn college degrees on time, providing an opportunity to save significant amounts of money. The narrative visualization below provides details around the ties between advanced placement course work and college sucess.</p>
-                      <hr />
+                    <div className="col-md-4 pull-right">
+                      <p>Advanced Placement (AP) courses offer high school students the chance to receive college course credit before they even move into their dorms. The chance to get a head start on college credits is a major benefit to AP courses, as are the cost savings that come with reducing the number of college classes a student needs to take. However, perhaps the most important advantage to AP courses is that they expose students to college-level academics. This head start is invaluable in helping a student jump into a college atmosphere.</p>
+                    </div>
+                    <div className="col-md-8 center">
+                      <BlockChartCount data={blockData} grade={12} subject="AP courses"/>
                     </div>
                   </div>
-                      <BlockChartCount data={blockData}/>
                 </div>
 
               );
