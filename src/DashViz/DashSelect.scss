@@ -1,28 +1,26 @@
 @import '_variables.scss';
 
 .dash-select {
-  background-color:$color-gray;
+  background-color:$color-gray-dark;
   padding:5px 5%;
   margin: 0;
   font-size: 1.6rem;
 }
 
-.dash-select p {
+.dash-select span {
   color: $color-white;
-  margin-bottom: 0;
-  display: block;
 }
 
 .Select {
   display: inline-table;
   width: 100%;
   z-index: 100;
+  margin-bottom: 5px;
 }
 
 .Select .Select-control {
   border-radius: 0;
   padding: 2px;
-
 }
 
 .Select-placeholder, .Select--single > .Select-control .Select-value {
@@ -33,21 +31,35 @@
   margin-left: 0;
 }
 
-@media (min-width: 768px) {
+.backToTop{
+  display: inline;
+}
+
+.btn.backToTop_btn{
+  margin-top: 12px;
+  display: none;
+  border-radius: 0;
+}
+
+a.backToTop_link{
+  color: $color-white;
+  text-decoration: underline;
+  display: block;
+}
+
+@media (min-width: 1199px) {
   .Select {
     width: 60%;
   }
   .btn-primary {
     margin-left: 3px;
   }
-}
 
-// @media (min-width: 992px) {
-//
-// }
-
-@media (min-width: 1200px) {
-  .dash-select p {
-    display: inline;
+  .btn.backToTop_btn{
+    margin-top: 10px;
+    display: inline-block;
+  }
+  a.backToTop_link{
+    display: none;
   }
 }

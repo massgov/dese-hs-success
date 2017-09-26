@@ -2,10 +2,11 @@
 
 
 @mixin active-state {
-  background-color: transparent;
-  color: $color-white;
+  background-color: $color-white;
+  color: $color-primary-blue;
   border-radius: 0;
   border-bottom: 3px solid $color-primary-yellow;
+  padding: 12px 15px 12px;
 }
 
 @mixin active-menu {
@@ -15,8 +16,8 @@
 }
 
 .navbar {
-  margin-top: 20px;
-  padding: 0 15px;
+  margin: 0 auto 30px;
+  padding: 0;
   border-radius: 0;
   border: 0;
 }
@@ -39,27 +40,44 @@
   padding: 0;
 }
 
-.navbar-inverse{
-  background-color: $color-gray;
+.nav, .navbar-inverse, .navbar-header{
+  color: $color-white;
+  background-color: $color-primary-blue;
+  float: none;
 }
 
-.nav, .nav-tabs {
-  width: 100%;
-}
+    .navbar-toggle {
+        display: block;
+        float:right;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+    }
 
 .nav {
   li{
+    width: 100%;
     a{
+      width: 100%;
       color: lighten($color-gray,30%);
-      border: none;
       border-radius: 0;
-      padding: 12px 15px;
-      &.active {
+      border: none;
+      padding: 12px 15px 15px;
+      text-align: center;
+      &.active,&:hover, &:active, &:focus {
         @include active-state;
       }
-      &:hover, &:active, &:focus{
-        @include active-state;
+    }
+    &:last-child{
+      border-top: 1px solid lighten($color-gray,30%);
+      border-bottom: none;
+      background-color: $color-gray-dark;
+      a{
+        &.active, &:hover, &:active, &:focus {
+          color: $color-gray-dark;
+        }
       }
+
     }
   }
 }
@@ -72,16 +90,9 @@
   border: 1px solid $color-white;
   color: $color-white;
   border-radius: 0;
-  &.active {
+  &.active, &:hover, &:active {
     @include active-menu
   }
-  &:hover, &:active{
-    @include active-menu
-  }
-}
-
-.nav-item {
-    padding-left: 0;
 }
 
 
@@ -90,17 +101,74 @@
   display: block;
 }
 
-@media all and (min-width: 768px) {
+
+@media all and (min-width: 1199px) {
+
+  .nav{
+    background-color: $color-white;
+    margin: 0 auto;
+    text-align: center;
+    li{
+      width: 14%;
+      a{
+        text-align: center;
+        margin: 0 auto;
+        &.active, &:hover, &:active, &:focus {
+          background-color: $color-primary-blue;
+          color: $color-white;
+        }
+      }
+      &:first-child{
+        width: 12%;
+      }
+      &:last-child{
+        width: 18%;
+        padding-top: 0;
+        margin-top: 0;
+        border-top: none;
+        border-left: 1px solid lighten($color-gray,30%);
+        //float: right;
+        background-color: $color-gray-lighter;
+        a{
+          &.active, &:hover, &:active, &:focus {
+            background-color: $color-gray-dark;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
   .navbar {
     padding: 0;
+    background-color: $color-white;
   }
   .navbar-fixed-top {
-    position: relative;
+    position: fixed;
   }
   .navbar-collapse{
     display: inline;
     padding: 0;
   }
+  .navbar-toggle {
+      display: none;
+  }
   #current-section {
     display: none; }
+}
+
+.nav-tabs{
+  padding-bottom: 1px;
+  border-bottom: 1px solid $color-gray-light;
+}
+.nav-item {
+  padding: 0;
+}
+
+.nav-item_last{
+  border-top: none;
+}
+
+.target-nav{
+  padding-top: 50px;
 }
