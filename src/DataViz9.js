@@ -4,7 +4,6 @@ import BlockChart from './DataViz/BlockChart'
 import GroupedBarChart from './DataViz/GroupedBarChart'
 import BarChartText from './DataViz/BarChartText'
 import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
-import $ from 'jquery'
 import {scrollToSection} from './Navigation'
 import './DataViz.css'
 
@@ -51,7 +50,14 @@ class Data extends React.Component{
               }
 
 
-              $(window).scroll(scrollToSection)
+              // $(window).scroll(function(){
+              //   scrollToSection;
+              //   $(':focus').blur();
+              // })
+
+              document.addEventListener("scroll", function() {
+                    document.activeElement.blur();
+                });
 
               return (
                 <div className="container target-nav" id="grade9" name="grade9">
