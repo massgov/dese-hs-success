@@ -25,7 +25,13 @@ export const CustomTooltip = (props) => {
     if( payload[0].value != 'Null' ){
       value = ( Math.round( payload[0].value * 10 ) / 10 ) + '%';
       countValue = payload[0]['payload'][props.dataCount].toLocaleString();
-    } else { value = payload[0].value + '*'}
+    } else { 
+      return (
+        <div className='custom-tooltip-district'>
+          <text className='descr_value'> Not Available </text>
+        </div>
+        )
+    }
     if(props.lastData == payload[0].value && props.lastYear == payload[0]['payload']['Yr']) {
       return (
         <div className='custom-tooltip-district'>

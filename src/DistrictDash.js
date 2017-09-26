@@ -97,7 +97,7 @@ class DistrictDash extends React.Component{
                       <div className="dashboard">
                         <div className="row">
                           <div className="col-md-12 center">
-                            <SectionTitle>Cohort Graduation Rates</SectionTitle>
+                            <SectionTitle>Graduation Rates</SectionTitle>
                           </div>
                             <DashCard Title='4-yr Cohort Graduation Rate' data={distData} dataKey="4 Year Graduation Percent" dataCount="4 Year Cohort Total"/>
                             <DashCard Title='5-yr Cohort Graduation Rate' data={distData} dataKey="5 Year Graduation Percent" dataCount="4 Year Cohort Total"/>
@@ -121,7 +121,7 @@ class DistrictDash extends React.Component{
 
                          <div className="row">
                           <div className="col-md-12 center">
-                            <SectionTitle>College Enrollment and Persistence</SectionTitle>
+                            <SectionTitle>College Participation</SectionTitle>
                           </div>
                             <DashCard Title='College Enrollment Rate' data={distData} dataKey="College Enrollment Percent" dataCount="College Persistence Count"/>
                             <DashCard Title='College Persistent Rate' data={distData} dataKey="College Persistence Percent" dataCount="College Enrollment Count"/>
