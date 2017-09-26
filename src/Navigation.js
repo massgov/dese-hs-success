@@ -19,7 +19,7 @@ class Navigation extends React.Component {
     super(props, context);
     this.state = {
       value: 'navbar-collapse',
-      grade: 9
+      currentId: ''
     }
   }
 
@@ -37,7 +37,7 @@ class Navigation extends React.Component {
     e.preventDefault();
     this.setState({
       value: 'navbar-collapse',
-      grade : e.target.getAttribute("value"),
+      currentId : e.target.getAttribute("value"),
     })
     var h = e.target.getAttribute('href')
     var top = document.getElementById(h).offsetTop;
@@ -45,10 +45,19 @@ class Navigation extends React.Component {
     return true
   }
 
+
   isActive = (id) => {
-    const currentSection = scrollToSection()
-    const sectionId = id
-    return (currentSection==sectionId) ? 'active' : ''
+    //const currentSection = this.hasScrolled()
+    var currentSection = scrollToSection()
+    // var previousSection = currentSection
+    // if (currentSection != previousSection){
+    //   this.setState({
+    //     currentId: currentSection
+    //   })
+    // }
+    //const { currentId } = this.state
+    console.log(currentSection)
+    return (currentSection===id) ? 'active' : ''
   }
 
   isScrolledTo = () => {
@@ -58,13 +67,13 @@ class Navigation extends React.Component {
 
   render() {
     const { sticky } = this.props
-    const { value, grade } = this.state
+    const { value, currentId } = this.state
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
 
-    const grades = ["intro","grade9","grade10","grade11","grade12","conclusion","district"]
-    const navItems = grades.map((grade) =>
-      <li key={grade} className="nav-item" onClick={this.onNavClick} ><a href={`${grade}`} id={`${grade}1`} className={`nav-link ${this.isActive(grade)}`} value={grade}>{grade}</a></li>
+    const targets = [["intro", "Intro"],["grade9","9th Grade"],["grade10","10th Grade"],["grade11","11th Grade"],["grade12", "12th Grade"],["conclusion", "Conclusion"]]
+    const navItems = targets.map((id) =>
+      <li key={id[0]} className="nav-item" onClick={this.onNavClick} ><a href={`${id[0]}`} id={`${id[0]}1`} className={`nav-link ${this.isActive(id[0])}`} value={id[0]}>{id[1]}</a></li>
     )
     return (
         <nav className={`navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
