@@ -7,6 +7,7 @@ import axios from 'axios'
 import _ from 'lodash'
 import { StickyContainer, Sticky } from 'react-sticky';
 import SectionTitle from './SectionTitle';
+import Dwnld from './Dwnld';
 
 class DistrictDash extends React.Component{
   constructor(props, context) {
@@ -93,6 +94,7 @@ class DistrictDash extends React.Component{
                       }
                     }
                   </Sticky>
+                  
                   <div >
                       <div className="dashboard" id="district" name="district">
                         <div className="row">
@@ -126,7 +128,11 @@ class DistrictDash extends React.Component{
                             <DashCard Title='College Enrollment Rate' data={distData} dataKey="College Enrollment Percent" dataCount="College Persistence Count"/>
                             <DashCard Title='College Persistent Rate' data={distData} dataKey="College Persistence Percent" dataCount="College Enrollment Count"/>
                          </div>
-
+                         <div className="row">
+                          <div className="col-md-12 center">
+                            <Dwnld data={'/data/district.json'}/>
+                          </div>
+                        </div>
                      </div>
                   </div>
           </StickyContainer>

@@ -3,6 +3,7 @@ import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'
 import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
+import Dwnld from './Dwnld'
 
 class Data extends React.Component{
 
@@ -70,10 +71,12 @@ class Data extends React.Component{
                     <div className="col-md-6 center">
                       <ChartSubTitle>4-year Graduation Rate by Attendance Behavior<FootNoteLink index={4}/></ChartSubTitle>
                       <BlockChart data={blockData1}/>
+                      <Dwnld data={'/data/10/data.json'}/>
                     </div>
                     <div className="col-md-6 center">
                       <ChartSubTitle>4-year Graduation Rate by Suspension Behavior</ChartSubTitle>
                       <BlockChart data={blockData2}/>
+                      <Dwnld data={'/data/10/data.json'}/>
                     </div>
                   </div>
                 </div>

@@ -3,6 +3,7 @@ import axios from 'axios'
 import BlockChartCount from './DataViz/BlockChartCount'
 import {GradeHeader, ChartTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
+import Dwnld from './Dwnld'
 
 class Data extends React.Component{
 
@@ -58,6 +59,7 @@ class Data extends React.Component{
                     </div>
                     <div className="col-md-8 center">
                       <BlockChartCount data={blockData} grade={12} subject="Algebra II"/>
+                      <Dwnld data={'/data/11/data.json'}/>
                     </div>
                   </div>
 

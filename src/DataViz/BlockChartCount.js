@@ -44,10 +44,10 @@ class BlockChart extends React.Component{
                     </div>
                   </div>
                     <div className="row">
-                    <div className="col-md-6 center">
+                    <div className="col-md-6 center block-desc">
                           <p>{description[0]} <span className="highlight_No">{pass}</span> {description[1]}</p>
                     </div>
-                    <div className="col-md-6 center">
+                    <div className="col-md-6 center block-desc">
                           <p>{description[2]} <span className="highlight_No">{fail}</span> {description[3]}</p>
                     </div>
                   </div>
@@ -80,10 +80,10 @@ class BlockChart extends React.Component{
                     </div>
                   </div>
                     <div className="row">
-                    <div className="col-md-6 center">
+                    <div className="col-md-6 center block-desc">
                           <p>{description[0]} <span className="highlight_Yes">{pass}%</span> {description[1]}</p>
                     </div>
-                    <div className="col-md-6 center">
+                    <div className="col-md-6 center block-desc">
                           <p>{description[2]} <span className="highlight_Yes">{fail}%</span> {description[3]}</p>
                     </div>
                   </div>
