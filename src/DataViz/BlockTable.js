@@ -1,16 +1,17 @@
 import React from 'react'
+import './BlockTable.css'
 
 const BlockTable = ({Yes, No}) => {
   return (
     <table className="table">
       <tbody>
           <tr>
-            <th>Graduated in 4 years</th>
-            <td className="color_Yes">{Yes}%</td>
+            <th className="fit">Graduated in 4 years</th>
+            <td className="fit color_Yes">{Yes}%</td>
           </tr>
           <tr>
-            <th>Did not graduate in 4 years</th>
-            <td className="color_No">{No}%</td>
+            <th className="fit">Did not graduate in 4 years</th>
+            <td className="fit color_No">{No}%</td>
           </tr>
       </tbody>
     </table>
