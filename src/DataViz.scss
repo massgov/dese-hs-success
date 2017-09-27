@@ -1,3 +1,23 @@
+@import '_variables.scss';
+
 .target-grade{
   margin-top: 60px;
+}
+
+.grade_line{
+  display: none;
+}
+@media all and (min-width: 992px) {
+  .container{
+    .grade_main{
+      float:right;
+    }
+    // .grade_line{
+    //   text-align: center;
+    //   width: 20%;
+    //   height: 400px;
+    //   display: block;
+    //   border-right: 2px solid $color-primary-blue;
+    // }
+  }
 }
