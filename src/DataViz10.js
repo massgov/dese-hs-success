@@ -51,9 +51,11 @@ class Data extends React.Component{
               return (
                 <div className="container target-nav" id="grade10" name="grade10">
                   <div className="row">
-                    <div className="col-md-12 center">
-                      <GradeHeader>10th Grade</GradeHeader>
-                        <ChartTitle> Steady Course: Behavioral habits and on-time graduation</ChartTitle>
+                    <div className="col-md-2">
+                        <GradeHeader><span>10th</span> Grade</GradeHeader>
+                        </div>
+                        <div className="col-md-10">
+                        <ChartTitle>Steady Course: <br/>Behavioral habits and on-time graduation</ChartTitle>
                     </div>
                   </div>
                   <div className="row">

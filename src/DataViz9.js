@@ -62,13 +62,11 @@ class Data extends React.Component{
               return (
                 <div className="container target-nav" id="grade9" name="grade9">
                   <div className="row">
-                    <div className="col-md-12 center">
-                        <GradeHeader>9th Grade</GradeHeader>
-                        <ChartTitle>Passing Grade: Failing just one course early in high school can set a student back</ChartTitle>
-                    </div>
-                    <div className="col-md-12">
-                      <p>The jump from middle school to high school is a big one. Students face greater academic challenges, and have social hurdles and new responsibilities to deal with. This transition can be hard to adjust to, which is one of the reasons why more students fail courses in their freshman year than any other in high school. This often leads to higher dropout rates and This increases the chances a student may be retained or drop out later in high school, and decreases the chances a student will graduate from high school in four 4 years.</p>
-                      <hr />
+                    <div className="col-md-2">
+                        <GradeHeader><span>9th</span> Grade</GradeHeader>
+                        </div>
+                        <div className="col-md-10">
+                        <ChartTitle>Passing Grade: <br />Failing just one course early in high school can set a student back</ChartTitle>
                     </div>
                   </div>
                   <div className="row">
