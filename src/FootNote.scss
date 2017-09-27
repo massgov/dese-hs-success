@@ -29,17 +29,25 @@
     color: $color-primary-blue;
 }
 
-.sources-section li {
+.sources-section li p {
     font-size: $small-font-size;
     background: transparent;
     transition: background 250ms ease-in-out;
 }
 
-.sources-section li:target {
-    color: $color-white;
+.sources-section li:target span {
+    color: $color-black;
     background-color: $color-white;
 }
 
 .sources-section li:target a {
-  color: $color-black; 
+  color: $color-white; 
+}
+
+.sources-section li i {
+  font-size: 1.5rem;
+}
+
+.sources-section li i:hover {
+  font-size: 1.6rem;
 }
