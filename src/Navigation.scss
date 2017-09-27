@@ -57,6 +57,7 @@
 .nav {
   li{
     width: 100%;
+    font-size: $base-font-size;
     a{
       width: 100%;
       color: lighten($color-gray,30%);

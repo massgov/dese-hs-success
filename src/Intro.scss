@@ -5,7 +5,7 @@
   margin-right: 10px;
 }
 
-ul{
+ul.icon-list{
   list-style: none;
   margin-left: 0;
   padding-left: 2.5rem;
@@ -13,6 +13,7 @@ ul{
   li {
     font-size: $base-font-size;
     padding-left: 1rem;
+    margin: 0.8rem 0;
   }
 }
 
@@ -21,5 +22,35 @@ ul{
   padding: 0 0 50px;
   &:last-child{
     margin-top: 50px;
+  }
+}
+
+@mixin underline {
+  color: $color-primary-blue;
+  padding-bottom: 10px;
+  display: inline-block;
+  line-height: $heading-line-height;
+}
+
+.full-width-alt__title{
+  color: $color-primary-blue;
+  text-align: center;
+  span{
+  border-bottom: 3px solid $color-primary-yellow;
+  @include underline;
+  }
+}
+
+h3.full-width-alt__title{
+  color: $color-primary-blue;
+  span{
+  border-bottom: 3px solid $color-primary-green;
+  @include underline;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .full-width-alt__title{
+    text-align: left;
   }
 }
