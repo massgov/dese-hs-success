@@ -1,7 +1,7 @@
 @import '_variables.scss';
 
-.target-grade{
-  margin-top: 60px;
+.target-nav{
+  padding-top: 80px;
 }
 
 .grade_line{
@@ -10,6 +10,7 @@
 @media all and (min-width: 992px) {
   .container{
     .grade_main{
+      width: 80%;
       float:right;
     }
     // .grade_line{

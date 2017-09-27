@@ -6,6 +6,7 @@ class Content extends React.Component{
 
   render = () =>  {
     return (
+      <div className="full-width-alt">
       <div className="container target-nav" id="intro" name="intro">
         <div className="row">
           <div className="col-md-12">
@@ -31,6 +32,7 @@ Attendance, behavior, and course performance – the ABCs – give us much-neede
             </ul>
           </div>
         </div>
+      </div>
       </div>
     );
   };

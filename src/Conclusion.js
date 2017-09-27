@@ -6,10 +6,11 @@ class Conclusion extends React.Component{
 
   render = () =>  {
     return (
+      <div className="full-width-alt">
       <div className="container target-nav"  id="conclusion" name="conclusion">
         <div className="row">
           <div className="col-md-12">
-            <h2>Conclusion</h2>
+            <h2>Get On Track</h2>
             <p>
               Influential, positive adults are important points of contact for students. Talk to the students in your life about their goals and the importance of the ABC’s: Attendance, Behavior and Courses in high school. Hold high expectations for students, let them know when they’re doing well, and talk about how to be even more successful next time. For tips on guiding these conversations for elementary students through high school and for other resources, visit <a href="http://futurereadyma.org/" target="_blank">Future Ready</a>.
             </p>
@@ -28,6 +29,7 @@ class Conclusion extends React.Component{
           </div>
         </div>
       </div>
+    </div>
     );
   };
 }
