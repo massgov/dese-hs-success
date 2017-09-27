@@ -24,8 +24,11 @@
 	text-align: left;
 }
 
+.col-md-6.center.block-desc {
+line-height: $heading-line-height;
+}
+
 @media only screen and (min-width: 767px) {
   .col-md-6.center.block-desc {
-  line-height: 1.5em;
-  height: 5.0em; }
+  height: 11rem; }
  }
