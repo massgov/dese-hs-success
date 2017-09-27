@@ -48,18 +48,26 @@ class Data extends React.Component{
 
               return (
                 <div className="container target-nav" id="grade12" name="grade12">
+                    <div className="row">
+                        <div className="col-md-2">
+                            <GradeHeader><span>12th</span> Grade</GradeHeader>
+                            </div>
+                            <div className="col-md-10">
+                            <ChartTitle>Jump Start: <br />AP courses set students ahead</ChartTitle>
+                        </div>
+                      </div>
                   <div className="row">
-                    <div className="col-md-12 center">
-                      <GradeHeader>12th Grade</GradeHeader>
-                        <ChartTitle>Jump Start: AP courses set students ahead</ChartTitle>
-                        <hr />
+                    <div className="grade_line col-md-2"></div>
+                    <div className="grade_main col-md-10">
+                      <div className="row">
+                      <div className="col-md-4 pull-right">
+                        <p>Advanced Placement (AP) courses offer high school students the chance to receive college course credit before they even move into their dorms. The chance to get a head start on college credits is a major benefit to AP courses, as are the cost savings that come with reducing the number of college classes a student needs to take. However, perhaps the most important advantage to AP courses is that they expose students to college-level academics. This head start is invaluable in helping a student jump into a college atmosphere.</p>
+                      </div>
+                      <div className="col-md-8 center">
+                        <BlockChartCount data={blockData} grade={12} subject="AP courses"/>
+                        <Dwnld data={'/data/12/data.json'}/>
+                      </div>
                     </div>
-                    <div className="col-md-4 pull-right">
-                      <p>Advanced Placement (AP) courses offer high school students the chance to receive college course credit before they even move into their dorms. The chance to get a head start on college credits is a major benefit to AP courses, as are the cost savings that come with reducing the number of college classes a student needs to take. However, perhaps the most important advantage to AP courses is that they expose students to college-level academics. This head start is invaluable in helping a student jump into a college atmosphere.</p>
-                    </div>
-                    <div className="col-md-8 center">
-                      <BlockChartCount data={blockData} grade={12} subject="AP courses"/>
-                      <Dwnld data={'/data/12/data.json'}/>
                     </div>
                   </div>
                 </div>

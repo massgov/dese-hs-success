@@ -49,11 +49,17 @@ class Data extends React.Component{
               return (
                 <div className="container target-nav" id="grade11" name="grade11">
                   <div className="row">
-                    <div className="col-md-12 center">
-                      <GradeHeader>11th Grade</GradeHeader>
-                        <ChartTitle>Math Matters: Relationship between math and college enrollment</ChartTitle>
-                        <hr />
+                      <div className="col-md-2">
+                          <GradeHeader><span>11th</span> Grade</GradeHeader>
+                          </div>
+                          <div className="col-md-10">
+                          <ChartTitle>Math Matters: <br />Relationship between math and college enrollment</ChartTitle>
+                      </div>
                     </div>
+                    <div className="row">
+                      <div className="grade_line col-md-2"></div>
+                      <div className="grade_main col-md-10">
+                        <div className="row">
                     <div className="col-md-4">
                       <p>High-level math classes are important to a student’s development, not just because of the content covered, but because of the critical thinking skills required to master these courses. Successfully taking on the challenge of Algebra II in grade 11, for example, has a big impact on a student’s future. Specifically, high school juniors who pass Algebra II or a higher-level math course tend to stay in college longer than their peers.</p>
                     </div>
@@ -62,8 +68,9 @@ class Data extends React.Component{
                       <Dwnld data={'/data/11/data.json'}/>
                     </div>
                   </div>
-
+                  </div>
                 </div>
+              </div>
 
               );
           };

@@ -19,17 +19,18 @@ $color-orange-alt:           rgba(#E65100, 0.4);
 $color-gray-alt:             rgba(#141414, 0.4);
 
 
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 // // Typography
 $font-sans:           'Helvetica Neue','Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
 $font-serif:          "Roboto Slab", 'Merriweather', 'Georgia', 'Times New Roman', serif;
+$font-style:           'Montserrat','Helvetica Neue','Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
 
 $em-base:             10px;
 $base-font-size:      1.8rem;
 $tiny-font-size:     1.2rem;
 $small-font-size:     1.5rem;
-$lead-font-size:      2.5rem;
+$lead-font-size:      2.7rem;
 $title-font-size:     5rem;
 $base-line-height:    1.5;
 $heading-line-height: 1.3;

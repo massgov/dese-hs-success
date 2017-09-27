@@ -1,17 +1,47 @@
 @import '_variables.scss';
 
 h2.grade-header{
-  font-size: $small-font-size;
-  text-transform: uppercase;
+  font-size: $lead-font-size;
   background-color: $color-primary-blue;
   color: $color-white;
-  padding: 15px 0;
+  padding: 15px 10px;
+  text-align: center;
 }
 
 h3.chart-title {
+  text-align: center;
   span{
   border-bottom: 3px solid $color-primary-yellow;
+  color: $color-primary-blue;
   padding-bottom: 10px;
   display: inline-block;
+  line-height: $heading-line-height;
   }
+}
+
+@media all and (min-width: 992px) {
+  h2.grade-header{
+    span{
+      font-size: $title-font-size;
+    }
+    font-family: $font-style;
+    font-size: $lead-font-size;
+    background-color: $color-primary-yellow;
+    color: $color-white;
+    padding: 25px 5%;
+    margin-bottom: 30px;
+    //border-radius: 100%;
+  }
+
+  h3.chart-title {
+    span{
+    width: 100%;
+    line-height: $base-line-height;
+    border-top: 7px solid $color-primary-yellow;
+    border-bottom: 7px solid $color-primary-yellow;
+    padding: 24px 0 24px 20px;
+    display: inline-block;
+    }
+  }
+
 }
