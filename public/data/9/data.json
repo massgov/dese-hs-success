@@ -19,28 +19,28 @@
       "count_all" : 5209,
       "count_core" : 4555,
       "All subjects" : 0.82,
-      "Core subjects": 0.77,
+      "Core subjects": 0.77
     } ,
     {
       "label" : "Two" ,
       "count_all" : 2463,
       "count_core" : 2177,
       "All subjects" : 0.70,
-      "Core subjects": 0.61,
+      "Core subjects": 0.61
     } ,
     {
       "label" : "Three" ,
       "count_all" : 1500,
       "count_core" : 1370,
       "All subjects" : 0.54,
-      "Core subjects": 0.43,
+      "Core subjects": 0.43
     } ,
     {
       "label" : "Four or more" ,
       "count_all" : 3645,
       "count_core" : 1980,
       "All subjects" : 0.37,
-      "Core subjects": 0.23,
+      "Core subjects": 0.23
     }
   ]
 ]
