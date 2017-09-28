@@ -15,6 +15,7 @@ export const scrollToSection = () => {
 }
 
 export const animatePageScroll = (target) => {
+  console.log(target)
     var h = target.getAttribute('href')
     var top = document.getElementById(h).offsetTop;
     $('html, body').animate({
@@ -71,10 +72,9 @@ class Navigation extends React.Component {
 
     const targets = {"intro": ["intro", "Intro"],"grade9":["grade9","9th Grade"],"grade10":["grade10","10th Grade"],"grade11":["grade11","11th Grade"],"grade12":["grade12", "12th Grade"],"conclusion":["conclusion", "Get on Track"],"district":["district", "Explore Your District"]}
     const navItems = _.map(targets, (id) =>
-      <li key={id[0]} className="nav-item" onClick={this.onNavClick} ><a href={`${id[0]}`} id={`${id[0]}1`} className={`nav-link ${this.isActive(id[0])}`} value={id[0]}>{id[1]}</a></li>
+      <li key={id[0]} className="nav-item" onClick={this.onNavClick} ><a href={`${id[0]}`} className={`nav-link ${this.isActive(id[0])}`} value={id[0]}>{id[1]}</a></li>
     )
     const currentSectionName = () => {
-      console.log(this.isScrolledTo())
       const id = this.isScrolledTo()
       if (id) return targets[id][1]
 
