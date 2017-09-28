@@ -74,7 +74,7 @@ class DistrictDash extends React.Component{
             }
 
             return (
-              <StickyContainer key={2} className="container  target-nav data-dash">
+              <StickyContainer key={2} className="container data-dash">
                   <Sticky>
                     {
                       (props) => {
@@ -94,9 +94,9 @@ class DistrictDash extends React.Component{
                       }
                     }
                   </Sticky>
-                  
+
                   <div >
-                      <div className="dashboard" id="district" name="district">
+                      <div className="dashboard">
                         <div className="row">
                           <div className="col-md-12 center">
                             <SectionTitle>Graduation Rates</SectionTitle>

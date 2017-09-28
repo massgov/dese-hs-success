@@ -6,6 +6,7 @@ import DataViz12 from './DataViz12'
 import Navigation from './Navigation'
 import Intro from './Intro'
 import Conclusion from './Conclusion'
+import DistIntro from './DistIntro'
 import { StickyContainer, Sticky } from 'react-sticky';
 
 
@@ -32,6 +33,7 @@ class GradeDash extends React.Component {
                   <DataViz11 />
                   <DataViz12 />
                   <Conclusion />
+                  <DistIntro />
           </StickyContainer>
     )
   }
