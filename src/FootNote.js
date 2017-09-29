@@ -12,7 +12,7 @@ class FootNote extends React.Component {
       return(
         <li id={`footnotemsg${i}`} onClick={() => animatePageScroll(i,70, `#footnoteref${i}`)}>
           <span>{children} </span>
-          <a><i className="glyphicon glyphicon-arrow-up" aria-hidden="true" alt="back to top"/></a>
+          <a><i className="glyphicon glyphicon-arrow-up" alt="back to top"/></a>
         </li>
       )
     }
