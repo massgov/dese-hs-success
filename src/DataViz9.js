@@ -3,7 +3,6 @@ import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'
 import GroupedBarChart from './DataViz/GroupedBarChart'
 import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
-import {scrollToSection} from './Navigation'
 import './DataViz.css'
 import Dwnld from './Dwnld'
 
@@ -48,12 +47,6 @@ class Data extends React.Component{
               if( blockData.length === 0 ) {
                 return <div className="container">Loading...</div>
               }
-
-
-              // $(window).scroll(function(){
-              //   scrollToSection;
-              //   $(':focus').blur();
-              // })
 
               document.addEventListener("scroll", function() {
                     document.activeElement.blur();
