@@ -5,7 +5,7 @@ class Logo extends React.Component{
   render = () =>  {
     return (
           <div className="logo">
-            <img src="/images/DESE-logo.png" height='50px' className="img-responsive" alt="DESE logo" />
+            <img src="/images/DESE-logo.png" alt="Department of Elementary and Secondary Education logo" />
           </div>
 
     );

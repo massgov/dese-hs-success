@@ -2,6 +2,9 @@
 
 footer{
   background-color: $color-gray-lighter;
-  padding: 25px 0;
-  margin: 25px 0 0;
+  padding: 20px 0;
+  address{
+    vertical-align: center;
+    margin: 20px 0 0;
+  }
 }

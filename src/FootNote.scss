@@ -17,37 +17,34 @@
     padding: 30px;
 }
 
-.sources-section {
-    @include dark-view;
-    background-color: $color-black;
-    padding: 25px 0;
-}
-
 .page-scroll sup {
     font-size: 1.2rem;
     font-weight: $font-bold;
     color: $color-primary-blue;
 }
 
-.sources-section li p {
-    font-size: $small-font-size;
-    background: transparent;
-    transition: background 250ms ease-in-out;
-}
-
-.sources-section li:target span{
-    color: $color-black;
-    background-color: $color-white;
-}
-
-.sources-section li:target a {
-  color: $color-white; 
-}
-
-.sources-section li i {
-  font-size: 1.5rem;
-}
-
-.sources-section li i:hover {
-  font-size: 1.6rem;
+.sources-section{
+  @include dark-view;
+  background-color: $color-black;
+  padding: 25px 0;
+  ol{
+    padding-left: 20px;
+    li{
+      &:target{
+        span{
+          color: $color-black;
+          background-color: $color-white;
+        }
+        a{
+          color: $color-white;
+        }
+      }
+      i {
+        font-size: 1.5rem;
+        &:hover {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
 }
