@@ -35,7 +35,7 @@
     transition: background 250ms ease-in-out;
 }
 
-.sources-section li:target span {
+.sources-section li:target span{
     color: $color-black;
     background-color: $color-white;
 }

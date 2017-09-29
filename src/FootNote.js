@@ -3,7 +3,8 @@ import './FootNote.css'
 
 const FootNote = ({children, i}) => {
   return(
-    <li id={`footnotemsg${i}`}>{children}
+    <li id={`footnotemsg${i}`}>
+      <span>{children}</span>
       <a href={`#footnoteref${i}`}><i className="glyphicon glyphicon-arrow-up" aria-hidden="true" alt="back to top"/></a>
     </li>
   )
