@@ -1,27 +1,8 @@
 import React from 'react'
 import './Navigation.css'
 import Btn from './Btn'
-import $ from 'jquery'
 import _ from 'lodash'
-
-export const scrollToSection = () => {
-  var $id
-  $('.target-nav').each(function() {
-      if ($(window).scrollTop() >= ($(this).offset().top) - 100) {
-          $id = $(this).attr('id');
-      }
-  });
-  return ($id)
-}
-
-export const animatePageScroll = (target) => {
-  console.log(target)
-    var h = target.getAttribute('href')
-    var top = document.getElementById(h).offsetTop;
-    $('html, body').animate({
-        scrollTop: top
-    }, 500);
-  }
+import { scrollToSection, animatePageScroll } from './scroll'
 
 class Navigation extends React.Component {
   constructor(props, context){
@@ -49,13 +30,13 @@ class Navigation extends React.Component {
       value: 'navbar-collapse',
       currentId : target.getAttribute("value"),
     })
-    animatePageScroll(target)
+    animatePageScroll(target, 0,`#${target.getAttribute('href')}`)
     return true
   }
 
 
   isActive = (id) => {
-    var currentSection = scrollToSection()
+    var currentSection = scrollToSection('.target-nav')
     return (currentSection===id) ? 'active' : ''
   }
 

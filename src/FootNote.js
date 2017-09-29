@@ -1,25 +1,16 @@
 import React from 'react'
 import './FootNote.css'
-import $ from 'jquery'
-
+import { animatePageScroll } from './scroll'
 
 class FootNote extends React.Component {
     constructor(props){
       super(props)
     }
-    animatePageScroll = (index) => {
-            var h = `#footnoteref${index}`
-            var top = $(h).offset().top-70
-            console.log(h, top)
-            $('html, body').animate({
-                scrollTop: top
-            }, 500);
-            return true
-      }
+
     render() {
       const {children, i} = this.props
       return(
-        <li id={`footnotemsg${i}`} onClick={() => this.animatePageScroll(i)}>
+        <li id={`footnotemsg${i}`} onClick={() => animatePageScroll(i,70, `#footnoteref${i}`)}>
           <span>{children} </span>
           <a><i className="glyphicon glyphicon-arrow-up" aria-hidden="true" alt="back to top"/></a>
         </li>
