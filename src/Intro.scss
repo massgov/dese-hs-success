@@ -52,7 +52,7 @@ h3.full-width-alt__title{
 
 div.dist__title{
   text-align: center;
-  color: $color-white;
+  color: $color-gray-dark;
   padding: 20px;
   margin: 0 auto 20px;
 	width: 90%;
@@ -60,8 +60,8 @@ div.dist__title{
   -webkit-transform: skew(-30deg);
   -moz-transform: skew(-30deg);
   transform: skew(-30deg);
-	background: $color-primary-green;
-  border-bottom: 4px solid $color-primary-yellow;
+	background: $color-primary-yellow;
+  border-bottom: 4px solid $color-gray-dark;
   h2{
     margin-top: 0;
     font-size: $base-font-size;
