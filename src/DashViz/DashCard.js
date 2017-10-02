@@ -1,16 +1,14 @@
 import React from 'react'
-import Description from '../Description'
 import LineChart from './LineChart'
 import './DashCard.css'
 
 const DataCard =({Title, data, dataKey, dataCount}) => {
-      var year, index, value, sentence, studentGroup, cardKey;
+      var year, value, studentGroup, cardKey;
     	if(data){
 	      for(let i = data.length-1; i > -1; i--) {
-	        if(data[i][dataKey] != 'Null') {
+	        if(data[i][dataKey] !== 'Null') {
 	          year = data[i]['Yr'];
 	          value = data[i][dataKey];
-	          index = i;
 	          break;
 	        }
       	  }

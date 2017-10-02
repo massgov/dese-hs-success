@@ -9,7 +9,6 @@ class Navigation extends React.Component {
     super(props, context);
     this.state = {
       value: 'navbar-collapse',
-      currentId: ''
     }
   }
 
@@ -28,7 +27,6 @@ class Navigation extends React.Component {
     const target = e.target
     this.setState({
       value: 'navbar-collapse',
-      currentId : target.getAttribute("value"),
     })
     animatePageScroll(target, 0,`#${target.getAttribute('href')}`)
     return true
@@ -47,7 +45,7 @@ class Navigation extends React.Component {
 
   render() {
     const { sticky } = this.props
-    const { value, currentId } = this.state
+    const { value } = this.state
     var fixed
     if (sticky) { fixed = "navbar-fixed-top"} else {fixed = ""}
 
@@ -61,7 +59,7 @@ class Navigation extends React.Component {
 
     }
     return (
-        <nav className={`navbar navbar-inverse ${fixed}`} role="navigation" id="navigation">
+        <nav className={`navbar navbar-inverse ${fixed}`} id="navigation">
             <div className="navbar-header">
               <span className="navbar-brand" id="current-section">{currentSectionName()}</span>
               <Btn handleClick={this.toggleClick} value={value} selected={'navbar-expand'} className="btn-inverse navbar-toggle">Menu <i className="glyphicon glyphicon-menu-hamburger" aria-hidden="true" /></Btn>

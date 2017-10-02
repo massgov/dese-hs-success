@@ -3,27 +3,23 @@ import Btn from '../Btn'
 import BtnGroup from '../BtnGroup'
 import './BlockChart.css'
 import BlockLegend from './BlockLegend'
-import BlockTable from './BlockTable'
 import BlockCount from './BlockCount'
-import { ChartSubTitle } from './ChartTitle'
-import Description from '../Description'
-import BlockCountLegend from './BlockCountLegend'
 import './BlockChartCount.css'
 
 class BlockChart extends React.Component{
       constructor(props, context) {
         super(props, context);
-        const { Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail } = this.getData('0');
+        const { description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail } = this.getData('0');
         this.state = {
           selected: 0,
-          Yes_1, Yes_2, No_1, No_2, description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail
+          description, array, array2, rate_pass, rate_fail, total_count_pass, total_count_fail
         };
       };
 
 
       render = () =>  {
-          const { Yes_1, Yes_2, No_1, No_2, description, array, array2, selected, rate_pass, rate_fail, total_count_pass, total_count_fail } = this.state;
-          const {grade, subject} = this.props
+          const {description, array, array2, selected, rate_pass, rate_fail, total_count_pass, total_count_fail } = this.state;
+          const {subject} = this.props
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
           });
@@ -112,12 +108,7 @@ class BlockChart extends React.Component{
 
       setData = (selected) => {
         const getData = this.getData(selected);
-        console.log(getData);
         this.setState({
-            Yes_1: getData.Yes_1,
-            Yes_2: getData.Yes_2,
-            No_1: getData.No_1,
-            No_2: getData.No_2,
             rate_pass: getData.rate_pass,
             rate_fail: getData.rate_fail,
             total_count_pass: getData.total_count_pass,
@@ -148,14 +139,14 @@ class BlockChart extends React.Component{
       }
 
       createArray = (Hightlight, Faded, Grayout) => {
-        var arr=[]
-        for(var y=0; y<Hightlight; y++){
+        var arr=[],x,y,z
+        for(x=0; x<Hightlight; x++){
           arr.push('Yes');
         };
-        for(var y=0; y<Faded; y++){
+        for(y=0; y<Faded; y++){
           arr.push('alt');
         };
-        for(var n=0; n<Grayout; n++){
+        for(z=0; z<Grayout; z++){
           arr.push('No');
         };
         return arr

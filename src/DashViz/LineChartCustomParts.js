@@ -22,10 +22,10 @@ export const CustomTooltip = (props) => {
   const { payload } = props;
   if (props.active) {
     const { payload } = props;
-    if( payload[0].value != 'Null' ){
+    if( payload[0].value !== 'Null' ){
       value = ( Math.round( payload[0].value * 10 ) / 10 ) + '%';
       countValue = payload[0]['payload'][props.dataCount].toLocaleString();
-    } else { 
+    } else {
       return (
         <div className='custom-tooltip-district'>
           <text className='descr_value'> Not Available </text>

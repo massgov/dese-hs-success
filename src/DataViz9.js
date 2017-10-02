@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import React from 'react'
 import axios from 'axios'
 import BlockChart from './DataViz/BlockChart'

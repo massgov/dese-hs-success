@@ -4,7 +4,6 @@ import './BlockChart.css'
 import BlockLegend from './BlockLegend'
 import BlockTable from './BlockTable'
 import Block from './Block'
-import { ChartSubTitle } from './ChartTitle'
 import fixWidow from '../widow'
 
 class BlockChart extends React.Component{

@@ -4,7 +4,7 @@ import {CustomizedXAxisTick, CustomizedYAxisTick, CustomTooltip, CustomizedLabel
 
 
 const SimpleLineChart = ({data, dataKey, dataCount, ymin, ymax}) => {
-  var value, index, year, countValue;
+  var value, index, year;
     if(data){
       for(let i = data.length-1; i > -1; i--) {
         if(data[i][dataKey] != 'Null') {
