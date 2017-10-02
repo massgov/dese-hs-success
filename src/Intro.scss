@@ -50,8 +50,40 @@ h3.full-width-alt__title{
   }
 }
 
+div.dist__title{
+  text-align: center;
+  color: $color-white;
+  padding: 20px;
+  margin: 0 auto 20px;
+	width: 90%;
+	height: 60px;
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  transform: skew(-30deg);
+	background: $color-primary-green;
+  border-bottom: 4px solid $color-primary-yellow;
+  h2{
+    margin-top: 0;
+    font-size: $base-font-size;
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(30deg);
+    transform: skew(30deg);
+  }
+}
+
 @media all and (min-width: 992px) {
   .full-width-alt__title{
     text-align: left;
+  }
+}
+
+@media all and (min-width: 576px) {
+  div.dist__title{
+  	width: 60%;
+    height: 60px;
+    padding: 14px;
+    h2{
+      font-size: $lead-font-size;
+    }
   }
 }
