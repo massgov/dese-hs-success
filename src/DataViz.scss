@@ -7,18 +7,21 @@
 .grade_line{
   display: none;
 }
+
+.vertical_space{
+  display: block;
+  height: 30px;
+  width: 100%;
+}
+
 @media all and (min-width: 992px) {
   .container{
     .grade_main{
       width: 80%;
       float:right;
     }
-    // .grade_line{
-    //   text-align: center;
-    //   width: 20%;
-    //   height: 400px;
-    //   display: block;
-    //   border-right: 2px solid $color-primary-blue;
-    // }
+    .vertical_space{
+      display: none;
+    }
   }
 }

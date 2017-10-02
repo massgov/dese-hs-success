@@ -20,8 +20,9 @@ ul.icon-list{
 .full-width-alt{
   background-color: $color-gray-lighter;
   padding: 0 0 50px;
-  &:last-child{
-    margin-top: 50px;
+  margin-top: 50px;
+  &:nth-child(2){
+    margin-top: 0;
   }
 }
 

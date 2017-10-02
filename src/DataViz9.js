@@ -78,6 +78,7 @@ class Data extends React.Component{
                           <Dwnld data={'/data/9/data.json'}/>
                         </div>
                         <div className="col-md-6">
+                          <div className="vertical_space"></div>
                           <div className='center'>
                               <ChartSubTitle>With each course failed, a student’s chance of graduating is reduced</ChartSubTitle>
                               <GroupedBarChart barData={barData} />
