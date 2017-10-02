@@ -29,7 +29,7 @@ class BlockChart extends React.Component{
                       <div className="table_blockchart">
                           <BlockTable Yes={Yes} No={No} />
                           <Block array = {array} />
-                          <BlockLegend type="person">1% of <b>{count.toLocaleString()}</b> students who <b>{description}</b></BlockLegend>
+                          <BlockLegend type="person">1% of <strong>{count.toLocaleString()}</strong> students who <b>{description}</b></BlockLegend>
                       </div>
                   </div>
           );
