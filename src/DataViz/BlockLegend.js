@@ -1,6 +1,5 @@
 import React from 'react'
 import './Legend.css'
-import fixWidow from '../widow'
 
 const PersonIcon = () => {
   return (
@@ -15,14 +14,13 @@ const DefaultIcon = () => {
 }
 
 const BlockLegend = ({type, children}) => {
-  var LegendIcon = (type == 'person')? <PersonIcon/>: <DefaultIcon/>
-  fixWidow()
-  return (
-    <div className="legend">
-      <hr/>
-      { LegendIcon }<span className="legend-text"> ={children}</span>
-    </div>
-  )
+    var LegendIcon = (type == 'person')? <PersonIcon/>: <DefaultIcon/>
+    return (
+      <div className="legend">
+        <hr/>
+        { LegendIcon }<span className="legend-text"> ={children}</span>
+      </div>
+    )
 }
 
 export default BlockLegend
