@@ -30,7 +30,7 @@ class DashSelect extends React.Component{
     return(
       <div className={`dash-select row ${fixed}`}>
         <Btn handleClick={handleClick} value={'State'} selected={value}>View statewide data</Btn>
-        <span> or filter by your district:  </span>
+        <span className="dash-select_text"> or filter by your district: </span>
         <Select
             name="select-district"
             value={value}
