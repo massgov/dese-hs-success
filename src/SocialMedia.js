@@ -31,6 +31,7 @@ class SocialMedia extends React.Component{
   render = () =>  {
     const shareUrl = 'http://dese-hs-datastory.digital.mass.gov.s3-website-us-east-1.amazonaws.com/';
     const title = 'The ABCs: Predicting success in high school and beyond';
+    const size = 30;
     return (
             <div className="social-media">
               <div className="Demo__container">
@@ -40,7 +41,7 @@ class SocialMedia extends React.Component{
                          quote={title}
                          className="Demo__some-network__share-button">
                          <FacebookIcon
-                           size={32}
+                           size={size}
                            round />
                        </FacebookShareButton>
 
@@ -57,7 +58,7 @@ class SocialMedia extends React.Component{
                          title={title}
                          className="Demo__some-network__share-button">
                          <TwitterIcon
-                           size={32}
+                           size={size}
                            round />
                        </TwitterShareButton>
 
@@ -72,7 +73,7 @@ class SocialMedia extends React.Component{
                          url={shareUrl}
                          className="Demo__some-network__share-button">
                          <GooglePlusIcon
-                           size={32}
+                           size={size}
                            round />
                        </GooglePlusShareButton>
 
@@ -91,7 +92,7 @@ class SocialMedia extends React.Component{
                          windowHeight={600}
                          className="Demo__some-network__share-button">
                          <LinkedinIcon
-                           size={32}
+                           size={size}
                            round />
                        </LinkedinShareButton>
 
@@ -106,10 +107,10 @@ class SocialMedia extends React.Component{
                        <EmailShareButton
                          url={shareUrl}
                          subject={title}
-                         body="body"
+                         body={shareUrl}
                          className="Demo__some-network__share-button">
                          <EmailIcon
-                           size={32}
+                           size={size}
                            round />
                        </EmailShareButton>
                      </div>
