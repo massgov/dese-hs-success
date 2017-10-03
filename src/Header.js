@@ -9,8 +9,8 @@ class Content extends React.Component{
         <div className="container">
           <div className="row">
             <div className="col-md-8">
-              <h1>The ABCs: Predicting success in high school and beyond<br /></h1>
-              <h3>A data story from the Massachusetts Department of Elementary and Secondary Education (DESE) on how attendance, behavior, and course performance information can forecast student achievement.</h3>
+              <h1>The ABCs of Success in High School and Beyond<br /></h1>
+              <h3>This data story provides information for parents, community members, and educators from the Massachusetts Department of Elementary and Secondary Education (ESE) on how attendance, behavior, and course performance in Massachusetts high schools affects post-secondary outcomes.</h3>
             </div>
           </div>
         </div>
