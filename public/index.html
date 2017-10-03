@@ -18,6 +18,15 @@
     })(window,document,'script','dataLayer','GTM-T6BNXVF');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- Facebook Open-graph metadata -->
+      <meta property="og:title" content="The ABCs: Predicting success in high school and beyond" />
+      <meta property="og:description" content="A data story from the Massachusetts Department of Elementary and Secondary Education (DESE) on how attendance, behavior, and course performance information can forecast student achievement." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="http://dese-hs-datastory.digital.mass.gov.s3-website-us-east-1.amazonaws.com/" />
+      <meta property="fb:admins" content="1266533259" />
+      <meta property="og:image" content="http://dese-hs-datastory.digital.mass.gov.s3-website-us-east-1.amazonaws.com/images/dese-header-image.jpg" />
+      <!-- End Facebook Open-graph metadata -->
+
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
     <title>DESE Data Story</title>
@@ -31,5 +40,15 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1253522564793891";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- End Facebook SDK for JavaScript -->
   </body>
 </html>
