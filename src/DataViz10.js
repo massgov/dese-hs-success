@@ -64,7 +64,7 @@ class Data extends React.Component{
                     <div className="grade_main col-md-10">
                   <div className="row">
                       <div className="col-md-12">
-                        <p>Getting through freshman year is a big step students can take to ensure success., but In grade 10 is where they should start establishing the right maintain good academic habits. One of the most important behaviors they need to adopt is simple but impactful: being present. Students who miss more than 10% of the school year, or just two days each month, see a significant drop in 4 year graduation rates. Further, individuals who receive a suspension are more likely to be struggling to stay on track at school. Their risk of failing to to graduate high school in 4 years is not surprisingly elevated.</p>
+                        <p>Successfully completing freshman year is a big step students can take to ensure success. In grade 10 they can begin to build or maintain good academic habits. One important strategy to adopt is simple but impactful: be present. Students who miss more than 10% of the school year see a significant drop in 4-year graduation rates. This amounts to  missing more than 18 days for the typical school year,or just two days each month. Additionally, students who have poor behavioral practices and receive a school suspension are more likely to struggle to stay on track academically.</p>
                       </div>
                   </div>
                   <div className="row">

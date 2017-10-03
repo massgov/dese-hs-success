@@ -68,7 +68,7 @@ class Data extends React.Component{
                     <div className="grade_main col-md-10">
                       <div className="row">
                         <div className="col-md-12">
-                          <p>The jump from middle school to high school is a big one. Students face greater academic challenges, and have social hurdles and new responsibilities to deal with. This transition can be hard to adjust to, which is one of the reasons why more students fail courses in their freshman year than any other in high school. This often leads to higher dropout rates and This increases the chances a student may be retained or drop out later in high school, and decreases the chances a student will graduate from high school in four 4 years.</p>
+                          <p>The jump from middle school to high school is a big one. Students face academic challenges, and take on new responsibilities as teenagers. This transition can be hard to adjust to: More students fail and repeat 9th grade more than any other grade in high school. Course failure increases a student’s chance of dropping out later in high school, and decreases the chance of graduating from high school in 4 years.</p>
                           <hr />
                         </div>
                       </div>
