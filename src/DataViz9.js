@@ -60,7 +60,7 @@ class Data extends React.Component{
                         <GradeHeader><span>9th</span> Grade</GradeHeader>
                         </div>
                         <div className="col-md-10">
-                        <ChartTitle>Passing Grade: <br />Failing just one course early in high school can set a student back</ChartTitle>
+                        <ChartTitle>Passing Grade: <span>Failing just one course early in high school can set a student back</span></ChartTitle>
                     </div>
                   </div>
                   <div className="row">

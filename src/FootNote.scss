@@ -17,12 +17,14 @@
     padding: 30px;
 }
 
-.page-scroll sup {
+a.page-scroll {
+  text-decoration: none;
+  sup {
     font-size: 1.2rem;
     font-weight: $font-bold;
     color: $color-primary-blue;
+  }
 }
-
 .sources-section{
   @include dark-view;
   background-color: $color-black;

@@ -10,7 +10,7 @@ export const GradeHeader = ({children}) => {
 
 export const ChartTitle = ({children}) => {
   return (
-    <h3 className="chart-title"><span>{children}</span></h3>
+    <h3 className="chart-title">{children}</h3>
   )
 }
 
