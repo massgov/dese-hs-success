@@ -18,17 +18,33 @@
   font-weight: $font-bold;
 }
 
-.col-md-6.center p{
-	padding-right: 10px;
-	padding-left: 10px;
-	text-align: left;
+.block-desc {
+text-align: left;
+vertical-align: text-bottom;
+margin:15px 0 -15px;
+p{
+  line-height: $heading-line-height;
+  font-size: $small-font-size;
+}
 }
 
-.col-md-6.center.block-desc {
-line-height: $heading-line-height;
-}
-
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 333px) {
   .block-desc {
-  height: 11rem; }
+  height: 6rem;
+  }
  }
+
+
+ @media only screen and (min-width: 576px) {
+   .block-desc {
+   height: 3rem;
+   }
+  }
+
+  @media only screen and (min-width: 992px) {
+    .block-desc {
+    height: 7rem;
+    margin: 0;
+
+    }
+   }
