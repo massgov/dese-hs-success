@@ -19,7 +19,7 @@ h3.chart-title {
   display: inline-block;
   line-height: $heading-line-height;
   width: 100%;
-//  text-align: center;
+  text-align:center;
   span{
     font-weight: $font-thin;
     font-size: $large-font-size;
@@ -45,6 +45,7 @@ h3.chart-title {
     border-bottom: 7px solid $color-primary-yellow;
     padding: 23px 0 23px 20px;
     font-size: $lead-font-size;
+    text-align: left;
     span{
       display: block;
     }
