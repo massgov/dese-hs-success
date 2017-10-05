@@ -13,7 +13,7 @@
       "total_count_fail": 20612
     },
     {
-      "description": ["Of those who passed,", "went on to college.","Just", "of students who did not take a higher level math class enrolled in higher education."],
+      "description": ["Of those who passed,", "went on to college.","Just", "of students who did not take or pass a higher level math class enrolled in higher education."],
       "rate_pass": 0.78,
       "rate_fail":0.49,
       "count_pass": 436,
