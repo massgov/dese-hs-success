@@ -1,1 +1,1 @@
-Metric,Description,Count of Students,RateHigh Attendance,Had high attendace in 10th grade,58524,95%Low Attendance,Had low attendace in 10th grade,7466,66%Never Suspended,Never had suspension in 10th grade,60726,94%Ever Suspended,Ever had suspension in 10th grade,5264,64%
+Metric,Description,Count of Students,RateHigh Attendance,Had high attendace in 10th grade,58524,0.95Low Attendance,Had low attendace in 10th grade,7466,0.66Never Suspended,Never had suspension in 10th grade,60726,0.94Ever Suspended,Ever had suspension in 10th grade,5264,0.64
