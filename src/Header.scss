@@ -3,12 +3,13 @@
 header, .page-header{
   background:
   linear-gradient(
-    left,
+    to right,
     $color-blue-alt,
     $color-blue-alt,
     $color-green-alt
   ),
   url('/images/dese-header-image.jpg');
+  background-color: $color-blue-alt;
   background-size: cover;
   background-position: center;
   padding: 50px 0;
