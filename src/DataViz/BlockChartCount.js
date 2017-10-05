@@ -23,12 +23,17 @@ class BlockChart extends React.Component{
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
           });
-          const fail = Math.round(rate_fail);
-          const pass = Math.round(rate_pass);
+          var fail, pass, hightlightStyle;
           if(uniqueArray[0] === "No"){
-            const fail = total_count_fail.toLocaleString();
-            const pass = total_count_pass.toLocaleString();
-            return (
+            fail = total_count_fail.toLocaleString();
+            pass = total_count_pass.toLocaleString();
+            hightlightStyle = 'highlight_No'
+          }else{
+            fail = Math.round(rate_fail) + '%';
+            pass = Math.round(rate_pass) + '%';
+            hightlightStyle = 'highlight_Yes'
+          }
+          return (
               <div>
                   <div className="row">
                     <div className="col-md-12 center">
@@ -39,21 +44,19 @@ class BlockChart extends React.Component{
                         </BtnGroup>
                     </div>
                   </div>
-                    <div className="row">
-                    <div className="col-md-6 center block-desc">
-                          <p>{description[0]} <span className="highlight_No">{pass}</span> {description[1]}</p>
-                    </div>
-                    <div className="col-md-6 center block-desc">
-                          <p>{description[2]} <span className="highlight_No">{fail}</span> {description[3]}</p>
-                    </div>
-                  </div>
                   <div className="row">
                     <div className="col-md-12 center">
                         <div className="block-group">
                             <div className="col-md-6 center">
+                              <div className="block-desc">
+                                <p>{description[0]} <span className={hightlightStyle}>{pass}</span> {description[1]}</p>
+                              </div>
                               <BlockCount array = {array}>Took and passed {subject}</BlockCount>
                             </div>
                             <div className="col-md-6 center">
+                              <div className="block-desc">
+                                <p>{description[2]} <span className={hightlightStyle}>{fail}</span> {description[3]}</p>
+                              </div>
                               <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
                             </div>
                         </div>
@@ -63,42 +66,6 @@ class BlockChart extends React.Component{
               </div>
 
             )
-          }
-          return(
-                <div>
-                  <div className="row">
-                    <div className="col-md-12 center">
-                        <BtnGroup>
-                          <Btn handleClick={this.handleClick} value={0} selected={selected}>1. Participated in {subject}</Btn>
-                          <Btn handleClick={this.handleClick} value={1} selected={selected}>2. Enrolled in College</Btn>
-                          <Btn handleClick={this.handleClick} value={2} selected={selected}>3. Stayed in College</Btn>
-                        </BtnGroup>
-                    </div>
-                  </div>
-                    <div className="row">
-                    <div className="col-md-6 center block-desc">
-                          <p>{description[0]} <span className="highlight_Yes">{pass}%</span> {description[1]}</p>
-                    </div>
-                    <div className="col-md-6 center block-desc">
-                          <p>{description[2]} <span className="highlight_Yes">{fail}%</span> {description[3]}</p>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-md-12 center">
-                          <div className="block-group">
-                            <div className="col-md-6 center">
-                              <BlockCount array = {array}>Took and passed {subject}</BlockCount>
-                            </div>
-                            <div className="col-md-6 center">
-                              <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
-                            </div>
-                          </div>
-                      </div>
-                      <BlockLegend type="default">100 students</BlockLegend>
-                  </div>
-                </div>
-
-          );
       };
 
       handleClick = (event) =>  {
