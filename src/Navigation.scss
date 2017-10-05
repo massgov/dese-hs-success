@@ -60,6 +60,7 @@
     font-size: $base-font-size;
     a{
       width: 100%;
+      text-decoration: none;
       color: lighten($color-gray,30%);
       border-radius: 0;
       border: none;
@@ -113,7 +114,6 @@
       width: 14%;
       a{
         text-align: center;
-        text-decoration: none;
         margin: 0 auto;
         &.active, &:hover, &:active, &:focus {
           background-color: $color-primary-blue;
