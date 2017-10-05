@@ -1,6 +1,7 @@
 @import '_variables.scss';
 
 h2.grade-header{
+  font-family: $font-style;
   font-size: $lead-font-size;
   background-color: $color-primary-yellow;
   color: $color-white;
@@ -9,13 +10,19 @@ h2.grade-header{
 }
 
 h3.chart-title {
-  text-align: center;
-  span{
+  font-family: $font-style;
+  font-weight: $font-bold;
+  font-size: $large-font-size;
   border-bottom: 3px solid $color-primary-yellow;
   color: $color-primary-blue;
   padding-bottom: 10px;
   display: inline-block;
   line-height: $heading-line-height;
+  width: 100%;
+//  text-align: center;
+  span{
+    font-weight: $font-thin;
+    font-size: $large-font-size;
   }
 }
 
@@ -24,7 +31,6 @@ h3.chart-title {
     span{
       font-size: $title-font-size;
     }
-    font-family: $font-style;
     font-size: $lead-font-size;
     background-color: $color-primary-yellow;
     color: $color-white;
@@ -34,14 +40,14 @@ h3.chart-title {
   }
 
   h3.chart-title {
-    span{
-    width: 100%;
     line-height: $base-line-height;
     border-top: 7px solid $color-primary-yellow;
     border-bottom: 7px solid $color-primary-yellow;
-    padding: 24px 0 24px 20px;
-    display: inline-block;
+    padding: 23px 0 23px 20px;
+    font-size: $lead-font-size;
+    span{
+      display: block;
     }
-  }
+}
 
 }
