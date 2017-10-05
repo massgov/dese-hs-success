@@ -28,7 +28,7 @@ export const CustomTooltip = (props) => {
     } else {
       return (
         <div className='custom-tooltip-district'>
-          <text className='descr_value'> Not Available </text>
+          <text className='descr_value'>Available in DART</text>
         </div>
         )
     }

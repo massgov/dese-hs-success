@@ -19,7 +19,7 @@ const SimpleLineChart = ({data, dataKey, dataCount, ymin, ymax}) => {
       <ResponsiveContainer maxHeight={200}>
         <LineChart data={data}
               margin={{top: 20, right: 30, left: -10, bottom: 15}}>
-         <XAxis padding={{ left: 0 }} dataKey="Yr" type="number" domain={[2010, 2016]} tick={<CustomizedXAxisTick/>}/>
+         <XAxis padding={{ left: 0 }} dataKey="Yr" type="number" domain={[2011, 2016]} tickCount={6} tick={<CustomizedXAxisTick/>}/>
          <YAxis padding={{ bottom: 0 }} type="number" domain={[ymin, ymax]} tick={<CustomizedYAxisTick/>}/>
          <Tooltip content={<CustomTooltip lastData={value} lastYear={year} dataCount={dataCount}/>}/>
          <Line type="monotone" dataKey={dataKey} stroke="#14558f" animationDuration={300}
