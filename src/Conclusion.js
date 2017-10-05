@@ -10,20 +10,20 @@ class Conclusion extends React.Component{
         <div className="row">
           <div className="col-md-12">
             <h2 className="full-width-alt__title"><span>Get On Track</span></h2>
-            <p>
-              Influential, positive adults are important points of contact for students. Talk to the students in your life about their goals and the importance of the ABC’s: Attendance, Behavior and Courses in high school. Hold high expectations for students, let them know when they’re doing well, and talk about how to be even more successful next time. For tips on guiding these conversations for elementary students through high school and for other resources, visit <a href="http://futurereadyma.org/" target="_blank" rel="noopener noreferrer">Future Ready</a>.
+            <p>Students benefit when they have engaged adults in their lives who help them stay positive and focus on goals. Start the conversation with the students in your life about their plans and dreams, and let them know how the ABCs can influence their futures. For tips on guiding these conversations for elementary, middle and high school students visit <a href="http://futurereadyma.org/" target="_blank" rel="noopener noreferrer">Future Ready</a>. For more information on the ways parents and educators can help their students succeed: 
             </p>
           </div>
         </div>
         <div className="row">
           <hr />
           <div className="col-md-12">
-            <h3 className="full-width-alt__title"><span>What else can you do?</span></h3>
             <ul className="icon-list">
-              <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> If you have failed a course, there are ways to get back on track. Ask a school counselor about credit recovery or other options at your school to get back on track.</li>
-              <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> Schools interested in learning more about supporting ninth grade students check out: <a href="https://www2.ed.gov/programs/slcp/ninthgradecounts/ninthgradecountsguide.pdf" target="_blank" rel="noopener noreferrer">9th grade counts</a></li>
-              <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> Need help improving attendance? <a href="http://www.attendanceworks.org/about/what-can-i-do/parents/" target="_blank" rel="noopener noreferrer">Attendance matters</a></li>
-              <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> Want to learn about taking rigorous courses? <a href="http://www.doe.mass.edu/ccr/masscore/MassCoreStudents.pdf" target="_blank" rel="noopener noreferrer">Masscore</a></li>
+              <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> <strong>Get off to a good start</strong> - Prepare 9th graders for the transition to high school by encouraging your school district to follow the <a href="https://www2.ed.gov/programs/slcp/ninthgradecounts/ninthgradecountsguide.pdf" target="_blank" rel="noopener noreferrer">Ninth Grade Counts guide</a>.</li>
+              <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> <strong>Recover credits from failed courses</strong> - Discuss credit recovery options with school counselors to get your student back on track.</li>
+              <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> <strong>Boost attendance</strong> - Use tips from <a href="http://www.attendanceworks.org/about/what-can-i-do/parents/" target="_blank" rel="noopener noreferrer">Attendance Works</a> to help students develop good attendance habits.</li>
+               <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> <strong>Watch for warning signs</strong> - Absentee rates of 10% or higher and behavioral challenges leading to suspensions may be signs of larger life problems your student is facing. ESE’s Rethinking Discipline Initiative provides resources to schools and districts to reduce out of school suspensions and promote a positive school climate.</li>
+               <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> <strong>Take rigorous courses</strong> - Learn about the Commonwealth’s <a href="http://www.doe.mass.edu/ccr/masscore/" target="_blank" rel="noopener noreferrer">MassCore course recommendations</a>. MassCore is a roadmap for students to take rigorous courses such as four years of math, and advanced courses such as AP, Capstone or Work-based learning. MassCore prepares them for success in college.</li>
+               <li><i className="glyphicon glyphicon-arrow-right list-icon" aria-hidden="true" /> <strong>Learn about your school district</strong> - Explore data specific to your ischool district in the section below.</li>
             </ul>
           </div>
         </div>
