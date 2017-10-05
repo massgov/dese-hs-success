@@ -4,7 +4,7 @@ import './Dwnld.css'
 const Dwnld = (props) => {
   const {data} = props
   return(
-      <a className="download" href={data}>Download the data powering this visualization</a>
+      <a className="download" href={data} download={data}>Download the data powering this visualization</a>
   )
 }
 
