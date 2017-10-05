@@ -48,13 +48,13 @@ class BlockChart extends React.Component{
                     <div className="col-md-12 center">
                         <div className="block-group">
                             <div className="col-md-6 center">
-                              <div className="block-desc">
+                              <div className="col-md-12 col-sm-6 block-desc">
                                 <p>{description[0]} <span className={hightlightStyle}>{pass}</span> {description[1]}</p>
                               </div>
                               <BlockCount array = {array}>Took and passed {subject}</BlockCount>
                             </div>
                             <div className="col-md-6 center">
-                              <div className="block-desc">
+                              <div className="col-md-12 col-sm-6 block-desc">
                                 <p>{description[2]} <span className={hightlightStyle}>{fail}</span> {description[3]}</p>
                               </div>
                               <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
