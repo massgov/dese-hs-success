@@ -113,6 +113,7 @@
       width: 14%;
       a{
         text-align: center;
+        text-decoration: none;
         margin: 0 auto;
         &.active, &:hover, &:active, &:focus {
           background-color: $color-primary-blue;
