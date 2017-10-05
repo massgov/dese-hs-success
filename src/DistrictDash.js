@@ -130,7 +130,7 @@ class DistrictDash extends React.Component{
                          </div>
                          <div className="row">
                           <div className="col-md-12 center">
-                            <Dwnld data={'/data/district.json'}/>
+                            <Dwnld data={'/data/district.csv'}/>
                           </div>
                         </div>
                      </div>
