@@ -66,7 +66,7 @@ class Data extends React.Component{
                     </div>
                     <div className="col-md-8 center">
                       <BlockChartCount data={blockData} subject="Algebra II"/>
-                      <Dwnld data={'/data/11/data.json'}/>
+                      <Dwnld data={'/data/11/grade_11_data.csv'}/>
                     </div>
                   </div>
                   </div>

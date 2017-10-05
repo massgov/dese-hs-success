@@ -76,14 +76,14 @@ class Data extends React.Component{
                         <div className="col-md-6 center">
                           <ChartSubTitle>4-Year Graduation Rate by Course Performance</ChartSubTitle>
                           <BlockChart data={blockData}/>
-                          <Dwnld data={'/data/9/data.json'}/>
+                          <Dwnld data={'/data/9/grade_9_data_viz1.csv'}/>
                         </div>
                         <div className="col-md-6">
                           <div className="vertical_space"></div>
                           <div className='center'>
                               <ChartSubTitle>With each course failed, a student’s chance of graduating is reduced</ChartSubTitle>
                               <GroupedBarChart barData={barData} />
-                              <Dwnld data={'/data/9/data.json'}/>
+                              <Dwnld data={'/data/9/grade_9_data_viz2.csv'}/>
                            </div>
                         </div>
                       </div>
