@@ -1,8 +1,11 @@
-.btn-group {margin-bottom: 10px;}
+.btn-group {
+  margin-bottom: 23px;
+}
 
 @media only screen and (max-width: 767px) {
   .btn-group {
     display: block;
+    margin-bottom: 10px;
   }
 
   .btn-group .btn {

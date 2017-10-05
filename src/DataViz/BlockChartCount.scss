@@ -19,6 +19,7 @@
 }
 
 .block-desc {
+padding: 0;
 text-align: left;
 vertical-align: text-bottom;
 margin:15px 0 -15px;
@@ -37,13 +38,13 @@ p{
 
  @media only screen and (min-width: 576px) {
    .block-desc {
-   height: 3rem;
+   height: 5rem;
    }
   }
 
   @media only screen and (min-width: 992px) {
     .block-desc {
-    height: 7rem;
+    height: 8rem;
     margin: 0;
 
     }
