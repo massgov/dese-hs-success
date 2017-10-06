@@ -24,7 +24,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
           return (
             <div className="col-md-6">
               <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year-5}-{year-2004} <span className="dash-card__hightlight">{cardKey}</span>.</p>
+                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year-4}-{year-2003} <span className="dash-card__hightlight">{cardKey}</span>.</p>
                 <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
               </div>
             </div> )
@@ -35,7 +35,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
           return (
             <div className="col-md-6">
               <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year-5}-{year-2004} <span className="dash-card__hightlight">{cardKey}</span>.</p>
+                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year-4}-{year-2003} <span className="dash-card__hightlight">{cardKey}</span>.</p>
                 <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
               </div>
             </div> )
