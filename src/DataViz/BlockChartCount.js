@@ -23,7 +23,7 @@ class BlockChart extends React.Component{
           const uniqueArray = array.filter(function(item, pos){
             return array.indexOf(item)== pos;
           });
-          var fail, pass, hightlightStyle;
+          var fail, pass, hightlightStyle, blockTitleYes, blockTitleNo;
           if(uniqueArray[0] === "No"){
             fail = total_count_fail.toLocaleString();
             pass = total_count_pass.toLocaleString();
@@ -32,6 +32,13 @@ class BlockChart extends React.Component{
             fail = Math.round(rate_fail) + '%';
             pass = Math.round(rate_pass) + '%';
             hightlightStyle = 'highlight_Yes'
+          }
+          if(subject === 'AP courses'){
+            blockTitleYes = 'Took an AP course'
+            blockTitleNo = 'Did no take an AP course'
+          } else {
+            blockTitleYes = 'Took and passed Algebra II'
+            blockTitleNo = 'Did no take or pass Algebra II'
           }
           return (
               <div>
@@ -51,13 +58,13 @@ class BlockChart extends React.Component{
                               <div className="col-md-12 col-sm-6 block-desc">
                                 <p>{description[0]} <span className={hightlightStyle}>{pass}</span> {description[1]}</p>
                               </div>
-                              <BlockCount array = {array}>Took and passed {subject}</BlockCount>
+                              <BlockCount array = {array}>{blockTitleYes}</BlockCount>
                             </div>
                             <div className="col-md-6 center">
                               <div className="col-md-12 col-sm-6 block-desc">
                                 <p>{description[2]} <span className={hightlightStyle}>{fail}</span> {description[3]}</p>
                               </div>
-                              <BlockCount array = {array2}>Did not take or pass {subject}</BlockCount>
+                              <BlockCount array = {array2}>{blockTitleNo}</BlockCount>
                             </div>
                         </div>
                     </div>

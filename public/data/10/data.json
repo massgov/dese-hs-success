@@ -21,7 +21,7 @@
       "rate": 94
     },
     {
-      "metric": "Ever Suspended",
+      "metric": "Suspended at Least Once",
       "description": "ever had suspension in 10th grade",
       "count": 5264,
       "rate": 64
