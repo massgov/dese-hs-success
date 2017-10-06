@@ -74,7 +74,7 @@ class Data extends React.Component{
                       </div>
                       <div className="row">
                         <div className="col-md-6 center">
-                          <ChartSubTitle>4-Year Graduation Rate by Course Performance</ChartSubTitle>
+                          <ChartSubTitle>Graduation rates are higher for students who pass all 9th grade classes</ChartSubTitle>
                           <BlockChart data={blockData}/>
                           <Dwnld data={'/data/9/grade_9_data_viz1.csv'}/>
                         </div>

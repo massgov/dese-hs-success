@@ -75,13 +75,13 @@ class Data extends React.Component{
 
                   <div className="row">
                     <div className="col-md-6 center">
-                      <ChartSubTitle>4-year Graduation Rate by Attendance Behavior<FootNoteLink index={4}/></ChartSubTitle>
+                      <ChartSubTitle>Graduation rates are higher for students with high attendance<FootNoteLink index={4}/></ChartSubTitle>
                       <BlockChart data={blockData1}/>
                       <Dwnld data={'/data/10/grade_10_data.csv'}/>
                     </div>
                     <div className="col-md-6 center">
                       <div className="vertical_space"></div>
-                      <ChartSubTitle>4-year Graduation Rate by Suspension Behavior</ChartSubTitle>
+                      <ChartSubTitle>Graduation rates are higher for students with no suspensions</ChartSubTitle>
                       <BlockChart data={blockData2}/>
                       <Dwnld data={'/data/10/grade_10_data.csv'}/>
                     </div>
