@@ -32,7 +32,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
         case 'Chronic Absence Percent':
            studentGroup = 'high school students';
            cardKey = 'missed more than 10% of days';
-           return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.<FootNoteLink index={6}/></p>
+           return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.</p>
            break;
         case 'Out of School Suspension Percent':
            studentGroup = 'high school students';
@@ -44,12 +44,12 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
         case 'Passed All 9th Grade Courses Percent':
           studentGroup = '9th graders';
           cardKey = 'passed all 9th grade courses';
-          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.</p>
           break;
          case 'Enrolled in AP/IB Course Percent':
           studentGroup = 'juniors/seniors';
           cardKey = 'took at least one AP/IB course';
-          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.</p>
           break;
          case 'College Enrollment Percent':
           studentGroup = ' high school graduates ';
