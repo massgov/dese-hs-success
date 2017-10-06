@@ -66,7 +66,6 @@ class Data extends React.Component{
                         <p>Advanced Placement (AP) courses are widely recognized by college admissions officers as rigorous classes that may provide high school students the chance to receive college course credit before enrolling. The chance to get a head start on college is a major benefit to AP courses, as are possible cost savings that come with reducing the number of credits a student needs to earn a college degree.<FootNoteLink index={5}/> However, perhaps the most important advantage to AP courses is that they expose students to college-level academics. This is invaluable in helping a student jump into a college atmosphere.</p>
                       </div>
                       <div className="col-md-8 center">
-                        <ChartSubTitle>12th grade students taking AP courses stay in college longer than their peers</ChartSubTitle>
                         <BlockChartCount data={blockData} subject="AP courses"/>
                         <Dwnld data={'/data/12/grade_12_data.csv'}/>
                       </div>

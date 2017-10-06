@@ -65,7 +65,6 @@ class Data extends React.Component{
                       <p>Higher-level math classes are important to a student’s development, not just because of the content covered, but because of the critical thinking skills required for these courses. Successfully taking on the challenge of Algebra II in grade 11, for example, has a big impact on a student’s academic potential. Specifically, high school juniors who pass Algebra II (or a higher-level math course) tend to stay in college longer than their peers.</p>
                     </div>
                     <div className="col-md-8 center">
-                      <ChartSubTitle>11th grade students passing Algebra II stay in college longer than their peers</ChartSubTitle>
                       <BlockChartCount data={blockData} subject="Algebra II"/>
                       <Dwnld data={'/data/11/grade_11_data.csv'}/>
                     </div>
