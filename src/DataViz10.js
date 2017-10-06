@@ -5,6 +5,7 @@ import BlockChart from './DataViz/BlockChart'
 import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import FootNoteLink from './FootNoteLink'
 import Dwnld from './Dwnld'
+import fixWidow from './widow'
 
 class Data extends React.Component{
 
@@ -75,13 +76,13 @@ class Data extends React.Component{
 
                   <div className="row">
                     <div className="col-md-6 center">
-                      <ChartSubTitle>Graduation rates are higher for students with high attendance<FootNoteLink index={4}/></ChartSubTitle>
+                      <ChartSubTitle>{fixWidow('Graduation rates are higher for students with high attendance')}<FootNoteLink index={4}/></ChartSubTitle>
                       <BlockChart data={blockData1}/>
                       <Dwnld data={'/data/10/grade_10_data.csv'}/>
                     </div>
                     <div className="col-md-6 center">
                       <div className="vertical_space"></div>
-                      <ChartSubTitle>Graduation rates are higher for students with no suspensions</ChartSubTitle>
+                      <ChartSubTitle>{fixWidow('Graduation rates are higher for students with no suspensions')}</ChartSubTitle>
                       <BlockChart data={blockData2}/>
                       <Dwnld data={'/data/10/grade_10_data.csv'}/>
                     </div>
