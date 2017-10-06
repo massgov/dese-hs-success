@@ -29,7 +29,7 @@ const EmailIcon = generateShareIcon('email');
 
 class SocialMedia extends React.Component{
   render = () =>  {
-    const shareUrl = 'http://dese-hs-datastory.digital.mass.gov.s3-website-us-east-1.amazonaws.com/';
+    const shareUrl = 'http://abcs.digital.mass.gov';
     const title = 'The ABCs: Predicting success in high school and beyond';
     const size = 30;
     return (
