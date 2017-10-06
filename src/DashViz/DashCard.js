@@ -4,7 +4,7 @@ import './DashCard.css'
 import FootNoteLink from '../FootNoteLink'
 
 const DataCard =({Title, data, dataKey, dataCount}) => {
-      var year, value, studentGroup, cardKey;
+      var year, value, studentGroup, cardKey, LineChartTitle;
     	if(data){
 	      for(let i = data.length-1; i > -1; i--) {
 	        if(data[i][dataKey] !== 'Null') {
@@ -17,7 +17,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
         let ymin = 0, ymax = 100;
       	if (value) {
         var percValue = Math.round( value * 10 ) / 10
-        const LineChartTitle = (dataKey) => {
+        LineChartTitle = (dataKey) => {
         switch (dataKey) {
         case '4 Year Graduation Percent':
           studentGroup = ' students who started high school in';
@@ -62,27 +62,21 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} Fall {year} and <span className="dash-card__hightlight">{cardKey}</span> through Fall {year+1}.</p>
          break;
         default: console.log('data card has not matched')
-      }}
-          return (
+      }}}else{
+        LineChartTitle = (dataKey) => {
+          var dataKeynew = dataKey.split(' ')
+          dataKeynew.pop()
+          dataKeynew = dataKeynew.join(' ')
+          return <p>Data on {dataKeynew} is not available for this school district.</p>
+        }
+      }
+      return (
             <div className="col-md-6">
               <div className="dash-card">
                 {LineChartTitle(dataKey)}
                 <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
               </div>
             </div> )
-    	}
-    else{
-      var dataKeynew = dataKey.split(' ')
-      dataKeynew.pop()
-      dataKeynew = dataKeynew.join(' ')
-     return (
-             <div className="col-md-6">
-               <div className="dash-card">
-                 <p>Data on {dataKeynew} is not available for this school district.</p>
-                 <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
-               </div>
-             </div> )
-    }
 }
 
 export default DataCard
