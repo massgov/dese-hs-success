@@ -17,90 +17,64 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
         let ymin = 0, ymax = 100;
       	if (value) {
         var percValue = Math.round( value * 10 ) / 10
+        const LineChartTitle = (dataKey) => {
         switch (dataKey) {
-    	   case '4 Year Graduation Percent':
-      		studentGroup = ' students who started high school in';
-      		cardKey = 'graduated in 4 years';
-          return (
-            <div className="col-md-6">
-              <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year-4}-{year-2003} <span className="dash-card__hightlight">{cardKey}</span>.</p>
-                <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
-              </div>
-            </div> )
+        case '4 Year Graduation Percent':
+          studentGroup = ' students who started high school in';
+          cardKey = 'graduated in 4 years';
+          return  <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year-4}-{year-2003} <span className="dash-card__hightlight">{cardKey}</span>.</p>
           break;
-    	   case '5 Year Graduation Percent':
-      		studentGroup = ' students who started high school in';
-      		cardKey = 'graduated in 5 years or less';
-          return (
-            <div className="col-md-6">
-              <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year-4}-{year-2003} <span className="dash-card__hightlight">{cardKey}</span>.</p>
-                <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
-              </div>
-            </div> )
+        case '5 Year Graduation Percent':
+          studentGroup = ' students who started high school in';
+          cardKey = 'graduated in 5 years or less';
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year-4}-{year-2003} <span className="dash-card__hightlight">{cardKey}</span>.</p>
           break;
-    	   case 'Chronic Absence Percent':
-      		studentGroup = 'high school students';
-      		cardKey = 'missed more than 10% of days';
+        case 'Chronic Absence Percent':
+           studentGroup = 'high school students';
+           cardKey = 'missed more than 10% of days';
+           return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.<FootNoteLink index={6}/></p>
+           break;
+        case 'Out of School Suspension Percent':
+           studentGroup = 'high school students';
+           cardKey = 'had at least one out-of-school suspension';
+           ymin = 0;
+           ymax = 20;
+           return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.<FootNoteLink index={6}/></p>
+           break;
+        case 'Passed All 9th Grade Courses Percent':
+          studentGroup = '9th graders';
+          cardKey = 'passed all 9th grade courses';
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
           break;
-    	   case 'Out of School Suspension Percent':
-      		studentGroup = 'high school students';
-      		cardKey = 'had at least one out-of-school suspension';
-      		ymin = 0;
-      		ymax = 20;
-          return (
-            <div className="col-md-6">
-              <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.<FootNoteLink index={6}/></p>
-                <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
-              </div>
-            </div> )
+         case 'Enrolled in AP/IB Course Percent':
+          studentGroup = 'juniors/seniors';
+          cardKey = 'took at least one AP/IB course';
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
           break;
-    	   case 'Passed All 9th Grade Courses Percent':
-      		studentGroup = '9th graders';
-      		cardKey = 'passed all 9th grade courses';
+         case 'College Enrollment Percent':
+          studentGroup = ' high school graduates ';
+          cardKey = 'enrolled in college';
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
           break;
-      	 case 'Enrolled in AP/IB Course Percent':
-      		studentGroup = 'juniors/seniors';
-      		cardKey = 'took at least one AP/IB course';
-          break;
-      	 case 'College Enrollment Percent':
-      		studentGroup = ' high school graduates ';
-      		cardKey = 'enrolled in college';
-          return (
-            <div className="col-md-6">
-              <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
-                <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
-              </div>
-            </div> )
-          break;
-    	   case 'College Persistence Percent':
-      		studentGroup = 'high school graduates enrolled college in ';
-      		cardKey = 'stayed in college';
-          return (
-            <div className="col-md-6">
-              <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} Fall {year} and <span className="dash-card__hightlight">{cardKey}</span> through Fall {year+1}.</p>
-                <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
-              </div>
-            </div> )
-          break;
+        case 'College Persistence Percent':
+         studentGroup = 'high school graduates enrolled college in ';
+         cardKey = 'stayed in college';
+         return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} Fall {year} and <span className="dash-card__hightlight">{cardKey}</span> through Fall {year+1}.</p>
+         break;
         default: console.log('data card has not matched')
+      }}
+          return (
+            <div className="col-md-6">
+              <div className="dash-card">
+                {LineChartTitle(dataKey)}
+                <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
+              </div>
+            </div> )
     	}
-      return(
-        <div className="col-md-6">
-          <div className="dash-card">
-            <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.</p>
-            <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
-          </div>
-      </div>
-      )
-    }else{
+    else{
       var dataKeynew = dataKey.split(' ')
       dataKeynew.pop()
-      dataKeynew = dataKeynew.join(' ') 
+      dataKeynew = dataKeynew.join(' ')
      return (
              <div className="col-md-6">
                <div className="dash-card">
