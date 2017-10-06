@@ -25,6 +25,7 @@ class FootNotes extends React.Component {
             <FootNote i={3}>Core subjects are English/Language Arts, Math, Science and Social Studies.</FootNote>
             <FootNote i={4}>High attendance means 90% attendance rate or higher. Low attendance means below 90% attendance rate, which is considered chronically absent.</FootNote>
             <FootNote i={5}>Many colleges give college credit to students scoring a 3 or above on an AP Test. Contact your school counselor for more information.</FootNote>
+            <FootNote i={6}>Suspension Rate Footnote.</FootNote>
           </ol>
       </div>
   </div>
