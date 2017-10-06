@@ -66,23 +66,23 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
       		cardKey = 'took at least one AP/IB course';
           break;
       	 case 'College Enrollment Percent':
-      		studentGroup = ' 2015 high school graduates ';
+      		studentGroup = ' high school graduates ';
       		cardKey = 'enrolled in college';
           return (
             <div className="col-md-6">
               <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in the fall of {year}.</p>
+                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
                 <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
               </div>
             </div> )
           break;
     	   case 'College Persistence Percent':
-      		studentGroup = 'high school graduates enrolled in and ';
+      		studentGroup = 'high school graduates enrolled college in ';
       		cardKey = 'stayed in college';
           return (
             <div className="col-md-6">
               <div className="dash-card">
-                <p><span className="dash-card__hightlight">{percValue}%</span> of {year} {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> through the fall of {year+1}.</p>
+                <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} Fall {year} and <span className="dash-card__hightlight">{cardKey}</span> through Fall {year+1}.</p>
                 <LineChart data={data} dataKey={dataKey} dataCount={dataCount} ymin={ymin} ymax={ymax}/>
               </div>
             </div> )
