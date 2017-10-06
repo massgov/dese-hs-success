@@ -18,6 +18,11 @@ class Content extends React.Component{
                 <SocialMedia />
             </div>
           </div>
+          <div className="row">
+            <div className="col-md-8 ">
+                <SocialMedia />
+            </div>
+          </div>
         </div>
       </header>
 
