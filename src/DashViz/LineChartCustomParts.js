@@ -42,7 +42,7 @@ export const CustomTooltip = (props) => {
       return (
         <div className='custom-tooltip-district'>
           <text className='descr_value'>{`${(value)}`}</text>
-          <text className='descr_value'> of {`${(countValue)}`} students</text>
+          <text className='descr_value'> of {`${(countValue).toLocaleString()}`} students</text>
         </div>
       );
     }
