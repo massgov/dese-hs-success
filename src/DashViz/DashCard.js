@@ -39,7 +39,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
            cardKey = 'had at least one out-of-school suspension';
            ymin = 0;
            ymax = 20;
-           return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.<FootNoteLink index={6}/></p>
+           return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.<FootNoteLink index={6}/><FootNoteLink index={7}/></p>
            break;
         case 'Passed All 9th Grade Courses Percent':
           studentGroup = '9th graders';
@@ -57,7 +57,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
           return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
           break;
         case 'College Persistence Percent':
-         studentGroup = 'high school graduates enrolled college in ';
+         studentGroup = 'high school graduates enrolled in college in ';
          cardKey = 'stayed in college';
          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} Fall {year} and <span className="dash-card__hightlight">{cardKey}</span> through Fall {year+1}.</p>
          break;
