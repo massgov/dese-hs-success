@@ -29,8 +29,8 @@ const EmailIcon = generateShareIcon('email');
 class SocialMedia extends React.Component{
   render = () =>  {
     const shareUrl = 'http://mass.gov/SuccessABCs';
-    const title = 'The ABCs: Predicting success in high school and beyond';
-    const size = 30;
+    const title = 'The ABCs of Success in High School and Beyond';
+    const size = 28;
     return (
             <div className="social-media">
               <div className="Demo__container">
