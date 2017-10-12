@@ -18,7 +18,6 @@ const {
   FacebookShareCount,
   GooglePlusShareCount,
   LinkedinShareCount,
-  PinterestShareCount,
 } = ShareCounts;
 
 const FacebookIcon = generateShareIcon('facebook');
@@ -29,7 +28,7 @@ const EmailIcon = generateShareIcon('email');
 
 class SocialMedia extends React.Component{
   render = () =>  {
-    const shareUrl = 'http://abcs.digital.mass.gov';
+    const shareUrl = 'http://mass.gov/SuccessABCs';
     const title = 'The ABCs: Predicting success in high school and beyond';
     const size = 30;
     return (
