@@ -35,10 +35,10 @@ class BlockChart extends React.Component{
           }
           if(subject === 'AP courses'){
             blockTitleYes = 'Took an AP course'
-            blockTitleNo = 'Did no take an AP course'
+            blockTitleNo = 'Did not take an AP course'
           } else {
             blockTitleYes = 'Took and passed Algebra II'
-            blockTitleNo = 'Did no take or pass Algebra II'
+            blockTitleNo = 'Did not take or pass Algebra II'
           }
           return (
               <div>
