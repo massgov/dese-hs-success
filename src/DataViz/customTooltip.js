@@ -13,7 +13,7 @@ export default class CustomTooltip extends React.Component{
             core = payload[1].payload['Core subjects']*100,
             color_all = payload[0].color,
             color_core = payload[1].color
-      if (number === 'one') {
+      if (number === '1') {
         return (
           <div className="custom-tooltip">
             <h4>Failed {number} course:</h4>
@@ -22,7 +22,7 @@ export default class CustomTooltip extends React.Component{
             <p>Among <span style={{color: `${color_core}`}}><b>{total_core}</b></span> students who failed {number} Core course, <span style={{color: `${color_core}`}}><b>{core}%</b></span> graduated in 4 years.</p>
           </div>
         )
-      }      
+      }
       return (
         <div className="custom-tooltip">
           <h4>Failed {number} courses:</h4>

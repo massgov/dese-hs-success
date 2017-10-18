@@ -2,7 +2,7 @@
 import React from 'react'
 import axios from 'axios'
 import BlockChartCount from './DataViz/BlockChartCount'
-import {GradeHeader, ChartTitle} from './DataViz/ChartTitle'
+import {GradeHeader, ChartTitle, ChartSubTitle} from './DataViz/ChartTitle'
 import Dwnld from './Dwnld'
 import FootNoteLink from './FootNoteLink'
 

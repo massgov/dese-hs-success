@@ -7,24 +7,24 @@
 }
 
 .block {
-    -webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
-    mask: url(/images/person.svg) no-repeat 50% 50%;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    // -webkit-mask: url(/images/person.svg) no-repeat 50% 50%;
+    // mask: url(/images/person.svg) no-repeat 50% 50%;
+    // -webkit-mask-size: contain;
+    // mask-size: contain;
     float: left;
     height: 9%;
     width: 9%;
     margin: 0.5%;
     position: relative;
-    opacity: 1;
+    background: none;
 }
 
-.color_Yes {
+.colorPerson_Yes {
     color: $color-white;
-    background: $color-primary-green;
+    fill: $color-primary-green;
 }
 
-.color_No {
+.colorPerson_No {
     color: $color-black;
-    background: $color-gray-light;
+    fill: $color-gray-light;
 }
