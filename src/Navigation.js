@@ -28,8 +28,7 @@ class Navigation extends React.Component {
     this.setState({
       value: 'navbar-collapse',
     })
-    animatePageScroll(target, 0,`#${target.getAttribute('href')}`)
-    return true
+    animatePageScroll(target, 0,`#${target.getAttribute('data-id')}`)
   }
 
 
@@ -51,7 +50,7 @@ class Navigation extends React.Component {
 
     const targets = {"intro": ["intro", "Intro"],"grade9":["grade9","9th Grade"],"grade10":["grade10","10th Grade"],"grade11":["grade11","11th Grade"],"grade12":["grade12", "12th Grade"],"conclusion":["conclusion", "Get on Track"],"district":["district", "Explore Your District"]}
     const navItems = _.map(targets, (id) =>
-      <li key={id[0]} className="nav-item" onClick={this.onNavClick} ><a href={`${id[0]}`} className={`nav-link ${this.isActive(id[0])}`} value={id[0]}>{id[1]}</a></li>
+      <li key={id[0]} className="nav-item" onClick={this.onNavClick} ><a data-id={`${id[0]}`} className={`nav-link ${this.isActive(id[0])}`} value={id[0]}>{id[1]}</a></li>
     )
     const currentSectionName = () => {
       const id = this.isScrolledTo()
