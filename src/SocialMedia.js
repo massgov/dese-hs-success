@@ -30,6 +30,7 @@ class SocialMedia extends React.Component{
   render = () =>  {
     const shareUrl = 'http://mass.gov/SuccessABCs';
     const title = 'The ABCs of Success in High School and Beyond';
+    const message = 'Interact with the @MASchoolsk12 ABCs of success in #HighSchool #DataViz & prepare students for the future. #MAedu'
     const size = 28;
     return (
             <div className="social-media">
@@ -37,7 +38,7 @@ class SocialMedia extends React.Component{
                      <div className="Demo__some-network">
                        <FacebookShareButton
                          url={shareUrl}
-                         quote={title}
+                         quote={message}
                          className="Demo__some-network__share-button">
                          <FacebookIcon
                            size={size}
@@ -54,7 +55,7 @@ class SocialMedia extends React.Component{
                      <div className="Demo__some-network">
                        <TwitterShareButton
                          url={shareUrl}
-                         title={title}
+                         title={message}
                          className="Demo__some-network__share-button">
                          <TwitterIcon
                            size={size}
@@ -86,7 +87,7 @@ class SocialMedia extends React.Component{
                      <div className="Demo__some-network">
                        <LinkedinShareButton
                          url={shareUrl}
-                         title={title}
+                         title={message + ' ' +shareUrl}
                          windowWidth={750}
                          windowHeight={600}
                          className="Demo__some-network__share-button">
@@ -106,7 +107,7 @@ class SocialMedia extends React.Component{
                        <EmailShareButton
                          url={shareUrl}
                          subject={title}
-                         body={shareUrl}
+                         body={message + ' ' +shareUrl}
                          className="Demo__some-network__share-button">
                          <EmailIcon
                            size={size}
