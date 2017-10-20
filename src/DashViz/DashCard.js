@@ -49,17 +49,17 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
          case 'Enrolled in AP/IB Course Percent':
           studentGroup = 'juniors/seniors';
           cardKey = 'took at least one AP/IB course';
-          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.</p>
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year}<span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.</p>
           break;
          case 'College Enrollment Percent':
-          studentGroup = ' high school graduates ';
+          studentGroup = 'high school students who graduated in spring';
           cardKey = 'enrolled in college';
-          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} <span className="dash-card__hightlight">{cardKey}</span> in Fall {year}.</p>
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year} <span className="dash-card__hightlight">{cardKey}</span> in fall {year}.</p>
           break;
         case 'College Persistence Percent':
-         studentGroup = 'high school graduates enrolled in college in ';
-         cardKey = 'stayed in college';
-         return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} Fall {year} and <span className="dash-card__hightlight">{cardKey}</span> through Fall {year+1}.</p>
+         studentGroup = 'high school students who graduated in spring';
+         cardKey = 'remained in college';
+         return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year} <span className="dash-card__hightlight">{cardKey}</span> through fall {year+1}.</p>
          break;
         default: console.log('data card has not matched')
       }}}else{

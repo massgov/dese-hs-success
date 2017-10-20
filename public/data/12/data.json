@@ -1,6 +1,6 @@
 [
   {
-    "description": ["","of 12th graders took an AP course.", "", " did not take such a course."],
+    "description": ["","12th graders took an AP course.", "", " did not take such a course."],
     "rate_pass": 0.39,
     "rate_fail": 0.61,
     "count_pass": 253,
@@ -26,7 +26,7 @@
     "total_count_fail": 22816
   },
   {
-    "description": ["","of students who took AP courses in 12th grade remained enrolled in college after 1 year.","That figure is only","for those that did not take an AP course."],
+    "description": ["","of students who took AP courses in 12th grade remained enrolled in college after 1 year.","That figure is only","for those who did not take an AP course."],
     "rate_pass": 0.81,
     "rate_fail": 0.46,
     "count_pass": 253,

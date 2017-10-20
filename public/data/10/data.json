@@ -16,13 +16,13 @@
   [
     {
       "metric": "Never Suspended",
-      "description": "never had suspension in 10th grade",
+      "description": "never had a suspension in 10th grade",
       "count": 60726,
       "rate": 94
     },
     {
       "metric": "Suspended at Least Once",
-      "description": "ever had suspension in 10th grade",
+      "description": "ever had a suspension in 10th grade",
       "count": 5264,
       "rate": 64
     }
