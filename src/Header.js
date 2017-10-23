@@ -10,7 +10,7 @@ class Content extends React.Component{
           <div className="row">
             <div className="col-md-8">
               <h1>The ABCs of Success in High School and Beyond<br /></h1>
-              <h3>This data story provides information for parents, community members, and educators from the Massachusetts Department of Elementary and Secondary Education (ESE) on how attendance, behavior, and course performance in Massachusetts high schools affects post-secondary outcomes.</h3>
+              <h3>This data story provides information for parents, community members, and educators from the Massachusetts Department of Elementary and Secondary Education (ESE) on how attendance, behavior, and course performance in Massachusetts high schools affect post-secondary outcomes.</h3>
             </div>
           </div>
         </div>

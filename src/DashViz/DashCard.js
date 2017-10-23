@@ -49,7 +49,7 @@ const DataCard =({Title, data, dataKey, dataCount}) => {
          case 'Enrolled in AP/IB Course Percent':
           studentGroup = 'juniors/seniors';
           cardKey = 'took at least one AP/IB course';
-          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year}<span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.</p>
+          return <p><span className="dash-card__hightlight">{percValue}%</span> of {studentGroup} {year} <span className="dash-card__hightlight">{cardKey}</span> in {year-1}-{year-2000}.<FootNoteLink index={8}/></p>
           break;
          case 'College Enrollment Percent':
           studentGroup = 'high school students who graduated in spring';
