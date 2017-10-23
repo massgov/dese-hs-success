@@ -30,7 +30,8 @@ class SocialMedia extends React.Component{
   render = () =>  {
     const shareUrl = 'http://mass.gov/SuccessABCs';
     const title = 'The ABCs of Success in High School and Beyond';
-    const message = 'Interact with the @MASchoolsk12 ABCs of success in #HighSchool #DataViz & prepare students for the future. #MAedu'
+    const tweet = 'Interact with the @MASchoolsk12 ABCs of success in #HighSchool #DataViz & prepare students for the future. #MAedu'
+    const message = 'Interact with the data story about the ABCs of success in high school to prepare Massachusetts students for the future.'
     const size = 28;
     return (
             <div className="social-media">
@@ -55,7 +56,7 @@ class SocialMedia extends React.Component{
                      <div className="Demo__some-network">
                        <TwitterShareButton
                          url={shareUrl}
-                         title={message}
+                         title={tweet}
                          className="Demo__some-network__share-button">
                          <TwitterIcon
                            size={size}
