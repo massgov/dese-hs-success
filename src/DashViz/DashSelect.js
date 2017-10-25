@@ -4,12 +4,13 @@ import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import Btn from '../Btn'
 import { Button } from 'react-bootstrap'
+import { animatePageScroll } from '../scroll'
 
 const BackToTop = () => {
   return (
     <div className="backToTop">
-      <Button className="backToTop_btn pull-right" href="#header" aria-label="Back to top"><i className="glyphicon glyphicon-arrow-up" aria-hidden="true" /></Button>
-      <a href="#header" className="backToTop_link pull-right">Back to top</a>
+      <Button className="backToTop_btn pull-right" aria-label="Back to top" onClick={() => animatePageScroll(null,0, `#header`)}><i className="glyphicon glyphicon-arrow-up" aria-hidden="true" /></Button>
+      <a className="backToTop_link pull-right" onClick={() => animatePageScroll(null,0, `#header`)}>Back to top</a>
     </div>
   )
 }
