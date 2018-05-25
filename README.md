@@ -1,5 +1,10 @@
-This repo contains the code for DESE High School Success Data Story. It is currently under development.
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# DESE High School Success Interactive Visualization
+
+***The ABCs of Success in High School and Beyond. Visit [Mass.gov/successABCs](http://abcs.digital.mass.gov).***
+
+This repository contains code and assets for an online, interactive visualization of the ABCs of Success in High School and Beyond interactive data report.
+
+This data story provides information for parents, community members, and educators from the Massachusetts Department of Elementary and Secondary Education (ESE) on how attendance, behavior, and course performance in Massachusetts high schools affect post-secondary outcomes.
 
 ## Table of Contents
 
@@ -57,3 +62,12 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+### This project is in the public domain
+
+>This project is in the worldwide public domain, licensed under the [GNU General Public License, V2]( https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
+
+### Credit
+
+>[Digital Services, Executive Office of Technology Services and Security (EOTSS), Commonwealth of Massachusetts](https://www.mass.gov/orgs/digital-services)
+
