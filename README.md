@@ -46,7 +46,7 @@ See the section about [running tests](#running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>=
+Builds the app for production to the `build` folder.<br>
 
 ### `npm run eject`
 
