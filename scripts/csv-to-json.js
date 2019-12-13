@@ -33,8 +33,41 @@ const dataPath = path.resolve(__dirname, '../public/data/');
 const csvPath = `${dataPath}/${inputPath}.csv`;
 const jsonPath = `${dataPath}/${outputPath}.json`;
 
+Object.prototype.renameProperty = function (oldName, newName) {
+     // Do nothing if the names are the same
+     if (oldName === newName) {
+         return this;
+     }
+    // Check for the old property name to avoid a ReferenceError in strict mode.
+    if (this.hasOwnProperty(oldName)) {
+        this[newName] = this[oldName];
+        delete this[oldName];
+    }
+    return this;
+};
+
+keyMapping = [{
+  csvKey: 'Metric',
+  jsonKey: 'metric'
+}, {
+  csvKey: 'Description',
+  jsonKey: 'description'
+}, {
+  csvKey: 'Count of Students',
+  jsonKey: 'count'
+}, {
+  csvKey: 'Rate',
+  jsonKey: 'rate'
+}]
+
 csv()
 .fromFile(csvPath)
+.subscribe((jsonObj,index)=>{
+    keyMapping.forEach(({ csvKey, jsonKey }) => {
+      jsonObj.renameProperty(csvKey, jsonKey)
+    })
+    console.log(jsonObj)
+})
 .then((jsonObj)=>{
     fs.writeFileSync(jsonPath, JSON.stringify(jsonObj, null, 2), (err) => {
       if (err) throw err;
