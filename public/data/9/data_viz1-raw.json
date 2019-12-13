@@ -1,14 +1,14 @@
 [
   {
-    "Category": "Passed All Courses",
+    "category": "Passed All Courses",
     "description": "Passes all 9th Grade Courses",
-    "4-Year Graduation Student Count": 54038,
-    "4-Year Graduation Rate": 96
+    "4-Year Graduation Student Count": "55928",
+    "4-Year Graduation Rate": "0.956"
   },
   {
-    "Category": "Failed Any Courses",
+    "category": "Failed Any Courses",
     "description": "Failed any 9th Grade Course(s)",
-    "4-Year Graduation Student Count": 12817,
-    "4-Year Graduation Rate": 64
+    "4-Year Graduation Student Count": "12186",
+    "4-Year Graduation Rate": "0.651"
   }
 ]
