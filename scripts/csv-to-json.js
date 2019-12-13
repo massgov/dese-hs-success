@@ -10,7 +10,7 @@ const csv=require('csvtojson')
   e.g. 10/grade_10_data
   * @param {3} outputPath - path relative to the public/data folder with fileName without file extension
   e.g. district
-  e.g. data
+  e.g. 10/data
 */
 
 let inputPath = '';
