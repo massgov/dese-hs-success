@@ -30,7 +30,7 @@
     "react-scripts": "2.1.3"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules ./src -o ./src --recursive",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./node_modules/ --include-path ./node_modules/ ./src -o ./src --watch",
     "start-js": "react-scripts start",
     "build-js": "react-scripts build",
