@@ -1,41 +1,41 @@
 [
   {
     "description": ["","12th graders took an AP course.", "", " did not take such a course."],
-    "rate_pass": 0.39,
-    "rate_fail": 0.61,
-    "count_pass": 253,
-    "count_fail": 396,
+    "rate_pass": 0.45,
+    "rate_fail": 0.55,
+    "count_pass": 299,
+    "count_fail": 367,
     "count_pass_hightlight": 0,
     "count_fail_hightlight": 0,
     "count_pass_faded": 0,
     "count_fail_faded": 0,
-    "total_count_pass": 25314,
-    "total_count_fail": 39645
+    "total_count_pass": 29891,
+    "total_count_fail": 36677
   },
   {
     "description": ["Of those who took an AP course,", "went on to college.","Just", "of students who did not take an AP course enrolled in higher education."],
     "rate_pass": 0.86,
-    "rate_fail": 0.58,
-    "count_pass": 253,
-    "count_fail": 396,
-    "count_pass_hightlight": 218,
-    "count_fail_hightlight": 228,
+    "rate_fail": 0.56,
+    "count_pass": 299,
+    "count_fail": 367,
+    "count_pass_hightlight": 257,
+    "count_fail_hightlight": 205,
     "count_pass_faded": 0,
     "count_fail_faded": 0,
-    "total_count_pass": 21767,
-    "total_count_fail": 22816
+    "total_count_pass": 25680,
+    "total_count_fail": 20490
   },
   {
     "description": ["","of students who took AP courses in 12th grade remained enrolled in college after 1 year.","That figure is only","for those who did not take an AP course."],
-    "rate_pass": 0.81,
-    "rate_fail": 0.46,
-    "count_pass": 253,
-    "count_fail": 396,
-    "count_pass_hightlight": 206,
-    "count_fail_hightlight": 184,
-    "count_pass_faded": 12,
+    "rate_pass": 0.80,
+    "rate_fail": 0.44,
+    "count_pass": 299,
+    "count_fail": 367,
+    "count_pass_hightlight": 240,
+    "count_fail_hightlight": 161,
+    "count_pass_faded": 17,
     "count_fail_faded": 44,
-    "total_count_pass": 20560,
-    "total_count_fail": 18353
+    "total_count_pass": 23984,
+    "total_count_fail": 16053
   }
 ]
