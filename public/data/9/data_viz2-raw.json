@@ -1,0 +1,30 @@
+[
+  {
+    "Number of Courses Failed": "1",
+    "4-Year Graduate Student Count - Failed any Course(s)": "5209",
+    "4-Year Graduate Student Count - Failed Core Course(s)": "4555",
+    "4-Year Graduation Rate Failed any Course(s)": "0.82",
+    "4-Year Graduation Rate Failed Core Course(s)": "0.77"
+  },
+  {
+    "Number of Courses Failed": "2",
+    "4-Year Graduate Student Count - Failed any Course(s)": "2463",
+    "4-Year Graduate Student Count - Failed Core Course(s)": "2177",
+    "4-Year Graduation Rate Failed any Course(s)": "0.7",
+    "4-Year Graduation Rate Failed Core Course(s)": "0.61"
+  },
+  {
+    "Number of Courses Failed": "3",
+    "4-Year Graduate Student Count - Failed any Course(s)": "1500",
+    "4-Year Graduate Student Count - Failed Core Course(s)": "1370",
+    "4-Year Graduation Rate Failed any Course(s)": "0.54",
+    "4-Year Graduation Rate Failed Core Course(s)": "0.43"
+  },
+  {
+    "Number of Courses Failed": ">=4",
+    "4-Year Graduate Student Count - Failed any Course(s)": "3645",
+    "4-Year Graduate Student Count - Failed Core Course(s)": "1980",
+    "4-Year Graduation Rate Failed any Course(s)": "0.37",
+    "4-Year Graduation Rate Failed Core Course(s)": "0.23"
+  }
+]

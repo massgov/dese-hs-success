@@ -62,11 +62,11 @@ keyMapping = [{
 
 csv()
 .fromFile(csvPath)
-.subscribe((jsonObj,index)=>{
-    keyMapping.forEach(({ csvKey, jsonKey }) => {
-      jsonObj.renameProperty(csvKey, jsonKey)
-    })
-})
+// .subscribe((jsonObj,index)=>{
+//     keyMapping.forEach(({ csvKey, jsonKey }) => {
+//       jsonObj.renameProperty(csvKey, jsonKey)
+//     })
+// })
 .then((jsonObj)=>{
     fs.writeFileSync(jsonPath, JSON.stringify(jsonObj, null, 2), (err) => {
       if (err) throw err;
