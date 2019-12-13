@@ -1,26 +1,26 @@
 [
   {
-    "metric": "High Attendance",
-    "description": "Had high attendance in 10th grade",
-    "count": 58524,
-    "rate": 95
+    "Metric": "High Attendance",
+    "Description": "Had high attendace in 10th grade",
+    "Count of Students": "59527",
+    "Rate": "0.958"
   },
   {
-    "metric": "Low Attendance",
-    "description": "Had low attendace in 10th grade",
-    "count": 7466,
-    "rate": 66
+    "Metric": "Low Attendance",
+    "Description": "Had low attendace in 10th grade",
+    "Count of Students": "7651",
+    "Rate": "0.685"
   },
   {
-    "metric": "Never Suspended",
-    "description": "Never had suspension in 10th grade",
-    "count": 60726,
-    "rate": 94
+    "Metric": "Never Suspended",
+    "Description": "Never had suspension in 10th grade",
+    "Count of Students": "62968",
+    "Rate": "0.939"
   },
   {
-    "metric": "Ever Suspended",
-    "description": "Ever had suspension in 10th grade",
-    "count": 5264,
-    "rate": 64
+    "Metric": "Ever Suspended",
+    "Description": "Ever had suspension in 10th grade",
+    "Count of Students": "4210",
+    "Rate": "0.744"
   }
 ]
