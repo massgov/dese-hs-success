@@ -66,7 +66,6 @@ csv()
     keyMapping.forEach(({ csvKey, jsonKey }) => {
       jsonObj.renameProperty(csvKey, jsonKey)
     })
-    console.log(jsonObj)
 })
 .then((jsonObj)=>{
     fs.writeFileSync(jsonPath, JSON.stringify(jsonObj, null, 2), (err) => {

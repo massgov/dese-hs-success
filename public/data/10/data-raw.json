@@ -1,0 +1,26 @@
+[
+  {
+    "metric": "High Attendance",
+    "description": "Had high attendance in 10th grade",
+    "count": 58524,
+    "rate": 95
+  },
+  {
+    "metric": "Low Attendance",
+    "description": "Had low attendace in 10th grade",
+    "count": 7466,
+    "rate": 66
+  },
+  {
+    "metric": "Never Suspended",
+    "description": "Never had suspension in 10th grade",
+    "count": 60726,
+    "rate": 94
+  },
+  {
+    "metric": "Ever Suspended",
+    "description": "Ever had suspension in 10th grade",
+    "count": 5264,
+    "rate": 64
+  }
+]
