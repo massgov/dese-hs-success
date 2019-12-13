@@ -2,37 +2,37 @@
   {
     "Category": "Participated in AP course",
     "Description": "Participated in AP course",
-    "Rate": 0.39,
-    "Count of Students": 25314
+    "Rate": 0.45,
+    "Count of Students": 29891
   },
   {
     "Category": "Participated in AP course",
     "Description": "Did not Participate in AP course",
-    "Rate": 0.61,
-    "Count of Students": 39645
+    "Rate": 0.55,
+    "Count of Students": 36677
   },
   {
     "Category": "Enrolled in College",
     "Description": "Participate in AP Course and Enrolled in College",
     "Rate": 0.86,
-    "Count of Students": 21767
+    "Count of Students": 25680
   },
   {
     "Category": "Enrolled in College",
     "Description": "Did not Participate in AP Course and Enrolled in College",
-    "Rate": 0.58,
-    "Count of Students": 22816
+    "Rate": 0.56,
+    "Count of Students": 20490
   },
   {
     "Category": "Remained in College",
     "Description": "Participated in AP Course and Remained in College after 1 year",
-    "Rate": 0.81,
-    "Count of Students": 20560
+    "Rate": 0.80,
+    "Count of Students": 23984
   },
   {
     "Category": "Remained in College",
     "Description": "Did not Participate in AP Course and Remaine in College after 1 year",
-    "Rate": 0.46,
-    "Count of Students": 18353
+    "Rate": 0.44,
+    "Count of Students": 16053
   }
 ]

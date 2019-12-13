@@ -2,37 +2,37 @@
   {
     "Category": "Participated in Algebra II",
     "Description": "Passed Algebra II",
-    "Rate": 0.68,
-    "Count of Students": 43622
+    "Rate": 0.72,
+    "Count of Students": 47532
   },
   {
     "Category": "Participated in Algebra II",
     "Description": "Did not Take/Failed Algebra II",
-    "Rate": 0.32,
-    "Count of Students": 20612
+    "Rate": 0.28,
+    "Count of Students": 18338
   },
   {
     "Category": "Enrolled in College",
     "Description": "Passed Algebra II and Enrolled in College",
-    "Rate": 0.78,
-    "Count of Students": 34027
+    "Rate": 0.77,
+    "Count of Students": 36466
   },
   {
     "Category": "Enrolled in College",
     "Description": "Did not Take/Failed Algebra II and Enrolled in College",
     "Rate": 0.49,
-    "Count of Students": 10122
+    "Count of Students": 9024
   },
   {
     "Category": "Remained in College",
     "Description": "Passed Algebra II and Remained in College after 1 year",
-    "Rate": 0.71,
-    "Count of Students": 30784
+    "Rate": 0.68,
+    "Count of Students": 32508
   },
   {
     "Category": "Remained in College",
     "Description": "Did not Take/Failed Algebra II and Remained in College after 1 year",
     "Rate": 0.38,
-    "Count of Students": 7911
+    "Count of Students": 7036
   }
 ]
