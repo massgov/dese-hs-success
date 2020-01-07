@@ -3,7 +3,7 @@ const fs = require('fs');
 const csv=require('csvtojson')
 
 /**
-  * $ node budgets/shared-ui/utils/docs-to-json/generic docsPath jsonPath imgPath fileName
+  * $ node ./scripts/csv-to-json.js district district
   * @param {1} script_path_from_root - ./scripts/csv-to-json.js
   * @param {2} inputPath - path relative to the public/data folder with fileName without file extension
   e.g. district
