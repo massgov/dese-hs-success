@@ -45,6 +45,7 @@ class Data extends React.Component{
 
           render = () =>  {
               const {blockData, barData} = this.state;
+              console.log(barData)
 
               if( blockData.length === 0 ) {
                 return <div className="container">Loading...</div>

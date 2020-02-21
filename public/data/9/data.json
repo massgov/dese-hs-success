@@ -3,44 +3,44 @@
     {
       "metric": "Passed All Courses",
       "description": "passed all courses in 9th grade",
-      "count": 54038,
+      "count": 55928,
       "rate": 96
     },
     {
       "metric": "Failed Any Course",
       "description": "failed any course in 9th grade",
-      "count": 12817,
-      "rate": 64
+      "count": 12186,
+      "rate": 65
     }
   ],
   [
     {
       "label" : "1" ,
-      "count_all" : 5209,
-      "count_core" : 4555,
-      "All subjects" : 0.82,
-      "Core subjects": 0.77
+      "count_all" : 5234,
+      "count_core" : 4147,
+      "All subjects" : 0.827,
+      "Core subjects": 0.7846
     } ,
     {
       "label" : "2" ,
-      "count_all" : 2463,
-      "count_core" : 2177,
-      "All subjects" : 0.70,
-      "Core subjects": 0.61
+      "count_all" : 2316,
+      "count_core" : 2044,
+      "All subjects" : 0.717,
+      "Core subjects": 0.626
     } ,
     {
       "label" : "3" ,
-      "count_all" : 1500,
-      "count_core" : 1370,
-      "All subjects" : 0.54,
-      "Core subjects": 0.43
+      "count_all" : 1327,
+      "count_core" : 1264,
+      "All subjects" : 0.583,
+      "Core subjects": 0.459
     } ,
     {
       "label" : "4 or more" ,
-      "count_all" : 3645,
-      "count_core" : 1980,
-      "All subjects" : 0.37,
-      "Core subjects": 0.23
+      "count_all" : 3309,
+      "count_core" : 1828,
+      "All subjects" : 0.354,
+      "Core subjects": 0.237
     }
   ]
 ]

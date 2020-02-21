@@ -1,41 +1,41 @@
   [
     {
       "description": [""," 11th graders passed Algebra II or a higher level math class.","", "either failed or did not take such a course."],
-      "rate_pass": 0.68,
-      "rate_fail":0.32,
-      "count_pass": 436,
-      "count_fail": 206,
+      "rate_pass": 0.72,
+      "rate_fail":0.28,
+      "count_pass": 475,
+      "count_fail": 183,
       "count_pass_hightlight": 0,
       "count_fail_hightlight": 0,
       "count_pass_faded": 0,
       "count_fail_faded": 0,
-      "total_count_pass": 43622,
-      "total_count_fail": 20612
+      "total_count_pass": 47532,
+      "total_count_fail": 18338
     },
     {
       "description": ["Of those who passed,", "went on to college.","Just", "of students who did not take or pass a higher level math class enrolled in higher education."],
-      "rate_pass": 0.78,
+      "rate_pass": 0.77,
       "rate_fail":0.49,
-      "count_pass": 436,
-      "count_fail": 206,
-      "count_pass_hightlight": 340,
-      "count_fail_hightlight": 101,
+      "count_pass": 475,
+      "count_fail": 183,
+      "count_pass_hightlight": 366,
+      "count_fail_hightlight": 90,
       "count_pass_faded": 0,
       "count_fail_faded": 0,
-      "total_count_pass": 34027,
-      "total_count_fail": 10122
+      "total_count_pass": 36466,
+      "total_count_fail": 9024
     },
     {
       "description": ["","of students who passed 11th grade math remained enrolled in college after 1 year.","That figure is only","for those that did not take or pass a higher level math class."],
-      "rate_pass": 0.71,
+      "rate_pass": 0.68,
       "rate_fail":0.38,
-      "count_pass": 436,
-      "count_fail": 206,
-      "count_pass_hightlight": 308,
-      "count_fail_hightlight": 79,
-      "count_pass_faded": 32,
-      "count_fail_faded": 22,
-      "total_count_pass": 30784,
-      "total_count_fail": 7911
+      "count_pass": 475,
+      "count_fail": 183,
+      "count_pass_hightlight": 325,
+      "count_fail_hightlight": 70,
+      "count_pass_faded": 41,
+      "count_fail_faded": 20,
+      "total_count_pass": 32508,
+      "total_count_fail": 7036
     }
   ]

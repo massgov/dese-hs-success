@@ -3,28 +3,28 @@
     {
       "metric": "High Attendance",
       "description": "had high attendace in 10th grade",
-      "count": 58524,
-      "rate": 95
+      "count": 59527,
+      "rate": 96
     },
     {
       "metric": "Low Attendance",
       "description": "had low attendace in 10th grade",
-      "count": 7466,
-      "rate": 66
+      "count": 7651,
+      "rate": 69
     }
   ],
   [
     {
       "metric": "Never Suspended",
       "description": "never had a suspension in 10th grade",
-      "count": 60726,
+      "count": 62968,
       "rate": 94
     },
     {
       "metric": "Suspended at Least Once",
       "description": "ever had a suspension in 10th grade",
-      "count": 5264,
-      "rate": 64
+      "count": 4210,
+      "rate": 74
     }
   ]
 ]

@@ -1,0 +1,26 @@
+[
+  {
+    "Metric": "High Attendance",
+    "Description": "Had high attendace in 10th grade",
+    "Count of Students": 59527,
+    "Rate": 0.958
+  },
+  {
+    "Metric": "Low Attendance",
+    "Description": "Had low attendace in 10th grade",
+    "Count of Students": 7651,
+    "Rate": 0.685
+  },
+  {
+    "Metric": "Never Suspended",
+    "Description": "Never had suspension in 10th grade",
+    "Count of Students": 62968,
+    "Rate": 0.939
+  },
+  {
+    "Metric": "Ever Suspended",
+    "Description": "Ever had suspension in 10th grade",
+    "Count of Students": 4210,
+    "Rate": 0.744
+  }
+]
